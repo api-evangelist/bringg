@@ -1,0 +1,28 @@
+specVersion: 0.1
+provider: bringg
+title: Bringg FinOps Alignment
+note: |
+  Bringg's FinOps surface is governed by negotiated enterprise contracts rather
+  than public usage-based pricing. The Status Page exposes a "Billing Page"
+  component per region, indicating per-region billing is metered. Carrier
+  Network usage (third-party fleet capacity drawn through Bringg Connect) is
+  passed through to merchants with per-leg/per-mile or per-quote economics
+  depending on the integrated carrier.
+focusAlignment:
+  chargeCategory: Usage (carrier consumption), Commitment (platform license)
+  serviceCategory: Logistics / Delivery Orchestration
+  pricingUnit:
+  - Order
+  - Delivery
+  - Driver seat
+  - Module subscription
+billingDimensions:
+- Module subscription (Plan / Dispatch / Drive / Delivery Experience / Shopping Experience / Connect / Intelligence)
+- Regional infrastructure (US2/US3/US4/EU2/EU3 on GCP)
+- Order volume tier
+- Carrier Network usage (per quote / per delivery passthrough)
+- Driver seat count
+- Premium support and SLA
+sources:
+- https://www.bringg.com/
+- https://status.bringg.com/

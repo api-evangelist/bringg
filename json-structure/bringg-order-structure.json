@@ -1,0 +1,15 @@
+{
+  "name": "BringgOrder",
+  "version": "1.0",
+  "description": "Structural breakdown of a Bringg order (task) including waypoints, customer, inventory, run linkage, and lifecycle timestamps.",
+  "properties": {
+    "identity": ["id", "external_id", "merchant_id"],
+    "lifecycle": ["status", "ready_to_execute", "created_at", "updated_at"],
+    "scheduling": ["scheduled_at", "no_later_than", "service_plan_id"],
+    "assignment": ["team_ids", "driver_id", "vehicle_id", "run_id", "active_way_point_id"],
+    "customer": ["customer.id", "customer.name", "customer.phone", "customer.email", "customer.address"],
+    "way_points": ["way_points[].position", "way_points[].address", "way_points[].lat", "way_points[].lng", "way_points[].scheduled_at", "way_points[].checkin_time", "way_points[].checkout_time", "way_points[].done"],
+    "inventory": ["task_inventories[]"],
+    "cancellation": ["cancel_reasons"]
+  }
+}

@@ -1,0 +1,242 @@
+asyncapi: 2.6.0
+info:
+  title: Bringg Webhooks
+  version: '1.0'
+  description: |
+    Bringg sends server-to-server webhook callbacks to subscriber URLs when events
+    occur on orders, drivers, runs, customers, and waypoints. Bringg retries failed
+    deliveries three times before recording the webhook in an Undelivered Webhooks
+    report. Subscribers configure URLs and signing secrets via the Bringg Merchant
+    Configuration screens.
+  contact:
+    name: Bringg Developer Support
+    url: https://developers.bringg.com/reference/webhooks-index
+defaultContentType: application/json
+channels:
+  delivery.created:
+    description: A new delivery (order) was created.
+    subscribe:
+      message: {$ref: '#/components/messages/DeliveryCreated'}
+  order.created:
+    description: An order was created on the Bringg platform.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderCreated'}
+  order.updated:
+    description: An order's details changed.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderUpdated'}
+  order.cancelled:
+    description: An order was cancelled.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderCancelled'}
+  order.is_done:
+    description: An order completed successfully.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderIsDone'}
+  order.eta_changed:
+    description: An order's ETA was updated.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderEtaChanged'}
+  order.assigned_to_driver:
+    description: An order was assigned to a driver.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderAssignedToDriver'}
+  order.assigned_to_dp:
+    description: An order was assigned to a delivery partner.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderAssignedToDp'}
+  order.unassigned_from_driver:
+    description: An order was unassigned from a driver.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderUnassignedFromDriver'}
+  order.accepted_by_driver:
+    description: A driver accepted an assigned order.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderAcceptedByDriver'}
+  order.accepted_by_fleet:
+    description: A fleet partner accepted an order.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderAcceptedByFleet'}
+  order.rejected_by_driver:
+    description: A driver rejected an assigned order.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderRejectedByDriver'}
+  order.marked_late:
+    description: An order was marked late.
+    subscribe:
+      message: {$ref: '#/components/messages/OrderMarkedLate'}
+  orders.ready_to_be_executed:
+    description: A batch of orders is ready to be executed.
+    subscribe:
+      message: {$ref: '#/components/messages/OrdersReadyToBeExecuted'}
+  return_delivery.created:
+    description: A return delivery was created.
+    subscribe:
+      message: {$ref: '#/components/messages/ReturnDeliveryCreated'}
+  driver.location_updated:
+    description: A driver's GPS location was updated.
+    subscribe:
+      message: {$ref: '#/components/messages/DriverLocationUpdated'}
+  driver.unavailable_status_changed:
+    description: A driver's unavailable status changed.
+    subscribe:
+      message: {$ref: '#/components/messages/DriverUnavailableStatusChanged'}
+  driver.changed_type:
+    description: A driver's role or type changed.
+    subscribe:
+      message: {$ref: '#/components/messages/DriverChangedType'}
+  driver.arrived_on_location:
+    description: A driver arrived at a destination.
+    subscribe:
+      message: {$ref: '#/components/messages/DriverArrivedOnLocation'}
+  driver.on_way:
+    description: A driver is on the way to a destination.
+    subscribe:
+      message: {$ref: '#/components/messages/DriverOnWay'}
+  driver.got_home:
+    description: A driver returned to their home base.
+    subscribe:
+      message: {$ref: '#/components/messages/DriverGotHome'}
+  driver.left_home:
+    description: A driver left their home base.
+    subscribe:
+      message: {$ref: '#/components/messages/DriverLeftHome'}
+  shift.started_for_driver:
+    description: A shift started for a driver.
+    subscribe:
+      message: {$ref: '#/components/messages/ShiftStartedForDriver'}
+  shift.ended_for_driver:
+    description: A shift ended for a driver.
+    subscribe:
+      message: {$ref: '#/components/messages/ShiftEndedForDriver'}
+  waypoint.arrived:
+    description: Arrived at a waypoint.
+    subscribe:
+      message: {$ref: '#/components/messages/ArrivedToWayPoint'}
+  waypoint.left:
+    description: Left a waypoint.
+    subscribe:
+      message: {$ref: '#/components/messages/LeftWayPoint'}
+  waypoint.rescheduled:
+    description: A waypoint was rescheduled.
+    subscribe:
+      message: {$ref: '#/components/messages/WayPointRescheduled'}
+  inventory.scanned:
+    description: An inventory item was scanned.
+    subscribe:
+      message: {$ref: '#/components/messages/InventoryScanned'}
+  scan.any:
+    description: Any scan event (inventory, package, etc.).
+    subscribe:
+      message: {$ref: '#/components/messages/AnyScan'}
+  customer.created:
+    description: A customer was created.
+    subscribe:
+      message: {$ref: '#/components/messages/CustomerCreated'}
+  customer.opted_in_to_sms:
+    description: A customer opted in to SMS notifications.
+    subscribe:
+      message: {$ref: '#/components/messages/CustomerOptedInToSms'}
+  customer.opted_out_of_sms:
+    description: A customer opted out of SMS notifications.
+    subscribe:
+      message: {$ref: '#/components/messages/CustomerOptedOutOfSms'}
+  customer.tipped_driver:
+    description: A customer tipped a driver.
+    subscribe:
+      message: {$ref: '#/components/messages/CustomerTippedDriver'}
+  rating.submitted:
+    description: A customer submitted a rating.
+    subscribe:
+      message: {$ref: '#/components/messages/RatingSubmitted'}
+  masked_call:
+    description: A masked phone call was placed between customer and driver.
+    subscribe:
+      message: {$ref: '#/components/messages/MaskedCall'}
+  shared_location.created:
+    description: A customer-facing shared tracking URL was created and SMS sent.
+    subscribe:
+      message: {$ref: '#/components/messages/SharedLocationCreated'}
+  alert.new:
+    description: A new operational alert was raised.
+    subscribe:
+      message: {$ref: '#/components/messages/NewAlert'}
+  task.note_added:
+    description: A note was added to an order (task).
+    subscribe:
+      message: {$ref: '#/components/messages/NoteWasAddedToTask'}
+  task.form_added:
+    description: A form was added to an order.
+    subscribe:
+      message: {$ref: '#/components/messages/FormWasAddedToTask'}
+  task.payment_history:
+    description: A payment history entry was added to an order.
+    subscribe:
+      message: {$ref: '#/components/messages/TaskPaymentHistory'}
+  run.started:
+    description: A run (route execution) started.
+    subscribe:
+      message: {$ref: '#/components/messages/RunStarted'}
+  run.ended:
+    description: A run ended.
+    subscribe:
+      message: {$ref: '#/components/messages/RunEnded'}
+  planning.done:
+    description: Planning completed for a set of orders.
+    subscribe:
+      message: {$ref: '#/components/messages/PlanningDone'}
+  optimization.applied:
+    description: Route optimization was applied.
+    subscribe:
+      message: {$ref: '#/components/messages/OptimizationApplied'}
+  route.plan_updated:
+    description: A route plan was updated.
+    subscribe:
+      message: {$ref: '#/components/messages/RoutePlanUpdated'}
+components:
+  messages:
+    DeliveryCreated: {summary: Delivery created}
+    OrderCreated: {summary: Order created}
+    OrderUpdated: {summary: Order updated}
+    OrderCancelled: {summary: Order cancelled}
+    OrderIsDone: {summary: Order is done}
+    OrderEtaChanged: {summary: Order ETA changed}
+    OrderAssignedToDriver: {summary: Order assigned to driver}
+    OrderAssignedToDp: {summary: Order assigned to delivery partner}
+    OrderUnassignedFromDriver: {summary: Order unassigned from driver}
+    OrderAcceptedByDriver: {summary: Order accepted by driver}
+    OrderAcceptedByFleet: {summary: Order accepted by fleet}
+    OrderRejectedByDriver: {summary: Order rejected by driver}
+    OrderMarkedLate: {summary: Order marked late}
+    OrdersReadyToBeExecuted: {summary: Orders ready to be executed}
+    ReturnDeliveryCreated: {summary: Return delivery created}
+    DriverLocationUpdated: {summary: Driver location updated}
+    DriverUnavailableStatusChanged: {summary: Driver unavailable status changed}
+    DriverChangedType: {summary: Driver changed type}
+    DriverArrivedOnLocation: {summary: Driver arrived on location}
+    DriverOnWay: {summary: Driver on way}
+    DriverGotHome: {summary: Driver got home}
+    DriverLeftHome: {summary: Driver left home}
+    ShiftStartedForDriver: {summary: Shift started}
+    ShiftEndedForDriver: {summary: Shift ended}
+    ArrivedToWayPoint: {summary: Arrived to way point}
+    LeftWayPoint: {summary: Left way point}
+    WayPointRescheduled: {summary: Way point rescheduled}
+    InventoryScanned: {summary: Inventory scanned}
+    AnyScan: {summary: Any scan}
+    CustomerCreated: {summary: Customer created}
+    CustomerOptedInToSms: {summary: Customer opted in to SMS}
+    CustomerOptedOutOfSms: {summary: Customer opted out of SMS}
+    CustomerTippedDriver: {summary: Customer tipped driver}
+    RatingSubmitted: {summary: Rating submitted}
+    MaskedCall: {summary: Masked call}
+    SharedLocationCreated: {summary: Shared location created}
+    NewAlert: {summary: New alert}
+    NoteWasAddedToTask: {summary: Note added to task}
+    FormWasAddedToTask: {summary: Form added to task}
+    TaskPaymentHistory: {summary: Task payment history}
+    RunStarted: {summary: Run started}
+    RunEnded: {summary: Run ended}
+    PlanningDone: {summary: Planning done}
+    OptimizationApplied: {summary: Optimization applied}
+    RoutePlanUpdated: {summary: Route plan updated}

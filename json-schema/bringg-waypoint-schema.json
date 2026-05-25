@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/bringg/json-schema/bringg-waypoint-schema.json",
+  "title": "Bringg Waypoint",
+  "description": "Waypoint (stop) on an order. Each order may have up to two waypoints: a pickup and a drop-off.",
+  "type": "object",
+  "properties": {
+    "id": {"type": "integer"},
+    "task_id": {"type": "integer"},
+    "position": {"type": "integer"},
+    "address": {"type": "string"},
+    "lat": {"type": "number"},
+    "lng": {"type": "number"},
+    "scheduled_at": {"type": "string", "format": "date-time"},
+    "no_later_than": {"type": "string", "format": "date-time"},
+    "checkin_time": {"type": "string", "format": "date-time"},
+    "checkout_time": {"type": "string", "format": "date-time"},
+    "done": {"type": "boolean"},
+    "rated": {"type": "boolean"},
+    "rating_reason": {"type": "string"},
+    "note": {"type": "string"}
+  },
+  "required": ["id"]
+}

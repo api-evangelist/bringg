@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/bringg/json-schema/bringg-run-schema.json",
+  "title": "Bringg Run (Route)",
+  "description": "A run represents a route instance — an ordered set of orders assigned to a driver and vehicle.",
+  "type": "object",
+  "properties": {
+    "id": {"type": "integer"},
+    "external_id": {"type": "string"},
+    "driver_id": {"type": "integer"},
+    "vehicle_id": {"type": "integer"},
+    "team_id": {"type": "integer"},
+    "scheduled_start_time": {"type": "string", "format": "date-time"},
+    "actual_start_time": {"type": "string", "format": "date-time"},
+    "scheduled_end_time": {"type": "string", "format": "date-time"},
+    "actual_end_time": {"type": "string", "format": "date-time"},
+    "task_ids": {"type": "array", "items": {"type": "integer"}},
+    "status": {"type": "integer"}
+  },
+  "required": ["id"]
+}

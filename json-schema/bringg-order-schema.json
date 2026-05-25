@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/bringg/json-schema/bringg-order-schema.json",
+  "title": "Bringg Order (Task)",
+  "description": "Represents an order (task) in Bringg with one or more waypoints, optional inventory, service plan, customer, run (route) assignment, and operational metadata.",
+  "type": "object",
+  "properties": {
+    "id": {"type": "integer", "description": "Bringg-assigned order id."},
+    "external_id": {"type": "string", "description": "Caller-supplied external identifier."},
+    "title": {"type": "string"},
+    "status": {"type": "integer", "description": "Numeric task status (see Order Status reference)."},
+    "merchant_id": {"type": "integer"},
+    "team_ids": {"type": "array", "items": {"type": "integer"}},
+    "scheduled_at": {"type": "string", "format": "date-time"},
+    "no_later_than": {"type": "string", "format": "date-time"},
+    "ready_to_execute": {"type": "boolean"},
+    "active_way_point_id": {"type": "integer"},
+    "customer": {"$ref": "bringg-customer-schema.json"},
+    "way_points": {"type": "array", "items": {"$ref": "bringg-waypoint-schema.json"}},
+    "task_inventories": {"type": "array", "items": {"type": "object"}},
+    "service_plan_id": {"type": "integer"},
+    "run_id": {"type": "integer"},
+    "driver_id": {"type": "integer"},
+    "vehicle_id": {"type": "integer"},
+    "cancel_reasons": {"type": "object"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  },
+  "required": ["id"]
+}

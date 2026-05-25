@@ -1,0 +1,70 @@
+name: Bringg
+domain: Last-Mile Delivery and Fulfillment Orchestration
+operationalDimensions:
+- Plan
+- Dispatch
+- Drive
+- Delivery Experience
+- Shopping Experience
+- Carrier Network
+- Analytics
+- Connect (Integrations)
+coreEntities:
+- Order (Task)
+- Waypoint
+- Run (Route)
+- Driver (User)
+- Vehicle
+- Team
+- Customer
+- Service Plan
+- Service Area
+- Delivery Slot (Planned Delivery Window)
+- Exclusion Window (Blackout)
+- Delivery Block
+- Inventory
+- Floating Inventory
+- Package
+- Parking Spot
+- Recurring Order
+- Vehicle Profile
+- Note
+- Merchant (Company)
+keyConcepts:
+- name: Task / Order
+  description: A unit of delivery work tracked from creation through completion or cancellation.
+- name: Run
+  description: A route — an ordered sequence of orders assigned to a driver and vehicle.
+- name: Waypoint
+  description: An origin or destination stop on an order.
+- name: Service Plan
+  description: A bundle of operational requirements, time windows, notifications, and branding applied to orders.
+- name: Service Area
+  description: A geographic polygon used to route orders to teams and enforce delivery rules.
+- name: Delivery Block
+  description: A shift slot drivers commit to working.
+- name: Delivery Hub
+  description: Bringg's third-party fleet orchestration layer for routing orders to delivery partners and self-integrated fleets.
+- name: Quotes And Availability
+  description: API surface for retrieving multi-carrier quotes and capacity before placing an order.
+- name: Floating Inventory
+  description: Inventory items not associated with a specific order, useful for upsell or chain-of-custody tracking.
+- name: Bringg Services
+  description: Tokenless, GUID-based URLs merchants can issue for limited operations.
+modules:
+- Plan
+- Dispatch
+- Drive
+- Delivery Experience
+- Shopping Experience
+- Automation Center
+- Intelligence
+- Connect
+authentication:
+- OAuth 2.0 Client Credentials Grant
+regions:
+- US2 (GCP)
+- US3 (GCP)
+- US4 (GCP)
+- EU2 (GCP)
+- EU3 (GCP)

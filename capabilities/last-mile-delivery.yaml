@@ -1,0 +1,33 @@
+name: last-mile-delivery
+description: End-to-end last-mile delivery orchestration workflow — quote, create order, optimize, dispatch, fulfill, and notify.
+composes:
+- bringg-orders
+- bringg-dispatch
+- bringg-drivers
+workflow:
+- step: Quote and availability
+  operation: getQuotes
+- step: Create order
+  operation: createTask
+- step: Plan and optimize
+  operation: getPostOptimizationTasks
+- step: Release to dispatch
+  operation: releaseTasks
+- step: Assign driver and vehicle
+  operations:
+  - assignRunDriver
+  - assignRunVehicle
+- step: Start shift / start order
+  operations:
+  - startShift
+  - startTask
+- step: Update location
+  operation: updateDriverLocation
+- step: Check-in / Check-out
+  operations:
+  - checkIn
+  - checkOut
+- step: Complete or cancel
+  operations:
+  - endTask
+  - cancelTask

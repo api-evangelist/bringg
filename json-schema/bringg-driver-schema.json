@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/bringg/json-schema/bringg-driver-schema.json",
+  "title": "Bringg Driver (User)",
+  "description": "A user with a driver role responsible for executing orders.",
+  "type": "object",
+  "properties": {
+    "id": {"type": "integer"},
+    "external_id": {"type": "string"},
+    "name": {"type": "string"},
+    "phone": {"type": "string"},
+    "email": {"type": "string", "format": "email"},
+    "user_type_id": {"type": "integer"},
+    "team_ids": {"type": "array", "items": {"type": "integer"}},
+    "lat": {"type": "number"},
+    "lng": {"type": "number"},
+    "current_location_updated_at": {"type": "string", "format": "date-time"},
+    "is_on_shift": {"type": "boolean"},
+    "unavailable": {"type": "boolean"}
+  },
+  "required": ["id"]
+}

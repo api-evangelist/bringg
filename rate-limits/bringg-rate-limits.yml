@@ -1,0 +1,29 @@
+specVersion: 0.1
+provider: bringg
+title: Bringg API Rate Limits
+sources:
+- https://developers.bringg.com/docs/bringg-api-access-management
+- https://developers.bringg.com/docs/oauth-20-urls
+note: |
+  Bringg does not publish a fixed per-minute rate-limit number in public
+  documentation. Rate limits are governed by OAuth 2.0 access token TTLs and
+  per-merchant agreements. Heavy bulk operations are routed through the JSONL
+  bulk upload pipeline rather than per-call invocation.
+limits:
+- name: Access Token TTL (Read)
+  description: Default time-to-live for OAuth 2.0 read scopes.
+  value: 14400
+  unit: seconds
+- name: Access Token TTL (Write)
+  description: Default time-to-live for OAuth 2.0 write scopes.
+  value: 1800
+  unit: seconds
+- name: Token TTL Override
+  description: Callers may request a non-default ttl via the ttl field on the token request.
+  value: configurable
+- name: Webhook Retry Policy
+  description: Bringg retries an outbound webhook up to three times before recording it on the Undelivered Webhooks report.
+  value: 3
+  unit: attempts
+- name: Bulk Pipeline
+  description: For large data loads, use the prepare_resource / process_resource JSONL pipeline rather than per-call POSTs.

@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "bringg": "https://api-evangelist.github.io/bringg/vocab#",
+    "Order": "schema:Order",
+    "ParcelDelivery": "schema:ParcelDelivery",
+    "Person": "schema:Person",
+    "PostalAddress": "schema:PostalAddress",
+    "GeoCoordinates": "schema:GeoCoordinates",
+    "id": "@id",
+    "external_id": "schema:identifier",
+    "title": "schema:name",
+    "status": "schema:orderStatus",
+    "scheduled_at": "schema:expectedArrivalFrom",
+    "no_later_than": "schema:expectedArrivalUntil",
+    "customer": "schema:customer",
+    "way_points": "schema:itemDelivered",
+    "address": "schema:address",
+    "lat": "schema:latitude",
+    "lng": "schema:longitude",
+    "phone": "schema:telephone",
+    "email": "schema:email",
+    "driver_id": "bringg:driver",
+    "vehicle_id": "bringg:vehicle",
+    "run_id": "bringg:run",
+    "team_ids": "bringg:team",
+    "service_plan_id": "bringg:servicePlan",
+    "merchant_id": "schema:merchant"
+  }
+}

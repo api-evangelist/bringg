@@ -1,0 +1,42 @@
+extends:
+- spectral:oas
+rules:
+  bringg-operation-summary-required:
+    description: Every operation must have a summary in Title Case.
+    severity: error
+    given: $.paths.*[get,post,put,patch,delete]
+    then:
+    - field: summary
+      function: truthy
+  bringg-operation-id-camelcase:
+    description: operationId must be camelCase.
+    severity: warn
+    given: $.paths.*[get,post,put,patch,delete].operationId
+    then:
+      function: pattern
+      functionOptions:
+        match: '^[a-z][a-zA-Z0-9]*$'
+  bringg-oauth-required:
+    description: All operations must be secured with OAuth 2.0 Client Credentials.
+    severity: error
+    given: $
+    then:
+    - field: security
+      function: truthy
+  bringg-region-server:
+    description: At least one region-specific Bringg server URL must be declared.
+    severity: warn
+    given: $.servers
+    then:
+      function: schema
+      functionOptions:
+        schema:
+          type: array
+          minItems: 1
+  bringg-info-contact:
+    description: info.contact must be present with developer support URL.
+    severity: warn
+    given: $.info
+    then:
+    - field: contact
+      function: truthy

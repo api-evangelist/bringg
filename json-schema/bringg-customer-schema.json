@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/bringg/json-schema/bringg-customer-schema.json",
+  "title": "Bringg Customer",
+  "description": "Customer (end-recipient) record included on orders and webhook callbacks.",
+  "type": "object",
+  "properties": {
+    "id": {"type": "integer"},
+    "external_id": {"type": "string"},
+    "merchant_id": {"type": "integer"},
+    "name": {"type": "string"},
+    "phone": {"type": "string"},
+    "email": {"type": "string", "format": "email"},
+    "address": {"type": "string"},
+    "address_second_line": {"type": "string"},
+    "city": {"type": "string"},
+    "zipcode": {"type": "string"},
+    "state": {"type": "string"},
+    "country": {"type": "string"},
+    "lat": {"type": "number"},
+    "lng": {"type": "number"},
+    "sms_enabled": {"type": "boolean"},
+    "extras": {"type": "object"}
+  },
+  "required": ["id"]
+}

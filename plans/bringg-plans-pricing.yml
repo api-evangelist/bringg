@@ -1,0 +1,32 @@
+specVersion: 0.1
+provider: bringg
+title: Bringg Pricing And Commercial Offering
+sources:
+- https://www.bringg.com/
+- https://www.bringg.com/platform/
+note: |
+  Bringg does not publish public list pricing. The Bringg platform is sold to
+  enterprise retailers, logistics providers, and delivery providers via a
+  consultative sales process. Plans are typically scoped per module (Plan, Dispatch,
+  Drive, Delivery Experience, Shopping Experience, Connect, Intelligence) and per
+  region (US/EU GCP deployments), with separate pricing for the Bringg-managed
+  carrier network and integrations to 250+ third-party fleets.
+plans:
+- id: contact-sales
+  name: Contact Sales
+  description: Custom enterprise pricing scoped to modules, regions, order volume, and integrations.
+  entries:
+  - geo: Global
+    unit: 1
+    label: Enterprise contract
+    price: Call
+    metric: contract
+    timeFrame: year
+    description: Negotiated annual contract with module-based pricing.
+  elements:
+  - name: Modules selected (Plan, Dispatch, Drive, Delivery Experience, Shopping Experience, Connect, Intelligence)
+  - name: Regional deployment (US2/US3/US4/EU2/EU3 on GCP)
+  - name: Order volume tier
+  - name: Carrier Network access fees
+  - name: Integrations and professional services
+  - name: SLAs and support level
