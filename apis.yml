@@ -1,271 +1,310 @@
 aid: bringg
 url: https://raw.githubusercontent.com/api-evangelist/bringg/refs/heads/main/apis.yml
 apis:
-- aid: bringg:bringg-delivery-hub-api
-  name: Bringg Delivery Hub API
-  tags:
-  - Last-Mile Delivery
-  - Orders
-  - Dispatch
-  - Routing
-  - Service Areas
-  - Service Plans
-  - Quotes
-  - Inventory
-  - Analytics
-  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
-  baseURL: https://us2-admin-api.bringg.com
-  properties:
-  - url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
-    type: Documentation
-  - url: https://developers.bringg.com/docs/overview
-    type: Documentation
-  - url: https://developers.bringg.com/docs/rest
-    type: Documentation
-  - url: https://developers.bringg.com/docs/bringg-api-access-management
-    type: Authentication
-  - url: https://developers.bringg.com/docs/oauth-20-urls
-    type: Authentication
-  - url: openapi/bringg-delivery-hub-api-openapi.yml
-    type: OpenAPI
-  - url: json-schema/bringg-order-schema.json
-    type: JSONSchema
-  - url: json-schema/bringg-customer-schema.json
-    type: JSONSchema
-  - url: json-schema/bringg-waypoint-schema.json
-    type: JSONSchema
-  - url: json-schema/bringg-run-schema.json
-    type: JSONSchema
-  - url: json-structure/bringg-order-structure.json
-    type: JSONStructure
-  - url: json-ld/bringg-context.jsonld
-    type: JSONLD
-  - url: examples/bringg-create-task-example.json
-    type: Example
-  - url: capabilities/shared/orders.yaml
-    type: NaftikoCapability
-  - url: capabilities/shared/dispatch.yaml
-    type: NaftikoCapability
-  description: Bringg's REST orchestration API for the Delivery Hub — create and manage orders (tasks), runs (routes), customers, teams, service areas, service plans, planned delivery windows (delivery slots), exclusion windows (blackouts), parking spots, packages, inventory, floating inventory, recurring orders, delivery blocks, vehicles, and analytics reports. All endpoints use OAuth 2.0 Client Credentials Grant against region-specific GCP base URLs (US2/US3/US4, EU2/EU3).
-- aid: bringg:bringg-drivers-shifts-api
-  name: Bringg Drivers And Shifts API
-  tags:
-  - Drivers
-  - Shifts
-  - Users
-  - Delivery Blocks
-  - Vehicles
-  - Fleet
-  humanURL: https://developers.bringg.com/reference/driver-shifts
-  baseURL: https://us2-admin-api.bringg.com
-  properties:
-  - url: https://developers.bringg.com/reference/driver-shifts
-    type: Documentation
-  - url: https://developers.bringg.com/reference/users-3
-    type: Documentation
-  - url: https://developers.bringg.com/reference/vehicles
-    type: Documentation
-  - url: https://developers.bringg.com/reference/delivery-blocks
-    type: Documentation
-  - url: openapi/bringg-drivers-shifts-api-openapi.yml
-    type: OpenAPI
-  - url: json-schema/bringg-driver-schema.json
-    type: JSONSchema
-  - url: capabilities/shared/drivers.yaml
-    type: NaftikoCapability
-  description: Manage Bringg drivers, user roles, shifts, real-time availability, driver location updates, delivery blocks (shift slots), QR-code-based login, and vehicles with vehicle profiles. Backs the Bringg Driver App and dispatcher workflows; uses OAuth 2.0 Client Credentials Grant.
-- aid: bringg:bringg-fleet-partners-api
-  name: Bringg Fleet Partners API
-  tags:
-  - Fleet Partners
-  - Self-Integrated Fleets
-  - Carrier Integration
-  - Quotes
-  - Webhooks
-  humanURL: https://developers.bringg.com/reference/overview-1
-  baseURL: https://app.bringg.com
-  properties:
-  - url: https://developers.bringg.com/reference/overview-1
-    type: Documentation
-  - url: https://developers.bringg.com/reference/how-to-get-started
-    type: GettingStarted
-  - url: https://developers.bringg.com/reference/getting-certified
-    type: Documentation
-  - url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
-    type: Documentation
-  - url: https://developers.bringg.com/reference/webhooks
-    type: Documentation
-  - url: https://developers.bringg.com/reference/webhooks-index
-    type: Documentation
-  - url: openapi/bringg-fleet-partners-api-openapi.yml
-    type: OpenAPI
-  - url: asyncapi/bringg-webhooks-asyncapi.yml
-    type: AsyncAPI
-  description: Integration surface for delivery providers and self-integrated fleets connecting to the Bringg Delivery Hub. Partners host webhook endpoints Bringg calls (Delivery Created, Get Quote, Delivery Updated, Delivery Cancelled, Merchant Registered, Return Delivery Created) and expose endpoints for order acceptance, status updates, driver location, and proof of delivery. Used by 250+ third-party carriers and crowdsourced fleets in the Bringg Carrier Network.
+  - aid: bringg:bringg-delivery-hub-api
+    name: Bringg Delivery Hub API
+    tags:
+      - Last-Mile Delivery
+      - Orders
+      - Dispatch
+      - Routing
+      - Service Areas
+      - Service Plans
+      - Quotes
+      - Inventory
+      - Analytics
+    humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+    baseURL: https://us2-admin-api.bringg.com
+    properties:
+      - url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+        type: Documentation
+      - url: https://developers.bringg.com/docs/overview
+        type: Documentation
+      - url: https://developers.bringg.com/docs/rest
+        type: Documentation
+      - url: https://developers.bringg.com/docs/bringg-api-access-management
+        type: Authentication
+      - url: https://developers.bringg.com/docs/oauth-20-urls
+        type: Authentication
+      - url: openapi/bringg-delivery-hub-api-openapi.yml
+        type: OpenAPI
+      - url: json-schema/bringg-order-schema.json
+        type: JSONSchema
+      - url: json-schema/bringg-customer-schema.json
+        type: JSONSchema
+      - url: json-schema/bringg-waypoint-schema.json
+        type: JSONSchema
+      - url: json-schema/bringg-run-schema.json
+        type: JSONSchema
+      - url: json-structure/bringg-order-structure.json
+        type: JSONStructure
+      - url: json-ld/bringg-context.jsonld
+        type: JSONLD
+      - url: examples/bringg-create-task-example.json
+        type: Example
+    description: >-
+      Bringg's REST orchestration API for the Delivery Hub — create and manage orders (tasks), runs (routes), customers,
+      teams, service areas, service plans, planned delivery windows (delivery slots), exclusion windows (blackouts),
+      parking spots, packages, inventory, floating inventory, recurring orders, delivery blocks, vehicles, and analytics
+      reports. All endpoints use OAuth 2.0 Client Credentials Grant against region-specific GCP base URLs (US2/US3/US4,
+      EU2/EU3).
+  - aid: bringg:bringg-drivers-shifts-api
+    name: Bringg Drivers And Shifts API
+    tags:
+      - Drivers
+      - Shifts
+      - Users
+      - Delivery Blocks
+      - Vehicles
+      - Fleet
+    humanURL: https://developers.bringg.com/reference/driver-shifts
+    baseURL: https://us2-admin-api.bringg.com
+    properties:
+      - url: https://developers.bringg.com/reference/driver-shifts
+        type: Documentation
+      - url: https://developers.bringg.com/reference/users-3
+        type: Documentation
+      - url: https://developers.bringg.com/reference/vehicles
+        type: Documentation
+      - url: https://developers.bringg.com/reference/delivery-blocks
+        type: Documentation
+      - url: openapi/bringg-drivers-shifts-api-openapi.yml
+        type: OpenAPI
+      - url: json-schema/bringg-driver-schema.json
+        type: JSONSchema
+    description: >-
+      Manage Bringg drivers, user roles, shifts, real-time availability, driver location updates, delivery blocks (shift
+      slots), QR-code-based login, and vehicles with vehicle profiles. Backs the Bringg Driver App and dispatcher
+      workflows; uses OAuth 2.0 Client Credentials Grant.
+  - aid: bringg:bringg-fleet-partners-api
+    name: Bringg Fleet Partners API
+    tags:
+      - Fleet Partners
+      - Self-Integrated Fleets
+      - Carrier Integration
+      - Quotes
+      - Webhooks
+    humanURL: https://developers.bringg.com/reference/overview-1
+    baseURL: https://app.bringg.com
+    properties:
+      - url: https://developers.bringg.com/reference/overview-1
+        type: Documentation
+      - url: https://developers.bringg.com/reference/how-to-get-started
+        type: GettingStarted
+      - url: https://developers.bringg.com/reference/getting-certified
+        type: Documentation
+      - url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+        type: Documentation
+      - url: https://developers.bringg.com/reference/webhooks
+        type: Documentation
+      - url: https://developers.bringg.com/reference/webhooks-index
+        type: Documentation
+      - url: openapi/bringg-fleet-partners-api-openapi.yml
+        type: OpenAPI
+      - url: asyncapi/bringg-webhooks-asyncapi.yml
+        type: AsyncAPI
+    description: >-
+      Integration surface for delivery providers and self-integrated fleets connecting to the Bringg Delivery Hub.
+      Partners host webhook endpoints Bringg calls (Delivery Created, Get Quote, Delivery Updated, Delivery Cancelled,
+      Merchant Registered, Return Delivery Created) and expose endpoints for order acceptance, status updates, driver
+      location, and proof of delivery. Used by 250+ third-party carriers and crowdsourced fleets in the Bringg Carrier
+      Network.
 name: Bringg
 tags:
-- Last-Mile Delivery
-- Delivery Orchestration
-- Fulfillment
-- Logistics
-- Retail
-- Dispatch
-- Routing
-- Driver App
-- Carrier Network
-- Fleet Management
-- Supply Chain
-- E-commerce
-- Same-Day Delivery
-- Curbside Pickup
-- Returns
+  - Last-Mile Delivery
+  - Delivery Orchestration
+  - Fulfillment
+  - Logistics
+  - Retail
+  - Dispatch
+  - Routing
+  - Driver App
+  - Carrier Network
+  - Fleet Management
+  - Supply Chain
+  - E-commerce
+  - Same-Day Delivery
+  - Curbside Pickup
+  - Returns
 kind: contract
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
-- type: Portal
-  url: https://www.bringg.com
-- type: Documentation
-  url: https://developers.bringg.com
-- type: Documentation
-  url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
-  name: Bringg API Reference
-- type: Documentation
-  url: https://developers.bringg.com/v2.0/docs/overview
-  name: Bringg API Documentation (legacy v2.0)
-- type: GettingStarted
-  url: https://developers.bringg.com/docs/overview
-- type: Authentication
-  url: https://developers.bringg.com/docs/bringg-api-access-management
-- type: Authentication
-  url: https://developers.bringg.com/docs/oauth-20-urls
-- type: Errors
-  url: https://developers.bringg.com/docs/errors
-- type: Webhooks
-  url: https://developers.bringg.com/docs/bringg-webhooks
-- type: Webhooks
-  url: https://developers.bringg.com/reference/webhooks-index
-- type: Documentation
-  url: https://developers.bringg.com/docs/webhook-authentication-methods
-  name: Webhook Authentication Methods
-- type: Documentation
-  url: https://developers.bringg.com/docs/data-formatting
-  name: Data Formatting
-- type: Documentation
-  url: https://developers.bringg.com/docs/bringg-system-requirements
-  name: Bringg Device Requirements
-- type: ChangeLog
-  url: https://developers.bringg.com/reference/changelog
-- type: StatusPage
-  url: https://status.bringg.com
-- type: TermsOfService
-  url: https://developers.bringg.com/reference/terms-of-service
-- type: KnowledgeBase
-  url: https://help.bringg.com
-- type: Blog
-  url: https://www.bringg.com/resources/blog
-- type: Portal
-  url: https://www.bringg.com/platform/
-  name: Bringg Platform
-- type: Portal
-  url: https://www.bringg.com/carrier-network/
-  name: Bringg Carrier Network
-- type: Portal
-  url: https://www.bringg.com/about/
-  name: About Bringg
-- type: SDK
-  url: https://developers.bringg.com/docs/dashboard-sdk-resources
-  name: Bringg Dispatcher SDK (JavaScript)
-- type: SDK
-  url: https://github.com/bringg/Bringg-iOS-DriverSDK
-  name: Bringg iOS Driver SDK
-- type: GitHubOrganization
-  url: https://github.com/bringg
-- type: LinkedIn
-  url: https://www.linkedin.com/company/bringg
-- type: Twitter
-  url: https://twitter.com/bringg
-- type: SignUp
-  url: https://www.bringg.com/contact-us/
-- type: Plans
-  url: plans/bringg-plans-pricing.yml
-- type: RateLimits
-  url: rate-limits/bringg-rate-limits.yml
-- type: FinOps
-  url: finops/bringg-finops.yml
-- type: Features
-  data:
-  - Last-mile delivery orchestration across own fleet and third-party fleets in a single platform
-  - Modular product suite — Shopping Experience, Plan, Dispatch, Drive, Delivery Experience
-  - Bringg Connect carrier network with 250+ third-party, crowdsourced, and autonomous carriers across 70+ countries
-  - Automation Center for no-code workflow automation
-  - Intelligence module for dashboards, reporting, and cost/profit/driver-performance insights
-  - REST APIs for orders, runs, drivers, vehicles, service areas, service plans, planned delivery windows, blackouts, packages, inventory, floating inventory
-  - 50+ outbound webhook event types covering order, driver, run, customer, waypoint, and inventory lifecycle
-  - OAuth 2.0 Client Credentials Grant authentication with configurable token TTLs (default 30 min write, 4 hr read)
-  - Regional deployments on Google Cloud Platform (US2, US3, US4, EU2, EU3) with per-region status and billing
-  - JSONL bulk upload pipeline (prepare/upload/process/results) for large data loads
-  - Bringg Driver App (iOS, Android) with offline support, geofence-powered visibility, and configurable workflows
-  - Bringg Dispatcher web app and JavaScript SDK for embedded dispatch UX
-  - Bringg Services — tokenless, GUID-based URLs for limited merchant operations without auth
-  - Quotes and Availability API for multi-carrier quoting before order placement
-  - Recurring orders, delivery blocks, vehicle profiles, parking spots, and service-area polygons
-  - Statuspage at status.bringg.com with per-region component status across 13 components (Auth, API, Customer Experience, Delivery Partners, Dispatch, Driver App, Geolocation, Infrastructure, Inventory, Notifications, Planning, Reporting, Billing)
-  - Used by enterprise retailers including Best Buy, AutoZone, ASDA, Wegmans, FedEx Office, Metro, uBreakiFix, and B&Q
-  - 800+ customers and 200 million annual deliveries
-  sources:
-  - https://www.bringg.com/
-  - https://www.bringg.com/platform/
-  - https://developers.bringg.com/
-  - https://developers.bringg.com/llms.txt
-  - https://developers.bringg.com/docs/oauth-20-urls
-  - https://status.bringg.com/
-  updated: '2026-05-25'
-- type: Modules
-  data:
-  - name: Shopping Experience
-    description: Optimize delivery options during checkout with dynamic slots and on-demand options.
-  - name: Plan
-    description: Resource management and route optimization across fleets, including continuous route optimization and carrier selection.
-  - name: Dispatch
-    description: Single-pane monitoring of order progress with real-time fleet visibility, exception handling, and automated dispatch.
-  - name: Drive
-    description: iOS and Android driver applications with customized workflows, task management, and geofence-powered delivery visibility.
-  - name: Delivery Experience
-    description: Customer-facing notifications, tracking, ETAs, and branded communication throughout the delivery process.
-  - name: Automation Center
-    description: No-code workflow automation across the Bringg platform.
-  - name: Intelligence
-    description: Dashboards, reporting, and insights on cost, profit, and driver performance.
-  - name: Connect
-    description: REST APIs, webhooks, and integrations with OMS, ERP, eCommerce, WMS, and TMS systems plus the Bringg Carrier Network.
-- type: Solutions
-  data:
-  - name: Retail Same-Day Delivery
-    description: Enable same-day, scheduled, and curbside fulfillment for enterprise retailers.
-  - name: Returns
-    description: Orchestrate return pickups and reverse logistics.
-  - name: Carrier Network Access
-    description: Plug into 250+ pre-integrated third-party fleets through a single integration.
-  - name: Driver Productivity
-    description: Equip drivers with the Bringg Driver App, optimized routes, and geofence-aware workflows.
-- type: Integrations
-  data:
-  - category: Carriers and crowdsourced fleets
-    examples: [DoorDash, Postmates, Uber, Lyft, Glovo, Bringg Carrier Network 250+]
-  - category: OMS / ERP
-    description: REST APIs and webhooks for OMS/ERP synchronization.
-  - category: eCommerce
-    description: Order intake and shopping-experience integration.
-  - category: WMS / TMS
-    description: Warehouse and transportation system integration.
+  - type: Portal
+    url: https://www.bringg.com
+  - type: Documentation
+    url: https://developers.bringg.com
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+    name: Bringg API Reference
+  - type: Documentation
+    url: https://developers.bringg.com/v2.0/docs/overview
+    name: Bringg API Documentation (legacy v2.0)
+  - type: GettingStarted
+    url: https://developers.bringg.com/docs/overview
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: Errors
+    url: https://developers.bringg.com/docs/errors
+  - type: Webhooks
+    url: https://developers.bringg.com/docs/bringg-webhooks
+  - type: Webhooks
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: Documentation
+    url: https://developers.bringg.com/docs/webhook-authentication-methods
+    name: Webhook Authentication Methods
+  - type: Documentation
+    url: https://developers.bringg.com/docs/data-formatting
+    name: Data Formatting
+  - type: Documentation
+    url: https://developers.bringg.com/docs/bringg-system-requirements
+    name: Bringg Device Requirements
+  - type: ChangeLog
+    url: https://developers.bringg.com/reference/changelog
+  - type: StatusPage
+    url: https://status.bringg.com
+  - type: TermsOfService
+    url: https://developers.bringg.com/reference/terms-of-service
+  - type: KnowledgeBase
+    url: https://help.bringg.com
+  - type: Blog
+    url: https://www.bringg.com/resources/blog
+  - type: Portal
+    url: https://www.bringg.com/platform/
+    name: Bringg Platform
+  - type: Portal
+    url: https://www.bringg.com/carrier-network/
+    name: Bringg Carrier Network
+  - type: Portal
+    url: https://www.bringg.com/about/
+    name: About Bringg
+  - type: SDK
+    url: https://developers.bringg.com/docs/dashboard-sdk-resources
+    name: Bringg Dispatcher SDK (JavaScript)
+  - type: SDK
+    url: https://github.com/bringg/Bringg-iOS-DriverSDK
+    name: Bringg iOS Driver SDK
+  - type: GitHubOrganization
+    url: https://github.com/bringg
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/bringg
+  - type: Twitter
+    url: https://twitter.com/bringg
+  - type: SignUp
+    url: https://www.bringg.com/contact-us/
+  - type: Plans
+    url: plans/bringg-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/bringg-rate-limits.yml
+  - type: FinOps
+    url: finops/bringg-finops.yml
+  - type: Features
+    data:
+      - Last-mile delivery orchestration across own fleet and third-party fleets in a single platform
+      - Modular product suite — Shopping Experience, Plan, Dispatch, Drive, Delivery Experience
+      - Bringg Connect carrier network with 250+ third-party, crowdsourced, and autonomous carriers across 70+ countries
+      - Automation Center for no-code workflow automation
+      - Intelligence module for dashboards, reporting, and cost/profit/driver-performance insights
+      - >-
+        REST APIs for orders, runs, drivers, vehicles, service areas, service plans, planned delivery windows,
+        blackouts, packages, inventory, floating inventory
+      - 50+ outbound webhook event types covering order, driver, run, customer, waypoint, and inventory lifecycle
+      - OAuth 2.0 Client Credentials Grant authentication with configurable token TTLs (default 30 min write, 4 hr read)
+      - Regional deployments on Google Cloud Platform (US2, US3, US4, EU2, EU3) with per-region status and billing
+      - JSONL bulk upload pipeline (prepare/upload/process/results) for large data loads
+      - Bringg Driver App (iOS, Android) with offline support, geofence-powered visibility, and configurable workflows
+      - Bringg Dispatcher web app and JavaScript SDK for embedded dispatch UX
+      - Bringg Services — tokenless, GUID-based URLs for limited merchant operations without auth
+      - Quotes and Availability API for multi-carrier quoting before order placement
+      - Recurring orders, delivery blocks, vehicle profiles, parking spots, and service-area polygons
+      - >-
+        Statuspage at status.bringg.com with per-region component status across 13 components (Auth, API, Customer
+        Experience, Delivery Partners, Dispatch, Driver App, Geolocation, Infrastructure, Inventory, Notifications,
+        Planning, Reporting, Billing)
+      - >-
+        Used by enterprise retailers including Best Buy, AutoZone, ASDA, Wegmans, FedEx Office, Metro, uBreakiFix, and
+        B&Q
+      - 800+ customers and 200 million annual deliveries
+    sources:
+      - https://www.bringg.com/
+      - https://www.bringg.com/platform/
+      - https://developers.bringg.com/
+      - https://developers.bringg.com/llms.txt
+      - https://developers.bringg.com/docs/oauth-20-urls
+      - https://status.bringg.com/
+    updated: '2026-05-25'
+  - type: Modules
+    data:
+      - name: Shopping Experience
+        description: Optimize delivery options during checkout with dynamic slots and on-demand options.
+      - name: Plan
+        description: >-
+          Resource management and route optimization across fleets, including continuous route optimization and carrier
+          selection.
+      - name: Dispatch
+        description: >-
+          Single-pane monitoring of order progress with real-time fleet visibility, exception handling, and automated
+          dispatch.
+      - name: Drive
+        description: >-
+          iOS and Android driver applications with customized workflows, task management, and geofence-powered delivery
+          visibility.
+      - name: Delivery Experience
+        description: Customer-facing notifications, tracking, ETAs, and branded communication throughout the delivery process.
+      - name: Automation Center
+        description: No-code workflow automation across the Bringg platform.
+      - name: Intelligence
+        description: Dashboards, reporting, and insights on cost, profit, and driver performance.
+      - name: Connect
+        description: >-
+          REST APIs, webhooks, and integrations with OMS, ERP, eCommerce, WMS, and TMS systems plus the Bringg Carrier
+          Network.
+  - type: Solutions
+    data:
+      - name: Retail Same-Day Delivery
+        description: Enable same-day, scheduled, and curbside fulfillment for enterprise retailers.
+      - name: Returns
+        description: Orchestrate return pickups and reverse logistics.
+      - name: Carrier Network Access
+        description: Plug into 250+ pre-integrated third-party fleets through a single integration.
+      - name: Driver Productivity
+        description: Equip drivers with the Bringg Driver App, optimized routes, and geofence-aware workflows.
+  - type: Integrations
+    data:
+      - category: Carriers and crowdsourced fleets
+        examples:
+          - DoorDash
+          - Postmates
+          - Uber
+          - Lyft
+          - Glovo
+          - Bringg Carrier Network 250+
+      - category: OMS / ERP
+        description: REST APIs and webhooks for OMS/ERP synchronization.
+      - category: eCommerce
+        description: Order intake and shopping-experience integration.
+      - category: WMS / TMS
+        description: Warehouse and transportation system integration.
 created: '2026-05-25T00:00:00.000Z'
 modified: '2026-05-25'
 position: Consuming
-description: Bringg is a last-mile delivery and fulfillment orchestration platform headquartered in Tel Aviv (founded 2013, CEO Guy Bloch). The Bringg platform combines modular software (Shopping Experience, Plan, Dispatch, Drive, Delivery Experience, Automation Center, Intelligence, Connect) with the Bringg Carrier Network — 250+ pre-integrated third-party, crowdsourced, and autonomous carriers across 70+ countries — to give enterprise retailers and logistics providers a single integration point for orchestrating own-fleet and partner-fleet deliveries. Bringg's developer surface exposes a REST Delivery Hub API for orders/runs/customers/teams/service areas/service plans/delivery slots/blackouts/inventory/packages, a Drivers & Shifts API for users/shifts/delivery-blocks/vehicles, a Fleet Partners API for self-integrated carriers, 50+ outbound webhook event types, and JavaScript/iOS/Android SDKs powering the Dispatcher and Driver apps. All HTTP APIs use OAuth 2.0 Client Credentials Grant against region-specific GCP base URLs (US2/US3/US4, EU2/EU3) — visible on status.bringg.com. Bringg counts 800+ customers including Best Buy, AutoZone, ASDA, Wegmans, FedEx Office, Metro, uBreakiFix, and B&Q, and processes 200 million annual deliveries.
+description: >-
+  Bringg is a last-mile delivery and fulfillment orchestration platform headquartered in Tel Aviv (founded 2013, CEO Guy
+  Bloch). The Bringg platform combines modular software (Shopping Experience, Plan, Dispatch, Drive, Delivery
+  Experience, Automation Center, Intelligence, Connect) with the Bringg Carrier Network — 250+ pre-integrated
+  third-party, crowdsourced, and autonomous carriers across 70+ countries — to give enterprise retailers and logistics
+  providers a single integration point for orchestrating own-fleet and partner-fleet deliveries. Bringg's developer
+  surface exposes a REST Delivery Hub API for orders/runs/customers/teams/service areas/service plans/delivery
+  slots/blackouts/inventory/packages, a Drivers & Shifts API for users/shifts/delivery-blocks/vehicles, a Fleet Partners
+  API for self-integrated carriers, 50+ outbound webhook event types, and JavaScript/iOS/Android SDKs powering the
+  Dispatcher and Driver apps. All HTTP APIs use OAuth 2.0 Client Credentials Grant against region-specific GCP base URLs
+  (US2/US3/US4, EU2/EU3) — visible on status.bringg.com. Bringg counts 800+ customers including Best Buy, AutoZone,
+  ASDA, Wegmans, FedEx Office, Metro, uBreakiFix, and B&Q, and processes 200 million annual deliveries.
 maintainers:
-- FN: Kin Lane
-  email: info@apievangelist.com
-  X: apievangelist
-  url: https://apievangelist.com
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    X: apievangelist
+    url: https://apievangelist.com
 specificationVersion: '0.16'
