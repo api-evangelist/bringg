@@ -1,0 +1,956 @@
+"""
+Bringg Delivery Hub GraphQL Schema
+Conceptual schema derived from the Bringg REST API surface:
+Delivery Hub API, Drivers & Shifts API, and Fleet Partners API.
+"""
+
+# ─── Scalars ───────────────────────────────────────────────────────────────────
+
+scalar DateTime
+scalar JSON
+scalar Float
+scalar ID
+
+# ─── Enums ─────────────────────────────────────────────────────────────────────
+
+enum OrderStatus {
+  PENDING
+  ASSIGNED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  FAILED
+}
+
+enum OrderType {
+  DELIVERY
+  PICKUP
+  RETURN
+  EXCHANGE
+  SERVICE
+}
+
+enum OrderPriority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}
+
+enum DeliveryStatus {
+  CREATED
+  SCHEDULED
+  IN_TRANSIT
+  OUT_FOR_DELIVERY
+  DELIVERED
+  ATTEMPTED
+  FAILED
+  RETURNED
+  CANCELLED
+}
+
+enum DeliveryType {
+  SAME_DAY
+  NEXT_DAY
+  SCHEDULED
+  ON_DEMAND
+  CURBSIDE
+  RETURNS
+}
+
+enum DriverStatus {
+  OFFLINE
+  AVAILABLE
+  ON_BREAK
+  ON_DUTY
+  EN_ROUTE
+  UNAVAILABLE
+}
+
+enum TaskStatus {
+  NOT_ACCEPTED
+  ACCEPTED
+  CHECKED_IN
+  DONE
+  CANCELLED
+  FAILED
+}
+
+enum TaskType {
+  DELIVERY
+  PICKUP
+  RETURN
+  SERVICE
+}
+
+enum WayPointType {
+  PICKUP
+  DROPOFF
+  STOP
+}
+
+enum VehicleType {
+  CAR
+  VAN
+  TRUCK
+  MOTORCYCLE
+  BICYCLE
+  CARGO_BIKE
+  AUTONOMOUS
+}
+
+enum ZoneType {
+  SERVICE_AREA
+  EXCLUSION_ZONE
+  DEPOT
+  HUB
+}
+
+enum WebhookEvent {
+  ORDER_CREATED
+  ORDER_UPDATED
+  ORDER_CANCELLED
+  ORDER_COMPLETED
+  DELIVERY_CREATED
+  DELIVERY_UPDATED
+  DELIVERY_CANCELLED
+  DELIVERY_COMPLETED
+  DRIVER_ASSIGNED
+  DRIVER_LOCATION_UPDATED
+  DRIVER_STATUS_CHANGED
+  TASK_STARTED
+  TASK_COMPLETED
+  TASK_FAILED
+  ROUTE_OPTIMIZED
+  WAYPOINT_ARRIVED
+  WAYPOINT_DEPARTED
+  RATING_SUBMITTED
+  TIP_ADDED
+  FLEET_UPDATED
+  INVENTORY_UPDATED
+}
+
+enum RouteOptimization {
+  NONE
+  TIME
+  DISTANCE
+  COST
+  BALANCED
+}
+
+# ─── Core Order Types ───────────────────────────────────────────────────────────
+
+type Order {
+  id: ID!
+  externalId: String
+  details: OrderDetails
+  status: OrderStatus!
+  type: OrderType!
+  priority: OrderPriority
+  items: OrderItems
+  customer: Customer
+  deliveries: [Delivery]
+  tasks: [Task]
+  createdAt: DateTime!
+  updatedAt: DateTime
+  scheduledAt: DateTime
+  completedAt: DateTime
+  notes: String
+  tags: [String]
+  metadata: JSON
+}
+
+type OrderDetails {
+  orderId: ID!
+  merchantId: ID
+  teamId: ID
+  serviceAreaId: ID
+  servicePlanId: ID
+  deliveryWindow: DeliveryWindow
+  pickupDetails: PickupDetails
+  specialInstructions: String
+  requiresSignature: Boolean
+  requiresProofOfDelivery: Boolean
+  totalValue: Float
+  currency: String
+  weight: Float
+  volume: Float
+  packageCount: Int
+}
+
+type OrderItems {
+  orderId: ID!
+  lineItems: [OrderLineItem]
+  totalQuantity: Int
+  totalWeight: Float
+  totalVolume: Float
+}
+
+type OrderLineItem {
+  id: ID!
+  orderId: ID!
+  itemDetails: ItemDetails
+  quantity: Int!
+  unitPrice: Float
+  totalPrice: Float
+  barcode: String
+  sku: String
+  notes: String
+}
+
+type ItemDetails {
+  itemId: ID!
+  name: String!
+  description: String
+  category: String
+  weight: Float
+  dimensions: JSON
+  imageUrl: String
+  requiresRefrigeration: Boolean
+  isHazardous: Boolean
+  customAttributes: JSON
+}
+
+# ─── Delivery Types ─────────────────────────────────────────────────────────────
+
+type Delivery {
+  id: ID!
+  orderId: ID!
+  details: DeliveryDetails
+  status: DeliveryStatus!
+  type: DeliveryType!
+  driver: Driver
+  vehicle: Vehicle
+  waypoints: [WayPoint]
+  tracking: Tracking
+  rating: Rating
+  tip: Tip
+  createdAt: DateTime!
+  updatedAt: DateTime
+  scheduledAt: DateTime
+  completedAt: DateTime
+}
+
+type DeliveryDetails {
+  deliveryId: ID!
+  externalId: String
+  merchantId: ID
+  teamId: ID
+  deliveryWindow: DeliveryWindow
+  pickupDetails: PickupDetails
+  dropoffAddress: Address
+  dropoffGeoLocation: GeoLocation
+  estimatedDuration: Int
+  actualDuration: Int
+  distanceKm: Float
+  proofOfDeliveryUrl: String
+  signatureUrl: String
+  notes: String
+}
+
+type DeliveryWindow {
+  id: ID!
+  startTime: DateTime!
+  endTime: DateTime!
+  label: String
+  isFlexible: Boolean
+  bufferMinutes: Int
+}
+
+# ─── Pickup Types ────────────────────────────────────────────────────────────────
+
+type Pickup {
+  id: ID!
+  orderId: ID!
+  details: PickupDetails
+  address: Address
+  geoLocation: GeoLocation
+  scheduledAt: DateTime
+  completedAt: DateTime
+  status: TaskStatus
+  notes: String
+}
+
+type PickupDetails {
+  pickupId: ID!
+  contactName: String
+  contactPhone: String
+  address: Address
+  geoLocation: GeoLocation
+  accessCode: String
+  parkingInstructions: String
+  estimatedReadyTime: DateTime
+  requiresPackageScan: Boolean
+}
+
+# ─── Driver Types ────────────────────────────────────────────────────────────────
+
+type Driver {
+  id: ID!
+  details: DriverDetails
+  status: DriverStatus
+  location: DriverLocation
+  capacity: DriverCapacity
+  assignedTasks: [Task]
+  currentRoute: Route
+  vehicle: Vehicle
+  rating: Float
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+type DriverDetails {
+  driverId: ID!
+  externalId: String
+  firstName: String!
+  lastName: String!
+  email: String
+  phone: String!
+  teamId: ID
+  licenseNumber: String
+  licenseExpiry: DateTime
+  profileImageUrl: String
+  isActive: Boolean
+  allowedVehicleTypes: [VehicleType]
+  languageCode: String
+  appVersion: String
+  deviceType: String
+}
+
+type DriverStatus {
+  driverId: ID!
+  status: DriverStatus!
+  lastUpdatedAt: DateTime!
+  shiftStartTime: DateTime
+  shiftEndTime: DateTime
+  isOnBreak: Boolean
+  breakStartTime: DateTime
+  currentTaskId: ID
+}
+
+type DriverLocation {
+  driverId: ID!
+  latitude: Float!
+  longitude: Float!
+  accuracy: Float
+  heading: Float
+  speed: Float
+  altitude: Float
+  timestamp: DateTime!
+  address: String
+}
+
+type DriverCapacity {
+  driverId: ID!
+  maxWeight: Float
+  maxVolume: Float
+  maxItems: Int
+  currentWeight: Float
+  currentVolume: Float
+  currentItems: Int
+  availableCapacityPct: Float
+}
+
+# ─── Task Types ──────────────────────────────────────────────────────────────────
+
+type Task {
+  id: ID!
+  orderId: ID!
+  details: TaskDetails
+  type: TaskType!
+  status: TaskStatus!
+  driver: Driver
+  waypoint: WayPoint
+  timestamps: TaskTimestamp
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+type TaskDetails {
+  taskId: ID!
+  externalId: String
+  merchantId: ID
+  teamId: ID
+  priority: OrderPriority
+  notes: String
+  requiresSignature: Boolean
+  requiresPhoto: Boolean
+  requiresBarcodeScan: Boolean
+  customFields: JSON
+}
+
+type TaskType {
+  value: String!
+  label: String
+  description: String
+}
+
+type TaskStatus {
+  taskId: ID!
+  status: TaskStatus!
+  reason: String
+  updatedAt: DateTime!
+  updatedBy: String
+}
+
+type TaskTimestamp {
+  taskId: ID!
+  createdAt: DateTime
+  acceptedAt: DateTime
+  startedAt: DateTime
+  arrivedAt: DateTime
+  completedAt: DateTime
+  cancelledAt: DateTime
+  failedAt: DateTime
+}
+
+# ─── Route Types ─────────────────────────────────────────────────────────────────
+
+type Route {
+  id: ID!
+  details: RouteDetails
+  optimization: RouteOptimization
+  stops: [RouteStop]
+  etas: RouteETAs
+  driver: Driver
+  vehicle: Vehicle
+  createdAt: DateTime!
+  updatedAt: DateTime
+  startedAt: DateTime
+  completedAt: DateTime
+  totalDistanceKm: Float
+  totalDurationMin: Int
+}
+
+type RouteDetails {
+  routeId: ID!
+  externalId: String
+  merchantId: ID
+  teamId: ID
+  name: String
+  startAddress: Address
+  endAddress: Address
+  plannedStartTime: DateTime
+  plannedEndTime: DateTime
+  actualStartTime: DateTime
+  actualEndTime: DateTime
+  notes: String
+  tags: [String]
+}
+
+type RouteStop {
+  id: ID!
+  routeId: ID!
+  sequence: Int!
+  waypoint: WayPoint
+  task: Task
+  plannedArrival: DateTime
+  actualArrival: DateTime
+  plannedDeparture: DateTime
+  actualDeparture: DateTime
+  dwellTimeMin: Int
+  status: TaskStatus
+}
+
+type RouteETAs {
+  routeId: ID!
+  calculatedAt: DateTime!
+  stops: [RouteStopETA]
+  totalRemainingMin: Int
+  lastUpdated: DateTime
+}
+
+type RouteStopETA {
+  stopId: ID!
+  sequence: Int!
+  estimatedArrival: DateTime!
+  lowerBound: DateTime
+  upperBound: DateTime
+  confidence: Float
+}
+
+# ─── WayPoint Types ───────────────────────────────────────────────────────────────
+
+type WayPoint {
+  id: ID!
+  details: WayPointDetails
+  type: WayPointType!
+  address: Address
+  geoLocation: GeoLocation
+  order: Order
+  task: Task
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+type WayPointDetails {
+  waypointId: ID!
+  externalId: String
+  contactName: String
+  contactPhone: String
+  accessCode: String
+  parkingSpotId: ID
+  notes: String
+  requiresSignature: Boolean
+  requiresPhoto: Boolean
+  proofOfDeliveryUrl: String
+  signatureImageUrl: String
+  customFields: JSON
+}
+
+# ─── Fleet Types ──────────────────────────────────────────────────────────────────
+
+type Fleet {
+  id: ID!
+  details: FleetDetails
+  vehicles: [Vehicle]
+  drivers: [Driver]
+  zones: [Zone]
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+type FleetDetails {
+  fleetId: ID!
+  externalId: String
+  name: String!
+  merchantId: ID
+  type: String
+  region: String
+  isActive: Boolean
+  contactEmail: String
+  contactPhone: String
+  webhookUrl: String
+  apiVersion: String
+  capabilities: [String]
+  coverageCountries: [String]
+}
+
+# ─── Vehicle Types ─────────────────────────────────────────────────────────────────
+
+type Vehicle {
+  id: ID!
+  details: VehicleDetails
+  type: VehicleType!
+  capacity: VehicleCapacity
+  driver: Driver
+  isActive: Boolean
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+type VehicleDetails {
+  vehicleId: ID!
+  externalId: String
+  name: String
+  make: String
+  model: String
+  year: Int
+  licensePlate: String!
+  color: String
+  teamId: ID
+  profileId: ID
+  fuelType: String
+  isElectric: Boolean
+  hasRefrigeration: Boolean
+  maxPayloadKg: Float
+  notes: String
+  customAttributes: JSON
+}
+
+type VehicleCapacity {
+  vehicleId: ID!
+  maxWeightKg: Float!
+  maxVolumeM3: Float
+  maxItems: Int
+  maxParcels: Int
+  currentWeightKg: Float
+  currentVolumeM3: Float
+  utilizationPct: Float
+}
+
+# ─── Dispatcher Types ─────────────────────────────────────────────────────────────
+
+type Dispatcher {
+  id: ID!
+  details: DispatcherDetails
+  assignedTeams: [ID]
+  createdAt: DateTime!
+  updatedAt: DateTime
+  isActive: Boolean
+}
+
+type DispatcherDetails {
+  dispatcherId: ID!
+  externalId: String
+  firstName: String!
+  lastName: String!
+  email: String!
+  phone: String
+  role: String
+  permissions: [String]
+  language: String
+  timezone: String
+}
+
+# ─── Customer Types ───────────────────────────────────────────────────────────────
+
+type Customer {
+  id: ID!
+  details: CustomerDetails
+  address: CustomerAddress
+  orders: [Order]
+  rating: Float
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+type CustomerDetails {
+  customerId: ID!
+  externalId: String
+  firstName: String
+  lastName: String
+  email: String
+  phone: String!
+  merchantId: ID
+  preferredLanguage: String
+  notes: String
+  tags: [String]
+  optInSms: Boolean
+  optInEmail: Boolean
+  customFields: JSON
+}
+
+type CustomerAddress {
+  customerId: ID!
+  addresses: [Address]
+  defaultAddressId: ID
+}
+
+# ─── Address & Geo Types ──────────────────────────────────────────────────────────
+
+type Address {
+  id: ID
+  street: String
+  street2: String
+  city: String!
+  state: String
+  postalCode: String
+  country: String!
+  formattedAddress: String
+  geoLocation: GeoLocation
+  isVerified: Boolean
+  placeId: String
+}
+
+type GeoLocation {
+  latitude: Float!
+  longitude: Float!
+  accuracy: Float
+  altitude: Float
+  geofenceRadius: Float
+}
+
+# ─── Zone Types ────────────────────────────────────────────────────────────────────
+
+type Zone {
+  id: ID!
+  details: ZoneDetails
+  type: ZoneType!
+  availability: ZoneAvailability
+  polygon: [[Float]]
+  center: GeoLocation
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+type ZoneDetails {
+  zoneId: ID!
+  externalId: String
+  name: String!
+  merchantId: ID
+  teamId: ID
+  description: String
+  color: String
+  isActive: Boolean
+  tags: [String]
+  customAttributes: JSON
+}
+
+type ZoneAvailability {
+  zoneId: ID!
+  isAvailable: Boolean!
+  availableDays: [String]
+  availableHoursStart: String
+  availableHoursEnd: String
+  blackoutDates: [DateTime]
+  maxDailyOrders: Int
+  currentDailyOrders: Int
+}
+
+# ─── Rating Types ──────────────────────────────────────────────────────────────────
+
+type Rating {
+  id: ID!
+  details: RatingDetails
+  orderId: ID!
+  deliveryId: ID
+  driverId: ID
+  createdAt: DateTime!
+}
+
+type RatingDetails {
+  ratingId: ID!
+  score: Float!
+  maxScore: Float
+  comment: String
+  categories: JSON
+  isPublic: Boolean
+  respondedAt: DateTime
+  responseComment: String
+}
+
+# ─── Tip Types ─────────────────────────────────────────────────────────────────────
+
+type Tip {
+  id: ID!
+  details: TipDetails
+  orderId: ID!
+  deliveryId: ID
+  driverId: ID!
+  createdAt: DateTime!
+}
+
+type TipDetails {
+  tipId: ID!
+  amount: Float!
+  currency: String!
+  method: String
+  status: String
+  processedAt: DateTime
+  notes: String
+}
+
+# ─── Webhook Types ─────────────────────────────────────────────────────────────────
+
+type Webhook {
+  id: ID!
+  merchantId: ID!
+  url: String!
+  events: [WebhookEvent]!
+  isActive: Boolean!
+  secret: String
+  authMethod: String
+  headers: JSON
+  createdAt: DateTime!
+  updatedAt: DateTime
+  lastTriggeredAt: DateTime
+  failureCount: Int
+}
+
+type WebhookEvent {
+  id: ID!
+  webhookId: ID!
+  event: WebhookEvent!
+  payload: JSON!
+  deliveredAt: DateTime
+  statusCode: Int
+  retryCount: Int
+  nextRetryAt: DateTime
+}
+
+# ─── Tracking Types ────────────────────────────────────────────────────────────────
+
+type Tracking {
+  id: ID!
+  details: TrackingDetails
+  url: TrackingURL
+  delivery: Delivery
+  driver: Driver
+  events: [TrackingEvent]
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+type TrackingDetails {
+  trackingId: ID!
+  orderId: ID!
+  deliveryId: ID
+  trackingNumber: String
+  isPublic: Boolean
+  expiresAt: DateTime
+  customerNotified: Boolean
+  notificationChannels: [String]
+  currentStatus: DeliveryStatus
+  lastEvent: String
+  lastEventAt: DateTime
+}
+
+type TrackingURL {
+  trackingId: ID!
+  publicUrl: String!
+  shortUrl: String
+  qrCodeUrl: String
+  expiresAt: DateTime
+  isPasswordProtected: Boolean
+  brandingMerchantId: ID
+}
+
+type TrackingEvent {
+  id: ID!
+  trackingId: ID!
+  status: DeliveryStatus!
+  description: String
+  location: GeoLocation
+  timestamp: DateTime!
+  isVisible: Boolean
+}
+
+# ─── Auth Types ────────────────────────────────────────────────────────────────────
+
+type APIKey {
+  id: ID!
+  merchantId: ID!
+  name: String
+  prefix: String!
+  scopes: [String]
+  isActive: Boolean!
+  createdAt: DateTime!
+  expiresAt: DateTime
+  lastUsedAt: DateTime
+  environment: String
+}
+
+type Token {
+  accessToken: String!
+  tokenType: String!
+  expiresIn: Int!
+  expiresAt: DateTime!
+  scopes: [String]
+  environment: String
+  region: String
+}
+
+# ─── Query Root ────────────────────────────────────────────────────────────────────
+
+type Query {
+  # Orders
+  order(id: ID!): Order
+  orders(status: OrderStatus, type: OrderType, limit: Int, offset: Int): [Order]
+
+  # Deliveries
+  delivery(id: ID!): Delivery
+  deliveries(status: DeliveryStatus, type: DeliveryType, limit: Int, offset: Int): [Delivery]
+
+  # Drivers
+  driver(id: ID!): Driver
+  drivers(status: DriverStatus, teamId: ID, limit: Int, offset: Int): [Driver]
+
+  # Tasks
+  task(id: ID!): Task
+  tasks(status: TaskStatus, driverId: ID, limit: Int, offset: Int): [Task]
+
+  # Routes
+  route(id: ID!): Route
+  routes(driverId: ID, teamId: ID, limit: Int, offset: Int): [Route]
+
+  # Waypoints
+  waypoint(id: ID!): WayPoint
+  waypoints(orderId: ID, type: WayPointType): [WayPoint]
+
+  # Fleet
+  fleet(id: ID!): Fleet
+  fleets(limit: Int, offset: Int): [Fleet]
+
+  # Vehicles
+  vehicle(id: ID!): Vehicle
+  vehicles(type: VehicleType, teamId: ID, limit: Int, offset: Int): [Vehicle]
+
+  # Dispatchers
+  dispatcher(id: ID!): Dispatcher
+  dispatchers(teamId: ID, limit: Int, offset: Int): [Dispatcher]
+
+  # Customers
+  customer(id: ID!): Customer
+  customers(merchantId: ID, limit: Int, offset: Int): [Customer]
+
+  # Zones
+  zone(id: ID!): Zone
+  zones(type: ZoneType, merchantId: ID, limit: Int, offset: Int): [Zone]
+
+  # Webhooks
+  webhook(id: ID!): Webhook
+  webhooks(merchantId: ID, isActive: Boolean): [Webhook]
+
+  # Tracking
+  tracking(id: ID!): Tracking
+  trackingByOrder(orderId: ID!): Tracking
+}
+
+# ─── Mutation Root ─────────────────────────────────────────────────────────────────
+
+type Mutation {
+  # Orders
+  createOrder(input: JSON!): Order
+  updateOrder(id: ID!, input: JSON!): Order
+  cancelOrder(id: ID!, reason: String): Order
+
+  # Deliveries
+  createDelivery(input: JSON!): Delivery
+  updateDelivery(id: ID!, input: JSON!): Delivery
+  cancelDelivery(id: ID!, reason: String): Delivery
+
+  # Drivers
+  createDriver(input: JSON!): Driver
+  updateDriver(id: ID!, input: JSON!): Driver
+  updateDriverLocation(id: ID!, latitude: Float!, longitude: Float!): DriverLocation
+  updateDriverStatus(id: ID!, status: DriverStatus!): Driver
+
+  # Tasks
+  createTask(input: JSON!): Task
+  updateTask(id: ID!, input: JSON!): Task
+  completeTask(id: ID!, proofOfDelivery: JSON): Task
+  cancelTask(id: ID!, reason: String): Task
+
+  # Routes
+  createRoute(input: JSON!): Route
+  optimizeRoute(id: ID!, strategy: RouteOptimization): Route
+  updateRoute(id: ID!, input: JSON!): Route
+
+  # Vehicles
+  createVehicle(input: JSON!): Vehicle
+  updateVehicle(id: ID!, input: JSON!): Vehicle
+
+  # Customers
+  createCustomer(input: JSON!): Customer
+  updateCustomer(id: ID!, input: JSON!): Customer
+
+  # Zones
+  createZone(input: JSON!): Zone
+  updateZone(id: ID!, input: JSON!): Zone
+
+  # Webhooks
+  createWebhook(input: JSON!): Webhook
+  updateWebhook(id: ID!, input: JSON!): Webhook
+  deleteWebhook(id: ID!): Boolean
+
+  # Ratings & Tips
+  submitRating(orderId: ID!, score: Float!, comment: String): Rating
+  addTip(orderId: ID!, amount: Float!, currency: String!): Tip
+
+  # Auth
+  generateToken(clientId: String!, clientSecret: String!, scope: String): Token
+  revokeToken(accessToken: String!): Boolean
+}
+
+# ─── Subscription Root ─────────────────────────────────────────────────────────────
+
+type Subscription {
+  orderUpdated(orderId: ID!): Order
+  deliveryUpdated(deliveryId: ID!): Delivery
+  driverLocationUpdated(driverId: ID!): DriverLocation
+  driverStatusChanged(driverId: ID!): Driver
+  taskStatusChanged(taskId: ID!): Task
+  routeUpdated(routeId: ID!): Route
+  webhookFired(merchantId: ID!): WebhookEvent
+}
