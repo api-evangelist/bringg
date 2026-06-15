@@ -1,0 +1,1504 @@
+{
+  "item": [
+    {
+      "id": "d8e36dc3-5dba-4ce3-a6f7-834e2bea292a",
+      "name": "Authentication",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b117c99f-4502-46e2-a2e1-7788e7d7454e",
+          "name": "Get Token",
+          "request": {
+            "name": "Get Token",
+            "description": {
+              "content": "Exchange partner credentials for an access token used to call Bringg from the partner side.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "get-token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e55aa192-a517-4a3d-a732-6de0e11b0494",
+              "name": "Token returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "get-token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "afeab2ba-3ded-4ee8-a40a-8ced69ec1060",
+          "name": "Get Merchant Credentials",
+          "request": {
+            "name": "Get Merchant Credentials",
+            "description": {
+              "content": "Retrieve merchant-specific credentials issued by Bringg to the fleet partner.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "merchant-credentials"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "92aa6157-9872-4eaf-b9bf-ee14c10d441d",
+              "name": "Credentials returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "merchant-credentials"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "52d60acf-3687-40c2-88e4-55865685a195",
+      "name": "Orders",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dee11ed3-6e66-489a-b020-89150fcbd58f",
+          "name": "Request Driver",
+          "request": {
+            "name": "Request Driver",
+            "description": {
+              "content": "Create a delivery request from a merchant or third-party system asking the partner to fulfill an order.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "request-driver"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95111b61-5a57-43c8-9a59-7c4570c05798",
+              "name": "Request created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "request-driver"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9a304d1c-8008-4f39-b9c2-b72a849c2bc0",
+          "name": "Cancel Order",
+          "request": {
+            "name": "Cancel Order",
+            "description": {
+              "content": "Cancel a delivery order at the partner side.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "cancel-order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d9e90b05-66d1-425a-ac63-7dd762b23369",
+              "name": "Cancelled.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "cancel-order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "38926b80-8fe6-422c-9788-8056bdb09d13",
+          "name": "Complete Order",
+          "request": {
+            "name": "Complete Order",
+            "description": {
+              "content": "Notify Bringg the partner has completed the delivery.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "complete-order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d288fc02-2835-4345-8911-bac3911b50c8",
+              "name": "Completed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "complete-order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "83b9c480-923a-45f6-9fae-de5d945b5837",
+          "name": "Update Order",
+          "request": {
+            "name": "Update Order",
+            "description": {
+              "content": "Update order status, driver, or other fields from the partner side.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "update-order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c8cca559-6243-4604-93f2-f78eaa873947",
+              "name": "Updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "update-order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8d2e5339-541d-4c3e-b3a8-6b03d8ee21c4",
+          "name": "Start Order",
+          "request": {
+            "name": "Start Order",
+            "description": {
+              "content": "Indicate the partner driver has started an order.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "start-order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "74fa3f5f-49db-4da9-baeb-b6ef6338cb02",
+              "name": "Started.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "start-order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c76502ad-adf3-4c9f-8bd1-6b2ffcf2bf32",
+      "name": "Waypoints",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "75f32003-b39e-4273-98cf-720dacf0922b",
+          "name": "Check In / Driver Arrived To Location",
+          "request": {
+            "name": "Check In / Driver Arrived To Location",
+            "description": {
+              "content": "Partner driver arrived at a waypoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "check-in"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "81404106-bd29-427c-93ec-ff287523100d",
+              "name": "Arrived.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "check-in"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bb730e55-6e45-4df7-a153-4a0a348cb8a7",
+          "name": "Check Out / Driver Left Location",
+          "request": {
+            "name": "Check Out / Driver Left Location",
+            "description": {
+              "content": "Partner driver left a waypoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "check-out"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f5ed1b3-69a9-4086-a27e-3c5ab6e8b9d2",
+              "name": "Departed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "check-out"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "be93e9f8-5e32-4c7b-a3ef-d6057f4f69b2",
+          "name": "Cluster Check-in / Check-out",
+          "request": {
+            "name": "Cluster Check-in / Check-out",
+            "description": {
+              "content": "Indicate multiple bulk arrival or departure events for clustered orders.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "cluster-checkin-checkout"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "72a8d46e-dc12-4a0e-8736-5e1841e3815d",
+              "name": "Cluster recorded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "cluster-checkin-checkout"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c5a377b9-37d2-4629-86d7-0cfb1ed75459",
+      "name": "Drivers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "28805a29-2514-4f72-a0c5-8ff85be91767",
+          "name": "Assign Driver",
+          "request": {
+            "name": "Assign Driver",
+            "description": {
+              "content": "Notify Bringg a partner driver has been assigned to an order.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "driver-is-assigned-to-order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e6312a6c-f947-4939-8599-b705805d5cf5",
+              "name": "Assigned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "driver-is-assigned-to-order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ba051e31-a34b-4f25-a9f0-36bcd63557e4",
+          "name": "Update Driver Location",
+          "request": {
+            "name": "Update Driver Location",
+            "description": {
+              "content": "Partner pushes driver GPS coordinates to Bringg.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "update-driver-location"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f283c91b-f51c-4d17-8d16-bf80e74ae12a",
+              "name": "Location updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "update-driver-location"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "062212c6-d70e-4320-9d6c-6c733a73f4b9",
+          "name": "Driver Location",
+          "request": {
+            "name": "Driver Location",
+            "description": {
+              "content": "Retrieve current driver location.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "driver-location"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6dd0c15c-f24e-4ce6-9231-cfe07391dc35",
+              "name": "Location returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "driver-location"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "fb2b444a-3a9d-4a32-9e37-318640f107b5",
+      "name": "Notes",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e96df71b-dbcd-4c1e-98f6-d676ad37af8a",
+          "name": "Add Note Or POD",
+          "request": {
+            "name": "Add Note Or POD",
+            "description": {
+              "content": "Add a note or proof-of-delivery artifact (photo, signature) to an order.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                "note-added"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c727f079-38db-45a7-8a42-598af50b9cc4",
+              "name": "Note added.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    "note-added"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "324ec20d-f96e-45bc-b6ef-ab3fa228e07d",
+      "name": "Webhooks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1de09bca-4aef-4b4e-84c5-e6f8a90f8d1f",
+          "name": "Delivery Created Webhook",
+          "request": {
+            "name": "Delivery Created Webhook",
+            "description": {
+              "content": "Bringg notifies the partner of a new delivery to fulfill.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "webhooks",
+                "delivery-created"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a01bb8f4-3ae7-4df6-9879-cc05885e85eb",
+              "name": "Acknowledged.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks",
+                    "delivery-created"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6848dd1d-0faa-44ec-834b-5be0c87d7753",
+          "name": "Get Quote Webhook",
+          "request": {
+            "name": "Get Quote Webhook",
+            "description": {
+              "content": "Bringg requests a delivery quote (price and ETA) from the partner.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "webhooks",
+                "get-quote"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8451b3e1-fc00-4532-bd4b-2f4ba5b4fd45",
+              "name": "Quote returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks",
+                    "get-quote"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5f2971a7-8055-4c12-b910-00a9067a00e2",
+          "name": "Delivery Updated Webhook",
+          "request": {
+            "name": "Delivery Updated Webhook",
+            "description": {
+              "content": "Bringg notifies the partner an order has been updated.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "webhooks",
+                "order-updated"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ba975a32-e04a-4800-aa3b-006b92b23363",
+              "name": "Acknowledged.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks",
+                    "order-updated"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "089298f5-5130-4cf2-89b9-1ef4ef3f7213",
+          "name": "Delivery Cancelled Webhook",
+          "request": {
+            "name": "Delivery Cancelled Webhook",
+            "description": {
+              "content": "Bringg notifies the partner an order has been cancelled.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "webhooks",
+                "order-cancelled"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f69af7de-3289-42e4-9bd9-c5440d40c3e9",
+              "name": "Acknowledged.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks",
+                    "order-cancelled"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "18644bee-84ed-4376-a14d-0bd565fcf6d5",
+          "name": "Merchant Registered Webhook",
+          "request": {
+            "name": "Merchant Registered Webhook",
+            "description": {
+              "content": "Bringg notifies the partner a new merchant has subscribed to the partner's fleet.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "webhooks",
+                "merchant-registered"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a9dce82b-e266-4c2c-b918-d6044d6ef6df",
+              "name": "Acknowledged.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks",
+                    "merchant-registered"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c656815b-b2d0-42df-8799-e3490917f021",
+          "name": "Return Delivery Created Webhook",
+          "request": {
+            "name": "Return Delivery Created Webhook",
+            "description": {
+              "content": "Bringg notifies the partner of a return delivery to pick up.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "webhooks",
+                "return-delivery-created"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1ddc5697-aa81-4f1e-ad90-bc6e3faf82cb",
+              "name": "Acknowledged.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks",
+                    "return-delivery-created"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.bringg.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "request_driver cancel_order complete_order update_driver_location"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d2ad059d-ea58-484f-98ee-0ae375e28d2d",
+    "name": "Bringg Fleet Partners (Self-Integrated Fleets) API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Bringg's Fleet Partners API is the integration surface for delivery providers\nand self-integrated fleets connecting to the Bringg Delivery Hub. Partners\nimplement webhook endpoints Bringg calls (Delivery Created, Get Quote, Order\nUpdated, Order Cancelled, Return Delivery Created, Merchant Registered) and\nexpose endpoints for accepting orders, updating order status, posting driver\nlocations, adding proof of delivery, and managing tokens / merchant credentials.\nAuthentication is OAuth 2.0 plus per-partner shared secrets for webhook\nsignature verification.\n\n\nContact Support:\n Name: Bringg Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

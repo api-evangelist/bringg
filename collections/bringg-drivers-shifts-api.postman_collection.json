@@ -1,0 +1,2344 @@
+{
+  "item": [
+    {
+      "id": "d712e355-dce5-4c11-8b44-10bd5029034d",
+      "name": "Users",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "81d9575f-6f27-4d15-978e-fa9f75fa963b",
+          "name": "Create User",
+          "request": {
+            "name": "Create User",
+            "description": {
+              "content": "Create a new user (driver, dispatcher, or other role).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "create_user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1e0ee30f-6c4b-49f4-b8c8-8a9b30d730a3",
+              "name": "User created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "create_user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "77ce980d-016e-467a-9e61-2151ccb4ca29",
+          "name": "Update User",
+          "request": {
+            "name": "Update User",
+            "description": {
+              "content": "Update an existing user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "update_user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "92278f6f-985c-40be-84a5-cdf8a0587917",
+              "name": "User updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "update_user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7cfc1158-f67a-4a52-b51a-fd456c8c4e82",
+          "name": "Get User",
+          "request": {
+            "name": "Get User",
+            "description": {
+              "content": "Get a user by id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "get_user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ae524351-f207-4b08-9dc6-cf51f68b171d",
+              "name": "User returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "get_user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4975bcb3-9aa2-495d-8838-f2b72c3a5c7b",
+          "name": "Get Users",
+          "request": {
+            "name": "Get Users",
+            "description": {
+              "content": "List all users.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "get_users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2f418ffb-b4bc-4d71-9482-a55bd4c3aca8",
+              "name": "Users returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "get_users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "af0e43e9-3112-4b4b-b661-869aa688faf8",
+          "name": "Delete User",
+          "request": {
+            "name": "Delete User",
+            "description": {
+              "content": "Delete a user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "delete_user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b767582f-d4a6-4d73-a119-7f838e4a0763",
+              "name": "User deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "delete_user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e62cee67-488c-4c44-b27e-23e3ca941584",
+          "name": "Create User Role",
+          "request": {
+            "name": "Create User Role",
+            "description": {
+              "content": "Create a custom user role/type.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "create_user_type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aefab571-88da-436f-a768-51643a52b116",
+              "name": "Created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "create_user_type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8aebfff1-d913-4fac-861b-b13399b4857c",
+      "name": "Drivers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1a709286-9002-4760-a380-166979e99d64",
+          "name": "Logoff Driver",
+          "request": {
+            "name": "Logoff Driver",
+            "description": {
+              "content": "Log a driver out of the Bringg Driver App.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "logoff_user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fbdfff44-b28c-4b27-aa52-49e8babd68c0",
+              "name": "Logged off.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "logoff_user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "14a494bc-9e4b-4e40-bbbf-4ca12d908fb0",
+          "name": "Generate Driver QR Code",
+          "request": {
+            "name": "Generate Driver QR Code",
+            "description": {
+              "content": "Generate an access token and QR code for Driver App login of a specified driver.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "generate_driver_qr_code"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a99cf670-5259-4b02-ba45-185b4ac41193",
+              "name": "QR code generated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "generate_driver_qr_code"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7fa4b908-0d30-4aed-86c5-59df7a35edb4",
+          "name": "Generate Pickup QR Code",
+          "request": {
+            "name": "Generate Pickup QR Code",
+            "description": {
+              "content": "Generate a pickup QR code for an order or location.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "generate_pickup_qr_code"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "70fc0768-c001-4619-9e6f-14477c7474ca",
+              "name": "QR code generated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "generate_pickup_qr_code"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6a6a18bb-d931-4a0e-afed-aaaf81b1d226",
+          "name": "Initiate Driver Home Events",
+          "request": {
+            "name": "Initiate Driver Home Events",
+            "description": {
+              "content": "Indicate whether a driver is at or has departed their home base.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "driver_home_events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "75316adb-714d-4150-9f40-2b0da530fbeb",
+              "name": "Event recorded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "driver_home_events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f5863626-759c-4d11-ac37-ff4a6c8f2e81",
+          "name": "Get Driver Availability",
+          "request": {
+            "name": "Get Driver Availability",
+            "description": {
+              "content": "Retrieve real-time driver availability across specified teams.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "get_realtime_availability"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fbb0f463-f1f9-4f19-a976-ea88c2ea40a6",
+              "name": "Availability returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "get_realtime_availability"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d4a4c775-1c3c-4538-a50f-db891bfabe2a",
+          "name": "Update Driver Location",
+          "request": {
+            "name": "Update Driver Location",
+            "description": {
+              "content": "Push a driver's GPS location for more accurate ETA calculations.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "update_driver_location"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ad7f94b7-ab52-4949-b0a2-75bd30598ac3",
+              "name": "Location updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "update_driver_location"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8fee5f69-8128-4e66-b0ed-f2795ae93e1e",
+      "name": "Shifts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0e45a4a8-27ec-43cc-9b3e-800302735a65",
+          "name": "Start Shift",
+          "request": {
+            "name": "Start Shift",
+            "description": {
+              "content": "Start a driver's shift.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "start_shift"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bb35385e-993a-4d71-b23d-98a975d387a2",
+              "name": "Shift started.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "start_shift"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bb4f6cd0-fb2e-4f49-b082-7c6e76c2599c",
+          "name": "End Shift",
+          "request": {
+            "name": "End Shift",
+            "description": {
+              "content": "End a driver's shift.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "end_shift"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7a9e247f-65a5-4240-9be3-036e00de2f7a",
+              "name": "Shift ended.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "end_shift"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e090dcd2-1577-40dd-80ac-9ea844ec5064",
+      "name": "Delivery Blocks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "24e2f883-caf3-40ae-ab9e-8650d204918f",
+          "name": "Create Delivery Block",
+          "request": {
+            "name": "Create Delivery Block",
+            "description": {
+              "content": "Create a delivery block (driver shift slot for delivery work).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "create_delivery_block"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "09fa05f6-55af-43c9-9735-1aaab029d2d5",
+              "name": "Created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "create_delivery_block"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6ebcee12-5df4-45be-b7f9-3e522d068e3c",
+          "name": "Update Delivery Block",
+          "request": {
+            "name": "Update Delivery Block",
+            "description": {
+              "content": "Update a delivery block.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "update_delivery_block"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c523eebd-ff92-40ee-a7c3-cffd0e2508e1",
+              "name": "Updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "update_delivery_block"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c46b7fb6-e043-483d-b66a-edf878618e62",
+          "name": "Delete Delivery Block",
+          "request": {
+            "name": "Delete Delivery Block",
+            "description": {
+              "content": "Delete a delivery block.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "delete_delivery_block"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6b3cdff6-cf78-43b4-aefb-5d3d3b8e691f",
+              "name": "Deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "delete_delivery_block"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4fcf29a1-35cc-4d06-90ca-bde16aae2dcd",
+          "name": "Get Delivery Block",
+          "request": {
+            "name": "Get Delivery Block",
+            "description": {
+              "content": "Get a delivery block by id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "get_delivery_block"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a23ff05d-f9de-4c86-acab-3e6229d2ec29",
+              "name": "Returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "get_delivery_block"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "da05f7d5-2aee-445d-b6ee-236e839dca86",
+          "name": "Assign Delivery Block",
+          "request": {
+            "name": "Assign Delivery Block",
+            "description": {
+              "content": "Assign a driver to a delivery block.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "assign_delivery_block"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4ca53f77-0b45-4190-a335-a5509bec5477",
+              "name": "Assigned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "assign_delivery_block"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7b771c47-452c-4890-8352-1a420151d2ca",
+          "name": "Unassign Delivery Block",
+          "request": {
+            "name": "Unassign Delivery Block",
+            "description": {
+              "content": "Unassign a driver from a delivery block.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "unassign_delivery_block"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "062871e7-920a-4721-8fe7-1095eac6fa13",
+              "name": "Unassigned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "unassign_delivery_block"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ae001e5-0c64-46eb-a608-fe9a7f7c832d",
+          "name": "Get Delivery Blocks By User",
+          "request": {
+            "name": "Get Delivery Blocks By User",
+            "description": {
+              "content": "List delivery blocks assigned to specific users.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "users_delivery_blocks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a591842b-32eb-433b-8cef-f1cc5896f56c",
+              "name": "Returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "users_delivery_blocks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e64933ed-8342-4f4e-9ddb-52eecc5f2e79",
+          "name": "Get Delivery Blocks By Team",
+          "request": {
+            "name": "Get Delivery Blocks By Team",
+            "description": {
+              "content": "List delivery blocks for a team.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "team_delivery_blocks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0fbd8e7b-3c1a-41ae-aaa8-1c19bb8fd73b",
+              "name": "Returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "team_delivery_blocks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "3f98b89f-e82d-46c1-98db-466a5d708f9f",
+      "name": "Vehicles",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5f34e61d-e01c-4a89-9f10-e97a9da8ad35",
+          "name": "Create Vehicle",
+          "request": {
+            "name": "Create Vehicle",
+            "description": {
+              "content": "Create a vehicle record.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "create_vehicle"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "38fd8ade-1420-4b6e-b22c-b33f4e897440",
+              "name": "Created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "create_vehicle"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a266afac-30a1-4d75-a391-49582a081576",
+          "name": "Update Vehicle",
+          "request": {
+            "name": "Update Vehicle",
+            "description": {
+              "content": "Update a vehicle.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "update_vehicle"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d68de956-2052-4104-a51c-28d920cbe68b",
+              "name": "Updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "update_vehicle"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "09f6d42d-cb42-46d4-b0cc-eb1c18aa5082",
+          "name": "Delete Vehicle",
+          "request": {
+            "name": "Delete Vehicle",
+            "description": {
+              "content": "Delete a vehicle.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "delete_vehicle"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "88238ad0-bdea-4ede-9aca-57271a6454e8",
+              "name": "Deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "delete_vehicle"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c9111dbe-d488-476a-b950-bd0c6346b323",
+          "name": "Get Vehicle",
+          "request": {
+            "name": "Get Vehicle",
+            "description": {
+              "content": "Get a vehicle by id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "get_vehicle_by_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "421020b8-21c9-4b77-9332-17e25d338a34",
+              "name": "Returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "get_vehicle_by_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8da1cbfd-419c-44df-9257-f53191df0c9d",
+          "name": "Get All Vehicles",
+          "request": {
+            "name": "Get All Vehicles",
+            "description": {
+              "content": "List all vehicles.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "get_all_vehicles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fff1126c-46b2-48f9-ba70-eeec9d7961e6",
+              "name": "Returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "get_all_vehicles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0c910d74-0d50-4e3f-bc6c-ec37a045abd0",
+      "name": "Vehicle Profiles",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "510f4034-ffa9-4f73-854b-801fec03c8ca",
+          "name": "Create Vehicle Profile",
+          "request": {
+            "name": "Create Vehicle Profile",
+            "description": {
+              "content": "Create a vehicle profile/type definition (capacity, constraints).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "create_vehicle_type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "db6eb32e-7a10-44cc-8301-f3ba1e73df77",
+              "name": "Created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "create_vehicle_type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "edbe9dda-aaf1-46e5-8680-c6af64c603d5",
+          "name": "Update Vehicle Profile",
+          "request": {
+            "name": "Update Vehicle Profile",
+            "description": {
+              "content": "Update a vehicle profile.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "update_vehicle_type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ee57aee4-9591-4f3d-b99d-03b25dd7714c",
+              "name": "Updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "update_vehicle_type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "565dbe08-26eb-42d1-a146-3f739d4fcd21",
+          "name": "Delete Vehicle Profile",
+          "request": {
+            "name": "Delete Vehicle Profile",
+            "description": {
+              "content": "Delete a vehicle profile.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "destroy_vehicle_type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b89f93e7-753f-4601-8259-28c5ff13066d",
+              "name": "Deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "destroy_vehicle_type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9620a23d-f566-40f0-857d-f76aad1ad7bc",
+          "name": "Get Vehicle Profile",
+          "request": {
+            "name": "Get Vehicle Profile",
+            "description": {
+              "content": "Get a vehicle profile by id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "get_vehicle_type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ebbb4d63-7ecb-4df2-b69a-87203ad71e55",
+              "name": "Returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "get_vehicle_type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8dc4d9b9-0c76-43c9-8cc9-da8eb41903e1",
+          "name": "Get Vehicle Profiles",
+          "request": {
+            "name": "Get Vehicle Profiles",
+            "description": {
+              "content": "List vehicle profiles.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "get_vehicle_types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "172a9f00-f4c3-43f2-808b-c094a7d1bc44",
+              "name": "Returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "get_vehicle_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://us2-admin-api.bringg.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_user update_user get_user delete_user start_shift end_shift update_driver_location create_delivery_block create_vehicle"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f993a588-1ee1-4fec-8630-9a44685b286a",
+    "name": "Bringg Drivers and Shifts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Bringg's Drivers and Shifts REST API covers driver lifecycle (users, roles, login),\nshift management (start/end shift, driver home events, availability), driver\nlocation updates, QR-code generation, delivery blocks (driver shift slots),\nvehicles, and vehicle profiles. Uses OAuth 2.0 Client Credentials.\n\n\nContact Support:\n Name: Bringg Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

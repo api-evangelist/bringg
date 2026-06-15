@@ -1,0 +1,1121 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_task"
+          },
+          "docs": "Create a new order (task) in Bringg with one or more waypoints, customer, inventory, service plan, and team assignment."
+        },
+        {
+          "info": {
+            "name": "Update Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_task"
+          },
+          "docs": "Update an existing order's details, waypoints, inventory, or service plan."
+        },
+        {
+          "info": {
+            "name": "Get Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_task"
+          },
+          "docs": "Retrieve full details of an order by id or external_id."
+        },
+        {
+          "info": {
+            "name": "Get Open Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_open_tasks"
+          },
+          "docs": "List orders currently in an open state (not completed or cancelled)."
+        },
+        {
+          "info": {
+            "name": "Get Post-Optimization Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_post_optimization_tasks"
+          },
+          "docs": "Retrieve orders after route optimization has been applied."
+        },
+        {
+          "info": {
+            "name": "Get Open Orders by Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_open_orders_by_customer"
+          },
+          "docs": "List open orders for a specific customer."
+        },
+        {
+          "info": {
+            "name": "Start Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/start_task"
+          },
+          "docs": "Mark an order as started (driver beginning execution)."
+        },
+        {
+          "info": {
+            "name": "End Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/end_task"
+          },
+          "docs": "Mark an order as ended/completed."
+        },
+        {
+          "info": {
+            "name": "Cancel Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/cancel_task"
+          },
+          "docs": "Cancel an order with optional cancellation reason."
+        },
+        {
+          "info": {
+            "name": "Update Order External ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_task_external_id"
+          },
+          "docs": "Update an order's external_id without other changes."
+        },
+        {
+          "info": {
+            "name": "Create Order Refund",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_task_refund"
+          },
+          "docs": "Create a refund record on a task."
+        },
+        {
+          "info": {
+            "name": "Create Order Payment History",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_task_payment_history"
+          },
+          "docs": "Add a payment history entry to an order."
+        },
+        {
+          "info": {
+            "name": "Check-in (Arrived to Destination)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/checkin"
+          },
+          "docs": "Record driver arrival at an order waypoint."
+        },
+        {
+          "info": {
+            "name": "Check-out (Left Destination)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/checkout"
+          },
+          "docs": "Record driver leaving an order waypoint. Final checkout completes the order."
+        },
+        {
+          "info": {
+            "name": "Multi-Order Checkout",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/mass_checkout"
+          },
+          "docs": "Trigger checkout for multiple orders sharing a checkout location."
+        },
+        {
+          "info": {
+            "name": "Release Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/release_tasks"
+          },
+          "docs": "Release orders from Planning to Dispatch, making them available to drivers."
+        },
+        {
+          "info": {
+            "name": "Assign Order To Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_task"
+          },
+          "docs": "Assign an order directly to a specific driver."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Routes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Assign Driver To Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_run_driver"
+          },
+          "docs": "Assign a driver to a route (run) to fulfill its orders."
+        },
+        {
+          "info": {
+            "name": "Assign Vehicle To Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_run_vehicle"
+          },
+          "docs": "Assign a vehicle to a route instance (run)."
+        },
+        {
+          "info": {
+            "name": "Unassign Driver From Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/unassign_run_driver"
+          },
+          "docs": "Remove a driver from a route assignment."
+        },
+        {
+          "info": {
+            "name": "Unassign Vehicle From Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/unassign_run_vehicle"
+          },
+          "docs": "Remove a vehicle from a route assignment."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Notes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Note",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_note"
+          },
+          "docs": "Create a note attached to a waypoint or order."
+        },
+        {
+          "info": {
+            "name": "Update Note",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_note"
+          },
+          "docs": "Update an existing note's text."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_customer"
+          },
+          "docs": "Create a new customer record."
+        },
+        {
+          "info": {
+            "name": "Update Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_customer"
+          },
+          "docs": "Update an existing customer record."
+        },
+        {
+          "info": {
+            "name": "Create Blacklisted Customer Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_blacklisted_customer_user"
+          },
+          "docs": "Block a driver from delivering to a specific customer."
+        },
+        {
+          "info": {
+            "name": "Delete Blacklisted Customer Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_blacklisted_customer_user"
+          },
+          "docs": "Remove a blacklist entry between customer and driver."
+        },
+        {
+          "info": {
+            "name": "Get Blacklisted Customer Drivers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_blacklisted_customer_users"
+          },
+          "docs": "List blacklist entries between drivers and customers."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_team"
+          },
+          "docs": "Create a new team."
+        },
+        {
+          "info": {
+            "name": "Update Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_team"
+          },
+          "docs": "Update an existing team."
+        },
+        {
+          "info": {
+            "name": "Delete Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_team"
+          },
+          "docs": "Delete a team."
+        },
+        {
+          "info": {
+            "name": "Get Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_team"
+          },
+          "docs": "Retrieve a team by id."
+        },
+        {
+          "info": {
+            "name": "List Teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/team_index"
+          },
+          "docs": "List all teams for the merchant."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Service Areas",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Service Area",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_service_area"
+          },
+          "docs": "Create a service area defined by a polygon."
+        },
+        {
+          "info": {
+            "name": "Update Service Area",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_service_area"
+          },
+          "docs": "Update an existing service area."
+        },
+        {
+          "info": {
+            "name": "Get Service Area",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_service_area"
+          },
+          "docs": "Get a service area by id."
+        },
+        {
+          "info": {
+            "name": "Get Service Areas",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_service_areas"
+          },
+          "docs": "List all service areas."
+        },
+        {
+          "info": {
+            "name": "Delete Service Area",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_service_area"
+          },
+          "docs": "Delete a service area."
+        },
+        {
+          "info": {
+            "name": "Assign Team To Service Area",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_team_service_area"
+          },
+          "docs": "Assign one or more teams to a service area."
+        },
+        {
+          "info": {
+            "name": "Get Team Service Areas",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_teams_service_areas"
+          },
+          "docs": "Get the team-service-area coupling."
+        },
+        {
+          "info": {
+            "name": "Update Team Service Area",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_team_service_area"
+          },
+          "docs": "Update teams assigned to a service area."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Service Plans",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Service Plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_service_plan"
+          },
+          "docs": "Create a service plan defining service level, time window, and requirements."
+        },
+        {
+          "info": {
+            "name": "Update Service Plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_service_plan"
+          },
+          "docs": "Update an existing service plan."
+        },
+        {
+          "info": {
+            "name": "Get Service Plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_service_plan"
+          },
+          "docs": "Retrieve a service plan by id or external_id."
+        },
+        {
+          "info": {
+            "name": "Get Service Plans",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_service_plans"
+          },
+          "docs": "List all service plans."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Delivery Slots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Planned Delivery Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_planned_delivery_window"
+          },
+          "docs": "Create a delivery slot (planned delivery window)."
+        },
+        {
+          "info": {
+            "name": "Update Planned Delivery Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_planned_delivery_window"
+          },
+          "docs": "Update a delivery slot."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Quotes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Quotes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/get_quotes"
+          },
+          "docs": "Get delivery quotes and availability for a proposed order."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Operations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Async Operation Status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/async_operation_status"
+          },
+          "docs": "Check the status of an asynchronous operation."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Blackouts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Exclusion Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_exclusion_window"
+          },
+          "docs": "Create a blackout (exclusion window) for delivery availability."
+        },
+        {
+          "info": {
+            "name": "Update Exclusion Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_exclusion_window"
+          },
+          "docs": "Update a blackout window."
+        },
+        {
+          "info": {
+            "name": "Delete Exclusion Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_exclusion_window"
+          },
+          "docs": "Delete a blackout window."
+        },
+        {
+          "info": {
+            "name": "Get Exclusion Windows",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_exclusion_windows"
+          },
+          "docs": "List blackout windows."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Planned Routes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Planned Route Identifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_planned_route"
+          },
+          "docs": "Create a named planned-route identifier."
+        },
+        {
+          "info": {
+            "name": "Update Planned Route Identifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_planned_route"
+          },
+          "docs": "Update a planned route identifier."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Recurring Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Recurring Order Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_recurrent_order_template"
+          },
+          "docs": "Create a recurring order template."
+        },
+        {
+          "info": {
+            "name": "Delete Recurring Order Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_recurrent_order_template"
+          },
+          "docs": "Delete a recurring order template."
+        },
+        {
+          "info": {
+            "name": "Get Recurring Order Templates By Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_recurrent_order_templates_by_customer"
+          },
+          "docs": "List recurring order templates for a customer."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Packages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_package"
+          },
+          "docs": "Create a package associated with an order."
+        },
+        {
+          "info": {
+            "name": "Update Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_package"
+          },
+          "docs": "Update a package."
+        },
+        {
+          "info": {
+            "name": "Upsert Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/upsert_package"
+          },
+          "docs": "Create or update a package by external_id."
+        },
+        {
+          "info": {
+            "name": "Delete Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_package"
+          },
+          "docs": "Delete a package."
+        },
+        {
+          "info": {
+            "name": "Get Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_package"
+          },
+          "docs": "Retrieve a package by id."
+        },
+        {
+          "info": {
+            "name": "Get Task Packages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_task_packages"
+          },
+          "docs": "List all packages for an order."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Inventory",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_inventory"
+          },
+          "docs": "Create an inventory item associated with an order."
+        },
+        {
+          "info": {
+            "name": "Update Inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_inventory"
+          },
+          "docs": "Update an inventory item."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Floating Inventory",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upsert Floating Inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/upsert_floating_inventory"
+          },
+          "docs": "Create or update a floating inventory item not associated with a specific order."
+        },
+        {
+          "info": {
+            "name": "Soft Delete Floating Inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/soft_delete_floating_inventory"
+          },
+          "docs": "Soft delete floating inventory items while retaining DB record."
+        },
+        {
+          "info": {
+            "name": "Mass Delete Floating Inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/mass_delete_floating_inventory"
+          },
+          "docs": "Delete multiple floating inventory items in bulk."
+        },
+        {
+          "info": {
+            "name": "Mass Custody Change To Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/mass_custody_change_floating_inventory"
+          },
+          "docs": "Move multiple floating inventory items to vehicle custody."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Analytics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Analytics Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/analytics_reports"
+          },
+          "docs": "Retrieve an analytics report for a scheduled report."
+        },
+        {
+          "info": {
+            "name": "Get Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_report"
+          },
+          "docs": "Get the latest version of a scheduled analytics report. Redirects to data file."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate Undelivered Webhooks Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_undelivered_webhooks"
+          },
+          "docs": "Retrieve a report of webhooks Bringg sent without receiving confirmation."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Parking Spots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Parking Spot",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_parking_spot"
+          },
+          "docs": "Create a parking spot for vehicles."
+        },
+        {
+          "info": {
+            "name": "Update Parking Spot",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_parking_spot"
+          },
+          "docs": "Update a parking spot."
+        },
+        {
+          "info": {
+            "name": "Delete Parking Spot",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_parking_spot"
+          },
+          "docs": "Delete a parking spot."
+        },
+        {
+          "info": {
+            "name": "Get Parking Spot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_parking_spot_by_id"
+          },
+          "docs": "Get a parking spot by id."
+        },
+        {
+          "info": {
+            "name": "Get All Parking Spots",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_all_parking_spots"
+          },
+          "docs": "List all parking spots."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Order Configurations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Order Configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_task_configuration"
+          },
+          "docs": "Create a task configuration (set of driver actions and operational capabilities)."
+        },
+        {
+          "info": {
+            "name": "Update Order Configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_task_configuration"
+          },
+          "docs": "Update an order configuration."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Bulk",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Prepare Bulk Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/prepare_resource"
+          },
+          "docs": "Prepare a JSONL bulk upload resource (step 1 of bulk pipeline)."
+        },
+        {
+          "info": {
+            "name": "Process Bulk Resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/process_resource"
+          },
+          "docs": "Process the uploaded bulk resource (step 4 of bulk pipeline)."
+        },
+        {
+          "info": {
+            "name": "Get Bulk Resource Status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_process_resource"
+          },
+          "docs": "Get bulk processing status and results."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Administration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_companies"
+          },
+          "docs": "Get merchants/companies the caller has access to."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

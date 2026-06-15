@@ -1,0 +1,289 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Fleet Partners (Self-Integrated Fleets) API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/get-token"
+          },
+          "docs": "Exchange partner credentials for an access token used to call Bringg from the partner side."
+        },
+        {
+          "info": {
+            "name": "Get Merchant Credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.bringg.com/partner/merchant-credentials"
+          },
+          "docs": "Retrieve merchant-specific credentials issued by Bringg to the fleet partner."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Request Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/request-driver"
+          },
+          "docs": "Create a delivery request from a merchant or third-party system asking the partner to fulfill an order."
+        },
+        {
+          "info": {
+            "name": "Cancel Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/cancel-order"
+          },
+          "docs": "Cancel a delivery order at the partner side."
+        },
+        {
+          "info": {
+            "name": "Complete Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/complete-order"
+          },
+          "docs": "Notify Bringg the partner has completed the delivery."
+        },
+        {
+          "info": {
+            "name": "Update Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/update-order"
+          },
+          "docs": "Update order status, driver, or other fields from the partner side."
+        },
+        {
+          "info": {
+            "name": "Start Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/start-order"
+          },
+          "docs": "Indicate the partner driver has started an order."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Waypoints",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Check In / Driver Arrived To Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/check-in"
+          },
+          "docs": "Partner driver arrived at a waypoint."
+        },
+        {
+          "info": {
+            "name": "Check Out / Driver Left Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/check-out"
+          },
+          "docs": "Partner driver left a waypoint."
+        },
+        {
+          "info": {
+            "name": "Cluster Check-in / Check-out",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/cluster-checkin-checkout"
+          },
+          "docs": "Indicate multiple bulk arrival or departure events for clustered orders."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Drivers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Assign Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/driver-is-assigned-to-order"
+          },
+          "docs": "Notify Bringg a partner driver has been assigned to an order."
+        },
+        {
+          "info": {
+            "name": "Update Driver Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/update-driver-location"
+          },
+          "docs": "Partner pushes driver GPS coordinates to Bringg."
+        },
+        {
+          "info": {
+            "name": "Driver Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.bringg.com/partner/driver-location"
+          },
+          "docs": "Retrieve current driver location."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Notes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Add Note Or POD",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/partner/note-added"
+          },
+          "docs": "Add a note or proof-of-delivery artifact (photo, signature) to an order."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Delivery Created Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/webhooks/delivery-created"
+          },
+          "docs": "Bringg notifies the partner of a new delivery to fulfill."
+        },
+        {
+          "info": {
+            "name": "Get Quote Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/webhooks/get-quote"
+          },
+          "docs": "Bringg requests a delivery quote (price and ETA) from the partner."
+        },
+        {
+          "info": {
+            "name": "Delivery Updated Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/webhooks/order-updated"
+          },
+          "docs": "Bringg notifies the partner an order has been updated."
+        },
+        {
+          "info": {
+            "name": "Delivery Cancelled Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/webhooks/order-cancelled"
+          },
+          "docs": "Bringg notifies the partner an order has been cancelled."
+        },
+        {
+          "info": {
+            "name": "Merchant Registered Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/webhooks/merchant-registered"
+          },
+          "docs": "Bringg notifies the partner a new merchant has subscribed to the partner's fleet."
+        },
+        {
+          "info": {
+            "name": "Return Delivery Created Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.bringg.com/webhooks/return-delivery-created"
+          },
+          "docs": "Bringg notifies the partner of a return delivery to pick up."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

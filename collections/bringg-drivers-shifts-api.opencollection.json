@@ -1,0 +1,421 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Drivers and Shifts API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create User",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_user"
+          },
+          "docs": "Create a new user (driver, dispatcher, or other role)."
+        },
+        {
+          "info": {
+            "name": "Update User",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_user"
+          },
+          "docs": "Update an existing user."
+        },
+        {
+          "info": {
+            "name": "Get User",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_user"
+          },
+          "docs": "Get a user by id."
+        },
+        {
+          "info": {
+            "name": "Get Users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_users"
+          },
+          "docs": "List all users."
+        },
+        {
+          "info": {
+            "name": "Delete User",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_user"
+          },
+          "docs": "Delete a user."
+        },
+        {
+          "info": {
+            "name": "Create User Role",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_user_type"
+          },
+          "docs": "Create a custom user role/type."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Drivers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Logoff Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/logoff_user"
+          },
+          "docs": "Log a driver out of the Bringg Driver App."
+        },
+        {
+          "info": {
+            "name": "Generate Driver QR Code",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/generate_driver_qr_code"
+          },
+          "docs": "Generate an access token and QR code for Driver App login of a specified driver."
+        },
+        {
+          "info": {
+            "name": "Generate Pickup QR Code",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/generate_pickup_qr_code"
+          },
+          "docs": "Generate a pickup QR code for an order or location."
+        },
+        {
+          "info": {
+            "name": "Initiate Driver Home Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/driver_home_events"
+          },
+          "docs": "Indicate whether a driver is at or has departed their home base."
+        },
+        {
+          "info": {
+            "name": "Get Driver Availability",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_realtime_availability"
+          },
+          "docs": "Retrieve real-time driver availability across specified teams."
+        },
+        {
+          "info": {
+            "name": "Update Driver Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_driver_location"
+          },
+          "docs": "Push a driver's GPS location for more accurate ETA calculations."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Shifts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Start Shift",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/start_shift"
+          },
+          "docs": "Start a driver's shift."
+        },
+        {
+          "info": {
+            "name": "End Shift",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/end_shift"
+          },
+          "docs": "End a driver's shift."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Delivery Blocks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Delivery Block",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_delivery_block"
+          },
+          "docs": "Create a delivery block (driver shift slot for delivery work)."
+        },
+        {
+          "info": {
+            "name": "Update Delivery Block",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_delivery_block"
+          },
+          "docs": "Update a delivery block."
+        },
+        {
+          "info": {
+            "name": "Delete Delivery Block",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_delivery_block"
+          },
+          "docs": "Delete a delivery block."
+        },
+        {
+          "info": {
+            "name": "Get Delivery Block",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_delivery_block"
+          },
+          "docs": "Get a delivery block by id."
+        },
+        {
+          "info": {
+            "name": "Assign Delivery Block",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_delivery_block"
+          },
+          "docs": "Assign a driver to a delivery block."
+        },
+        {
+          "info": {
+            "name": "Unassign Delivery Block",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/unassign_delivery_block"
+          },
+          "docs": "Unassign a driver from a delivery block."
+        },
+        {
+          "info": {
+            "name": "Get Delivery Blocks By User",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/users_delivery_blocks"
+          },
+          "docs": "List delivery blocks assigned to specific users."
+        },
+        {
+          "info": {
+            "name": "Get Delivery Blocks By Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/team_delivery_blocks"
+          },
+          "docs": "List delivery blocks for a team."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Vehicles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_vehicle"
+          },
+          "docs": "Create a vehicle record."
+        },
+        {
+          "info": {
+            "name": "Update Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_vehicle"
+          },
+          "docs": "Update a vehicle."
+        },
+        {
+          "info": {
+            "name": "Delete Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_vehicle"
+          },
+          "docs": "Delete a vehicle."
+        },
+        {
+          "info": {
+            "name": "Get Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_vehicle_by_id"
+          },
+          "docs": "Get a vehicle by id."
+        },
+        {
+          "info": {
+            "name": "Get All Vehicles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_all_vehicles"
+          },
+          "docs": "List all vehicles."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Vehicle Profiles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Vehicle Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_vehicle_type"
+          },
+          "docs": "Create a vehicle profile/type definition (capacity, constraints)."
+        },
+        {
+          "info": {
+            "name": "Update Vehicle Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_vehicle_type"
+          },
+          "docs": "Update a vehicle profile."
+        },
+        {
+          "info": {
+            "name": "Delete Vehicle Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/destroy_vehicle_type"
+          },
+          "docs": "Delete a vehicle profile."
+        },
+        {
+          "info": {
+            "name": "Get Vehicle Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_vehicle_type"
+          },
+          "docs": "Get a vehicle profile by id."
+        },
+        {
+          "info": {
+            "name": "Get Vehicle Profiles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_vehicle_types"
+          },
+          "docs": "List vehicle profiles."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
