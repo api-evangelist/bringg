@@ -3,19 +3,12 @@
   "feeds": [
     {
       "source": "https://www.bringg.com/resources/blog",
-      "feed_url": "https://www.bringg.com/resources/blog",
-      "title": "",
+      "feed_url": "",
       "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://help.bringg.com",
-      "feed_url": "https://help.bringg.com",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "method": "agent-scrape"
     }
   ],
   "post_count": 1,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:29:56Z",
+  "agent_pulled": "2026-06-27"
 }

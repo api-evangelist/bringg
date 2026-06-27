@@ -41,7 +41,7 @@ apis:
   - url: json-ld/bringg-context.jsonld
     type: JSONLD
   - url: examples/bringg-create-task-example.json
-    type: Example
+    type: Examples
   - url: graphql/bringg-graphql.md
     type: GraphQL
   description: Bringg's REST orchestration API for the Delivery Hub — create and manage
@@ -148,7 +148,7 @@ common:
   url: https://developers.bringg.com/docs/bringg-api-access-management
 - type: Authentication
   url: https://developers.bringg.com/docs/oauth-20-urls
-- type: Errors
+- type: ErrorCodes
   url: https://developers.bringg.com/docs/errors
 - type: Webhooks
   url: https://developers.bringg.com/docs/bringg-webhooks
@@ -182,10 +182,10 @@ common:
 - type: Portal
   url: https://www.bringg.com/about/
   name: About Bringg
-- type: SDK
+- type: SDKs
   url: https://developers.bringg.com/docs/dashboard-sdk-resources
   name: Bringg Dispatcher SDK (JavaScript)
-- type: SDK
+- type: SDKs
   url: https://github.com/bringg/Bringg-iOS-DriverSDK
   name: Bringg iOS Driver SDK
 - type: GitHubOrganization
@@ -194,7 +194,7 @@ common:
   url: https://www.linkedin.com/company/bringg
 - type: Twitter
   url: https://twitter.com/bringg
-- type: SignUp
+- type: Signup
   url: https://www.bringg.com/contact-us/
 - type: Plans
   url: plans/bringg-plans-pricing.yml
