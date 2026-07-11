@@ -1,0 +1,24 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/bringg-delivery-hub-api-openapi.yml, openapi/bringg-drivers-shifts-api-openapi.yml,
+  openapi/bringg-fleet-partners-api-openapi.yml
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://admin-api.bringg.com/oauth/token
+    scopes: 13
+  description: |-
+    OAuth 2.0 Client Credentials Grant. Exchange your client_id and client_secret
+    for an access token via POST https://admin-api.bringg.com/oauth/token (or the
+    regional equivalent), then send Authorization: Bearer <access_token>.
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+  - openapi/bringg-fleet-partners-api-openapi.yml
