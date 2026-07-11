@@ -1,0 +1,179 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/bringg-delivery-hub-api-openapi.yml, openapi/bringg-drivers-shifts-api-openapi.yml,
+  openapi/bringg-fleet-partners-api-openapi.yml
+schemes:
+- name: OAuth2ClientCredentials
+  source: openapi/bringg-delivery-hub-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://admin-api.bringg.com/oauth/token
+  description: |-
+    OAuth 2.0 Client Credentials Grant. Exchange your client_id and client_secret
+    for an access token via POST https://admin-api.bringg.com/oauth/token (or the
+    regional equivalent), then send Authorization: Bearer <access_token>.
+- name: OAuth2ClientCredentials
+  source: openapi/bringg-drivers-shifts-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://admin-api.bringg.com/oauth/token
+  description: OAuth 2.0 Client Credentials Grant.
+- name: OAuth2ClientCredentials
+  source: openapi/bringg-fleet-partners-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://admin-api.bringg.com/oauth/token
+  description: OAuth 2.0 Client Credentials Grant. Webhook callbacks are signed with a shared
+    secret.
+scopes:
+- scope: assign_task
+  description: Assign orders to drivers
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: cancel_order
+  description: Cancel orders
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-fleet-partners-api-openapi.yml
+- scope: cancel_task
+  description: Cancel orders
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: checkin
+  description: Driver check-in
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: checkout
+  description: Driver check-out
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: complete_order
+  description: Complete orders
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-fleet-partners-api-openapi.yml
+- scope: create_customer
+  description: Create customers
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: create_delivery_block
+  description: Create delivery blocks
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+- scope: create_service_area
+  description: Create service areas
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: create_service_plan
+  description: Create service plans
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: create_task
+  description: Create orders
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: create_team
+  description: Create teams
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: create_user
+  description: Create users
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+- scope: create_vehicle
+  description: Create vehicles
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+- scope: delete_user
+  description: Delete users
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+- scope: end_shift
+  description: End shifts
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+- scope: get_quotes
+  description: Get delivery quotes
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: get_task
+  description: Read orders
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: get_user
+  description: Read users
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+- scope: request_driver
+  description: Request driver fulfillment
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-fleet-partners-api-openapi.yml
+- scope: start_shift
+  description: Start shifts
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+- scope: update_customer
+  description: Update customers
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: update_driver_location
+  description: Update driver location
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml
+  - openapi/bringg-fleet-partners-api-openapi.yml
+- scope: update_task
+  description: Update orders
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-delivery-hub-api-openapi.yml
+- scope: update_user
+  description: Update users
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/bringg-drivers-shifts-api-openapi.yml

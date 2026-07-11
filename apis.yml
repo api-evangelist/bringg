@@ -132,6 +132,8 @@ kind: contract
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+- type: OAuthScopes
+  url: scopes/bringg-scopes.yml
 - type: Portal
   url: https://www.bringg.com
 - type: Documentation
