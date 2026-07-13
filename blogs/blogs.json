@@ -2,13 +2,14 @@
   "repo": "bringg",
   "feeds": [
     {
-      "source": "https://www.bringg.com/resources/blog",
-      "feed_url": "",
+      "source": "https://help.bringg.com",
+      "feed_url": "https://help.bringg.com",
+      "title": "",
       "saved": 0,
-      "method": "agent-scrape"
+      "method": "none"
     }
   ],
   "post_count": 1,
-  "fetched": "2026-06-27T12:29:56Z",
-  "agent_pulled": "2026-06-27"
+  "fetched": "2026-07-11T11:50:51Z",
+  "agent_pulled": "2026-07-04"
 }
