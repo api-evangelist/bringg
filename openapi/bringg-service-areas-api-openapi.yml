@@ -1,0 +1,150 @@
+openapi: 3.0.3
+info:
+  title: Bringg Delivery Hub Administration Service Areas API
+  version: '1.0'
+  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
+
+    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
+
+    service plans, planned delivery windows (delivery slots), exclusion windows
+
+    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
+
+    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
+
+    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
+
+    follow the pattern https://{region}-admin-api.bringg.com.
+
+    '
+  contact:
+    name: Bringg Developer Support
+    url: https://developers.bringg.com
+  termsOfService: https://developers.bringg.com/reference/terms-of-service
+  license:
+    name: Bringg API Terms of Service
+    url: https://developers.bringg.com/reference/terms-of-service
+servers:
+- url: https://us2-admin-api.bringg.com
+  description: US2 region (GCP)
+- url: https://us3-admin-api.bringg.com
+  description: US3 region (GCP)
+- url: https://us4-admin-api.bringg.com
+  description: US4 region (GCP)
+- url: https://eu2-admin-api.bringg.com
+  description: EU2 region (GCP)
+- url: https://eu3-admin-api.bringg.com
+  description: EU3 region (GCP)
+security:
+- OAuth2ClientCredentials: []
+tags:
+- name: Service Areas
+paths:
+  /services/create_service_area:
+    post:
+      summary: Create Service Area
+      description: Create a service area defined by a polygon.
+      tags:
+      - Service Areas
+      operationId: createServiceArea
+      responses:
+        '200':
+          description: Service area created.
+  /services/update_service_area:
+    post:
+      summary: Update Service Area
+      description: Update an existing service area.
+      tags:
+      - Service Areas
+      operationId: updateServiceArea
+      responses:
+        '200':
+          description: Updated.
+  /services/get_service_area:
+    get:
+      summary: Get Service Area
+      description: Get a service area by id.
+      tags:
+      - Service Areas
+      operationId: getServiceArea
+      responses:
+        '200':
+          description: Returned.
+  /services/get_service_areas:
+    get:
+      summary: Get Service Areas
+      description: List all service areas.
+      tags:
+      - Service Areas
+      operationId: getServiceAreas
+      responses:
+        '200':
+          description: List returned.
+  /services/delete_service_area:
+    delete:
+      summary: Delete Service Area
+      description: Delete a service area.
+      tags:
+      - Service Areas
+      operationId: deleteServiceArea
+      responses:
+        '200':
+          description: Deleted.
+  /services/create_team_service_area:
+    post:
+      summary: Assign Team To Service Area
+      description: Assign one or more teams to a service area.
+      tags:
+      - Service Areas
+      operationId: createTeamServiceArea
+      responses:
+        '200':
+          description: Team assigned.
+  /services/get_teams_service_areas:
+    get:
+      summary: Get Team Service Areas
+      description: Get the team-service-area coupling.
+      tags:
+      - Service Areas
+      operationId: getTeamsServiceAreas
+      responses:
+        '200':
+          description: Returned.
+  /services/update_team_service_area:
+    post:
+      summary: Update Team Service Area
+      description: Update teams assigned to a service area.
+      tags:
+      - Service Areas
+      operationId: updateTeamServiceArea
+      responses:
+        '200':
+          description: Updated.
+components:
+  securitySchemes:
+    OAuth2ClientCredentials:
+      type: oauth2
+      description: 'OAuth 2.0 Client Credentials Grant. Exchange your client_id and client_secret
+
+        for an access token via POST https://admin-api.bringg.com/oauth/token (or the
+
+        regional equivalent), then send Authorization: Bearer <access_token>.
+
+        '
+      flows:
+        clientCredentials:
+          tokenUrl: https://admin-api.bringg.com/oauth/token
+          scopes:
+            create_task: Create orders
+            update_task: Update orders
+            get_task: Read orders
+            cancel_task: Cancel orders
+            assign_task: Assign orders to drivers
+            checkin: Driver check-in
+            checkout: Driver check-out
+            create_customer: Create customers
+            update_customer: Update customers
+            create_team: Create teams
+            create_service_area: Create service areas
+            create_service_plan: Create service plans
+            get_quotes: Get delivery quotes

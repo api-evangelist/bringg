@@ -1,0 +1,220 @@
+openapi: 3.0.3
+info:
+  title: Bringg Delivery Hub Administration Drivers API
+  version: '1.0'
+  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
+
+    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
+
+    service plans, planned delivery windows (delivery slots), exclusion windows
+
+    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
+
+    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
+
+    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
+
+    follow the pattern https://{region}-admin-api.bringg.com.
+
+    '
+  contact:
+    name: Bringg Developer Support
+    url: https://developers.bringg.com
+  termsOfService: https://developers.bringg.com/reference/terms-of-service
+  license:
+    name: Bringg API Terms of Service
+    url: https://developers.bringg.com/reference/terms-of-service
+servers:
+- url: https://us2-admin-api.bringg.com
+  description: US2 region (GCP)
+- url: https://us3-admin-api.bringg.com
+  description: US3 region (GCP)
+- url: https://us4-admin-api.bringg.com
+  description: US4 region (GCP)
+- url: https://eu2-admin-api.bringg.com
+  description: EU2 region (GCP)
+- url: https://eu3-admin-api.bringg.com
+  description: EU3 region (GCP)
+security:
+- OAuth2ClientCredentials: []
+tags:
+- name: Drivers
+paths:
+  /services/assign_task:
+    post:
+      summary: Assign Order To Driver
+      description: Assign an order directly to a specific driver.
+      tags:
+      - Drivers
+      operationId: assignTask
+      responses:
+        '200':
+          description: Assigned.
+  /services/assign_run_driver:
+    post:
+      summary: Assign Driver To Route
+      description: Assign a driver to a route (run) to fulfill its orders.
+      tags:
+      - Drivers
+      operationId: assignRunDriver
+      responses:
+        '200':
+          description: Driver assigned to run.
+  /services/unassign_run_driver:
+    post:
+      summary: Unassign Driver From Route
+      description: Remove a driver from a route assignment.
+      tags:
+      - Drivers
+      operationId: unassignRunDriver
+      responses:
+        '200':
+          description: Driver unassigned.
+  /services/create_blacklisted_customer_user:
+    post:
+      summary: Create Blacklisted Customer Driver
+      description: Block a driver from delivering to a specific customer.
+      tags:
+      - Drivers
+      operationId: createBlacklistedCustomerUser
+      responses:
+        '200':
+          description: Blacklist entry created.
+  /services/delete_blacklisted_customer_user:
+    delete:
+      summary: Delete Blacklisted Customer Driver
+      description: Remove a blacklist entry between customer and driver.
+      tags:
+      - Drivers
+      operationId: deleteBlacklistedCustomerUser
+      responses:
+        '200':
+          description: Blacklist removed.
+  /services/get_blacklisted_customer_users:
+    get:
+      summary: Get Blacklisted Customer Drivers
+      description: List blacklist entries between drivers and customers.
+      tags:
+      - Drivers
+      operationId: getBlacklistedCustomerUsers
+      responses:
+        '200':
+          description: Blacklist list.
+  /services/logoff_user:
+    post:
+      summary: Logoff Driver
+      description: Log a driver out of the Bringg Driver App.
+      tags:
+      - Drivers
+      operationId: logoffUser
+      responses:
+        '200':
+          description: Logged off.
+  /services/generate_driver_qr_code:
+    post:
+      summary: Generate Driver QR Code
+      description: Generate an access token and QR code for Driver App login of a specified driver.
+      tags:
+      - Drivers
+      operationId: generateDriverQrCode
+      responses:
+        '200':
+          description: QR code generated.
+  /services/generate_pickup_qr_code:
+    post:
+      summary: Generate Pickup QR Code
+      description: Generate a pickup QR code for an order or location.
+      tags:
+      - Drivers
+      operationId: generatePickupQrCode
+      responses:
+        '200':
+          description: QR code generated.
+  /services/driver_home_events:
+    post:
+      summary: Initiate Driver Home Events
+      description: Indicate whether a driver is at or has departed their home base.
+      tags:
+      - Drivers
+      operationId: driverHomeEvents
+      responses:
+        '200':
+          description: Event recorded.
+  /services/get_realtime_availability:
+    get:
+      summary: Get Driver Availability
+      description: Retrieve real-time driver availability across specified teams.
+      tags:
+      - Drivers
+      operationId: getRealtimeAvailability
+      responses:
+        '200':
+          description: Availability returned.
+  /services/update_driver_location:
+    post:
+      summary: Update Driver Location
+      description: Push a driver's GPS location for more accurate ETA calculations.
+      tags:
+      - Drivers
+      operationId: updateDriverLocation
+      responses:
+        '200':
+          description: Location updated.
+  /partner/driver-is-assigned-to-order:
+    post:
+      summary: Assign Driver
+      description: Notify Bringg a partner driver has been assigned to an order.
+      tags:
+      - Drivers
+      operationId: driverIsAssignedToOrder
+      responses:
+        '200':
+          description: Assigned.
+  /partner/update-driver-location:
+    post:
+      summary: Update Driver Location
+      description: Partner pushes driver GPS coordinates to Bringg.
+      tags:
+      - Drivers
+      operationId: partnerUpdateDriverLocation
+      responses:
+        '200':
+          description: Location updated.
+  /partner/driver-location:
+    get:
+      summary: Driver Location
+      description: Retrieve current driver location.
+      tags:
+      - Drivers
+      operationId: getDriverLocation
+      responses:
+        '200':
+          description: Location returned.
+components:
+  securitySchemes:
+    OAuth2ClientCredentials:
+      type: oauth2
+      description: 'OAuth 2.0 Client Credentials Grant. Exchange your client_id and client_secret
+
+        for an access token via POST https://admin-api.bringg.com/oauth/token (or the
+
+        regional equivalent), then send Authorization: Bearer <access_token>.
+
+        '
+      flows:
+        clientCredentials:
+          tokenUrl: https://admin-api.bringg.com/oauth/token
+          scopes:
+            create_task: Create orders
+            update_task: Update orders
+            get_task: Read orders
+            cancel_task: Cancel orders
+            assign_task: Assign orders to drivers
+            checkin: Driver check-in
+            checkout: Driver check-out
+            create_customer: Create customers
+            update_customer: Update customers
+            create_team: Create teams
+            create_service_area: Create service areas
+            create_service_plan: Create service plans
+            get_quotes: Get delivery quotes

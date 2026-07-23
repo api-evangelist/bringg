@@ -1,0 +1,150 @@
+openapi: 3.0.3
+info:
+  title: Bringg Delivery Hub Administration Delivery Blocks API
+  version: '1.0'
+  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
+
+    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
+
+    service plans, planned delivery windows (delivery slots), exclusion windows
+
+    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
+
+    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
+
+    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
+
+    follow the pattern https://{region}-admin-api.bringg.com.
+
+    '
+  contact:
+    name: Bringg Developer Support
+    url: https://developers.bringg.com
+  termsOfService: https://developers.bringg.com/reference/terms-of-service
+  license:
+    name: Bringg API Terms of Service
+    url: https://developers.bringg.com/reference/terms-of-service
+servers:
+- url: https://us2-admin-api.bringg.com
+  description: US2 region (GCP)
+- url: https://us3-admin-api.bringg.com
+  description: US3 region (GCP)
+- url: https://us4-admin-api.bringg.com
+  description: US4 region (GCP)
+- url: https://eu2-admin-api.bringg.com
+  description: EU2 region (GCP)
+- url: https://eu3-admin-api.bringg.com
+  description: EU3 region (GCP)
+security:
+- OAuth2ClientCredentials: []
+tags:
+- name: Delivery Blocks
+paths:
+  /services/create_delivery_block:
+    post:
+      summary: Create Delivery Block
+      description: Create a delivery block (driver shift slot for delivery work).
+      tags:
+      - Delivery Blocks
+      operationId: createDeliveryBlock
+      responses:
+        '200':
+          description: Created.
+  /services/update_delivery_block:
+    post:
+      summary: Update Delivery Block
+      description: Update a delivery block.
+      tags:
+      - Delivery Blocks
+      operationId: updateDeliveryBlock
+      responses:
+        '200':
+          description: Updated.
+  /services/delete_delivery_block:
+    delete:
+      summary: Delete Delivery Block
+      description: Delete a delivery block.
+      tags:
+      - Delivery Blocks
+      operationId: deleteDeliveryBlock
+      responses:
+        '200':
+          description: Deleted.
+  /services/get_delivery_block:
+    get:
+      summary: Get Delivery Block
+      description: Get a delivery block by id.
+      tags:
+      - Delivery Blocks
+      operationId: getDeliveryBlock
+      responses:
+        '200':
+          description: Returned.
+  /services/assign_delivery_block:
+    post:
+      summary: Assign Delivery Block
+      description: Assign a driver to a delivery block.
+      tags:
+      - Delivery Blocks
+      operationId: assignDeliveryBlock
+      responses:
+        '200':
+          description: Assigned.
+  /services/unassign_delivery_block:
+    post:
+      summary: Unassign Delivery Block
+      description: Unassign a driver from a delivery block.
+      tags:
+      - Delivery Blocks
+      operationId: unassignDeliveryBlock
+      responses:
+        '200':
+          description: Unassigned.
+  /services/users_delivery_blocks:
+    get:
+      summary: Get Delivery Blocks By User
+      description: List delivery blocks assigned to specific users.
+      tags:
+      - Delivery Blocks
+      operationId: usersDeliveryBlocks
+      responses:
+        '200':
+          description: Returned.
+  /services/team_delivery_blocks:
+    get:
+      summary: Get Delivery Blocks By Team
+      description: List delivery blocks for a team.
+      tags:
+      - Delivery Blocks
+      operationId: teamDeliveryBlocks
+      responses:
+        '200':
+          description: Returned.
+components:
+  securitySchemes:
+    OAuth2ClientCredentials:
+      type: oauth2
+      description: 'OAuth 2.0 Client Credentials Grant. Exchange your client_id and client_secret
+
+        for an access token via POST https://admin-api.bringg.com/oauth/token (or the
+
+        regional equivalent), then send Authorization: Bearer <access_token>.
+
+        '
+      flows:
+        clientCredentials:
+          tokenUrl: https://admin-api.bringg.com/oauth/token
+          scopes:
+            create_task: Create orders
+            update_task: Update orders
+            get_task: Read orders
+            cancel_task: Cancel orders
+            assign_task: Assign orders to drivers
+            checkin: Driver check-in
+            checkout: Driver check-out
+            create_customer: Create customers
+            update_customer: Update customers
+            create_team: Create teams
+            create_service_area: Create service areas
+            create_service_plan: Create service plans
+            get_quotes: Get delivery quotes

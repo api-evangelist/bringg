@@ -1,0 +1,150 @@
+openapi: 3.0.3
+info:
+  title: Bringg Delivery Hub Administration Teams API
+  version: '1.0'
+  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
+
+    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
+
+    service plans, planned delivery windows (delivery slots), exclusion windows
+
+    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
+
+    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
+
+    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
+
+    follow the pattern https://{region}-admin-api.bringg.com.
+
+    '
+  contact:
+    name: Bringg Developer Support
+    url: https://developers.bringg.com
+  termsOfService: https://developers.bringg.com/reference/terms-of-service
+  license:
+    name: Bringg API Terms of Service
+    url: https://developers.bringg.com/reference/terms-of-service
+servers:
+- url: https://us2-admin-api.bringg.com
+  description: US2 region (GCP)
+- url: https://us3-admin-api.bringg.com
+  description: US3 region (GCP)
+- url: https://us4-admin-api.bringg.com
+  description: US4 region (GCP)
+- url: https://eu2-admin-api.bringg.com
+  description: EU2 region (GCP)
+- url: https://eu3-admin-api.bringg.com
+  description: EU3 region (GCP)
+security:
+- OAuth2ClientCredentials: []
+tags:
+- name: Teams
+paths:
+  /services/create_team:
+    post:
+      summary: Create Team
+      description: Create a new team.
+      tags:
+      - Teams
+      operationId: createTeam
+      responses:
+        '200':
+          description: Team created.
+  /services/update_team:
+    post:
+      summary: Update Team
+      description: Update an existing team.
+      tags:
+      - Teams
+      operationId: updateTeam
+      responses:
+        '200':
+          description: Team updated.
+  /services/delete_team:
+    delete:
+      summary: Delete Team
+      description: Delete a team.
+      tags:
+      - Teams
+      operationId: deleteTeam
+      responses:
+        '200':
+          description: Team deleted.
+  /services/get_team:
+    get:
+      summary: Get Team
+      description: Retrieve a team by id.
+      tags:
+      - Teams
+      operationId: getTeam
+      responses:
+        '200':
+          description: Team returned.
+  /services/team_index:
+    get:
+      summary: List Teams
+      description: List all teams for the merchant.
+      tags:
+      - Teams
+      operationId: teamIndex
+      responses:
+        '200':
+          description: Teams returned.
+  /services/create_team_service_area:
+    post:
+      summary: Assign Team To Service Area
+      description: Assign one or more teams to a service area.
+      tags:
+      - Teams
+      operationId: createTeamServiceArea
+      responses:
+        '200':
+          description: Team assigned.
+  /services/get_teams_service_areas:
+    get:
+      summary: Get Team Service Areas
+      description: Get the team-service-area coupling.
+      tags:
+      - Teams
+      operationId: getTeamsServiceAreas
+      responses:
+        '200':
+          description: Returned.
+  /services/update_team_service_area:
+    post:
+      summary: Update Team Service Area
+      description: Update teams assigned to a service area.
+      tags:
+      - Teams
+      operationId: updateTeamServiceArea
+      responses:
+        '200':
+          description: Updated.
+components:
+  securitySchemes:
+    OAuth2ClientCredentials:
+      type: oauth2
+      description: 'OAuth 2.0 Client Credentials Grant. Exchange your client_id and client_secret
+
+        for an access token via POST https://admin-api.bringg.com/oauth/token (or the
+
+        regional equivalent), then send Authorization: Bearer <access_token>.
+
+        '
+      flows:
+        clientCredentials:
+          tokenUrl: https://admin-api.bringg.com/oauth/token
+          scopes:
+            create_task: Create orders
+            update_task: Update orders
+            get_task: Read orders
+            cancel_task: Cancel orders
+            assign_task: Assign orders to drivers
+            checkin: Driver check-in
+            checkout: Driver check-out
+            create_customer: Create customers
+            update_customer: Update customers
+            create_team: Create teams
+            create_service_area: Create service areas
+            create_service_plan: Create service plans
+            get_quotes: Get delivery quotes

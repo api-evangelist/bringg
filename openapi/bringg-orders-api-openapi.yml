@@ -1,0 +1,290 @@
+openapi: 3.0.3
+info:
+  title: Bringg Delivery Hub Administration Orders API
+  version: '1.0'
+  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
+
+    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
+
+    service plans, planned delivery windows (delivery slots), exclusion windows
+
+    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
+
+    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
+
+    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
+
+    follow the pattern https://{region}-admin-api.bringg.com.
+
+    '
+  contact:
+    name: Bringg Developer Support
+    url: https://developers.bringg.com
+  termsOfService: https://developers.bringg.com/reference/terms-of-service
+  license:
+    name: Bringg API Terms of Service
+    url: https://developers.bringg.com/reference/terms-of-service
+servers:
+- url: https://us2-admin-api.bringg.com
+  description: US2 region (GCP)
+- url: https://us3-admin-api.bringg.com
+  description: US3 region (GCP)
+- url: https://us4-admin-api.bringg.com
+  description: US4 region (GCP)
+- url: https://eu2-admin-api.bringg.com
+  description: EU2 region (GCP)
+- url: https://eu3-admin-api.bringg.com
+  description: EU3 region (GCP)
+security:
+- OAuth2ClientCredentials: []
+tags:
+- name: Orders
+paths:
+  /services/create_task:
+    post:
+      summary: Create Order
+      description: Create a new order (task) in Bringg with one or more waypoints, customer, inventory, service plan, and team assignment.
+      tags:
+      - Orders
+      operationId: createTask
+      responses:
+        '200':
+          description: Order created.
+  /services/update_task:
+    post:
+      summary: Update Order
+      description: Update an existing order's details, waypoints, inventory, or service plan.
+      tags:
+      - Orders
+      operationId: updateTask
+      responses:
+        '200':
+          description: Order updated.
+  /services/get_task:
+    get:
+      summary: Get Order
+      description: Retrieve full details of an order by id or external_id.
+      tags:
+      - Orders
+      operationId: getTask
+      responses:
+        '200':
+          description: Order returned.
+  /services/get_open_tasks:
+    get:
+      summary: Get Open Orders
+      description: List orders currently in an open state (not completed or cancelled).
+      tags:
+      - Orders
+      operationId: getOpenTasks
+      responses:
+        '200':
+          description: List of open orders.
+  /services/get_post_optimization_tasks:
+    get:
+      summary: Get Post-Optimization Orders
+      description: Retrieve orders after route optimization has been applied.
+      tags:
+      - Orders
+      operationId: getPostOptimizationTasks
+      responses:
+        '200':
+          description: Post-optimization orders.
+  /services/get_open_orders_by_customer:
+    get:
+      summary: Get Open Orders by Customer
+      description: List open orders for a specific customer.
+      tags:
+      - Orders
+      operationId: getOpenOrdersByCustomer
+      responses:
+        '200':
+          description: Orders for customer.
+  /services/start_task:
+    post:
+      summary: Start Order
+      description: Mark an order as started (driver beginning execution).
+      tags:
+      - Orders
+      operationId: startTask
+      responses:
+        '200':
+          description: Order started.
+  /services/end_task:
+    post:
+      summary: End Order
+      description: Mark an order as ended/completed.
+      tags:
+      - Orders
+      operationId: endTask
+      responses:
+        '200':
+          description: Order ended.
+  /services/cancel_task:
+    post:
+      summary: Cancel Order
+      description: Cancel an order with optional cancellation reason.
+      tags:
+      - Orders
+      operationId: cancelTask
+      responses:
+        '200':
+          description: Order cancelled.
+  /services/update_task_external_id:
+    post:
+      summary: Update Order External ID
+      description: Update an order's external_id without other changes.
+      tags:
+      - Orders
+      operationId: updateTaskExternalId
+      responses:
+        '200':
+          description: External id updated.
+  /services/create_task_refund:
+    post:
+      summary: Create Order Refund
+      description: Create a refund record on a task.
+      tags:
+      - Orders
+      operationId: createTaskRefund
+      responses:
+        '200':
+          description: Refund created.
+  /services/create_task_payment_history:
+    post:
+      summary: Create Order Payment History
+      description: Add a payment history entry to an order.
+      tags:
+      - Orders
+      operationId: createTaskPaymentHistory
+      responses:
+        '200':
+          description: Payment recorded.
+  /services/checkin:
+    post:
+      summary: Check-in (Arrived to Destination)
+      description: Record driver arrival at an order waypoint.
+      tags:
+      - Orders
+      operationId: checkIn
+      responses:
+        '200':
+          description: Check-in recorded.
+  /services/checkout:
+    post:
+      summary: Check-out (Left Destination)
+      description: Record driver leaving an order waypoint. Final checkout completes the order.
+      tags:
+      - Orders
+      operationId: checkOut
+      responses:
+        '200':
+          description: Check-out recorded.
+  /services/mass_checkout:
+    post:
+      summary: Multi-Order Checkout
+      description: Trigger checkout for multiple orders sharing a checkout location.
+      tags:
+      - Orders
+      operationId: massCheckout
+      responses:
+        '200':
+          description: Bulk checkout accepted.
+  /services/release_tasks:
+    post:
+      summary: Release Orders
+      description: Release orders from Planning to Dispatch, making them available to drivers.
+      tags:
+      - Orders
+      operationId: releaseTasks
+      responses:
+        '200':
+          description: Orders released.
+  /services/assign_task:
+    post:
+      summary: Assign Order To Driver
+      description: Assign an order directly to a specific driver.
+      tags:
+      - Orders
+      operationId: assignTask
+      responses:
+        '200':
+          description: Assigned.
+  /partner/request-driver:
+    post:
+      summary: Request Driver
+      description: Create a delivery request from a merchant or third-party system asking the partner to fulfill an order.
+      tags:
+      - Orders
+      operationId: requestDriver
+      responses:
+        '200':
+          description: Request created.
+  /partner/cancel-order:
+    post:
+      summary: Cancel Order
+      description: Cancel a delivery order at the partner side.
+      tags:
+      - Orders
+      operationId: cancelOrder
+      responses:
+        '200':
+          description: Cancelled.
+  /partner/complete-order:
+    post:
+      summary: Complete Order
+      description: Notify Bringg the partner has completed the delivery.
+      tags:
+      - Orders
+      operationId: completeOrder
+      responses:
+        '200':
+          description: Completed.
+  /partner/update-order:
+    post:
+      summary: Update Order
+      description: Update order status, driver, or other fields from the partner side.
+      tags:
+      - Orders
+      operationId: updateOrder
+      responses:
+        '200':
+          description: Updated.
+  /partner/start-order:
+    post:
+      summary: Start Order
+      description: Indicate the partner driver has started an order.
+      tags:
+      - Orders
+      operationId: startOrder
+      responses:
+        '200':
+          description: Started.
+components:
+  securitySchemes:
+    OAuth2ClientCredentials:
+      type: oauth2
+      description: 'OAuth 2.0 Client Credentials Grant. Exchange your client_id and client_secret
+
+        for an access token via POST https://admin-api.bringg.com/oauth/token (or the
+
+        regional equivalent), then send Authorization: Bearer <access_token>.
+
+        '
+      flows:
+        clientCredentials:
+          tokenUrl: https://admin-api.bringg.com/oauth/token
+          scopes:
+            create_task: Create orders
+            update_task: Update orders
+            get_task: Read orders
+            cancel_task: Cancel orders
+            assign_task: Assign orders to drivers
+            checkin: Driver check-in
+            checkout: Driver check-out
+            create_customer: Create customers
+            update_customer: Update customers
+            create_team: Create teams
+            create_service_area: Create service areas
+            create_service_plan: Create service plans
+            get_quotes: Get delivery quotes
