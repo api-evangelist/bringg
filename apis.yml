@@ -1,116 +1,1806 @@
 aid: bringg
 url: https://raw.githubusercontent.com/api-evangelist/bringg/refs/heads/main/apis.yml
 apis:
-- aid: bringg:bringg-delivery-hub-api
-  name: Bringg Delivery Hub API
-  tags:
-  - Last-Mile Delivery
-  - Orders
-  - Dispatch
-  - Routing
-  - Service Areas
-  - Service Plans
-  - Quotes
-  - Inventory
-  - Analytics
+- aid: bringg:bringg-administration-api
+  name: Bringg Administration API
+  description: The Administration API from Bringg — 1 operation(s) for administration.
   humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
   baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Administration
   properties:
-  - url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
-    type: Documentation
-  - url: https://developers.bringg.com/docs/overview
-    type: Documentation
-  - url: https://developers.bringg.com/docs/rest
-    type: Documentation
-  - url: https://developers.bringg.com/docs/bringg-api-access-management
-    type: Authentication
-  - url: https://developers.bringg.com/docs/oauth-20-urls
-    type: Authentication
-  - url: openapi/bringg-delivery-hub-api-openapi.yml
-    type: OpenAPI
-  - url: json-schema/bringg-order-schema.json
-    type: JSONSchema
-  - url: json-schema/bringg-customer-schema.json
-    type: JSONSchema
-  - url: json-schema/bringg-waypoint-schema.json
-    type: JSONSchema
-  - url: json-schema/bringg-run-schema.json
-    type: JSONSchema
-  - url: json-structure/bringg-order-structure.json
-    type: JSONStructure
-  - url: json-ld/bringg-context.jsonld
-    type: JSONLD
-  - url: examples/bringg-create-task-example.json
-    type: Examples
-  - url: graphql/bringg-graphql.md
-    type: GraphQL
-  description: Bringg's REST orchestration API for the Delivery Hub — create and manage
-    orders (tasks), runs (routes), customers, teams, service areas, service plans,
-    planned delivery windows (delivery slots), exclusion windows (blackouts), parking
-    spots, packages, inventory, floating inventory, recurring orders, delivery blocks,
-    vehicles, and analytics reports. All endpoints use OAuth 2.0 Client Credentials
-    Grant against region-specific GCP base URLs (US2/US3/US4, EU2/EU3).
-- aid: bringg:bringg-drivers-shifts-api
-  name: Bringg Drivers And Shifts API
+  - type: OpenAPI
+    url: openapi/bringg-administration-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-analytics-api
+  name: Bringg Analytics API
+  description: The Analytics API from Bringg — 2 operation(s) for analytics.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Analytics
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-analytics-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-authentication-api
+  name: Bringg Authentication API
+  description: The Authentication API from Bringg — 2 operation(s) for authentication.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Authentication
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-authentication-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-blackouts-api
+  name: Bringg Blackouts API
+  description: The Blackouts API from Bringg — 4 operation(s) for blackouts.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Blackouts
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-blackouts-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-bulk-api
+  name: Bringg Bulk API
+  description: The Bulk API from Bringg — 3 operation(s) for bulk.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Bulk
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-bulk-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-customers-api
+  name: Bringg Customers API
+  description: The Customers API from Bringg — 5 operation(s) for customers.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Customers
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-customers-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-delivery-blocks-api
+  name: Bringg Delivery Blocks API
+  description: The Delivery Blocks API from Bringg — 8 operation(s) for delivery blocks.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Delivery Blocks
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-delivery-blocks-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-delivery-slots-api
+  name: Bringg Delivery Slots API
+  description: The Delivery Slots API from Bringg — 2 operation(s) for delivery slots.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Delivery Slots
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-delivery-slots-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-drivers-api
+  name: Bringg Drivers API
+  description: The Drivers API from Bringg — 15 operation(s) for drivers.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
   tags:
   - Drivers
-  - Shifts
-  - Users
-  - Delivery Blocks
-  - Vehicles
-  - Fleet
-  humanURL: https://developers.bringg.com/reference/driver-shifts
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-drivers-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-floating-inventory-api
+  name: Bringg Floating Inventory API
+  description: The Floating Inventory API from Bringg — 4 operation(s) for floating inventory.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
   baseURL: https://us2-admin-api.bringg.com
-  properties:
-  - url: https://developers.bringg.com/reference/driver-shifts
-    type: Documentation
-  - url: https://developers.bringg.com/reference/users-3
-    type: Documentation
-  - url: https://developers.bringg.com/reference/vehicles
-    type: Documentation
-  - url: https://developers.bringg.com/reference/delivery-blocks
-    type: Documentation
-  - url: openapi/bringg-drivers-shifts-api-openapi.yml
-    type: OpenAPI
-  - url: json-schema/bringg-driver-schema.json
-    type: JSONSchema
-  description: Manage Bringg drivers, user roles, shifts, real-time availability,
-    driver location updates, delivery blocks (shift slots), QR-code-based login, and
-    vehicles with vehicle profiles. Backs the Bringg Driver App and dispatcher workflows;
-    uses OAuth 2.0 Client Credentials Grant.
-- aid: bringg:bringg-fleet-partners-api
-  name: Bringg Fleet Partners API
   tags:
-  - Fleet Partners
-  - Self-Integrated Fleets
-  - Carrier Integration
-  - Quotes
-  - Webhooks
-  humanURL: https://developers.bringg.com/reference/overview-1
-  baseURL: https://app.bringg.com
+  - Floating Inventory
   properties:
-  - url: https://developers.bringg.com/reference/overview-1
-    type: Documentation
-  - url: https://developers.bringg.com/reference/how-to-get-started
-    type: GettingStarted
-  - url: https://developers.bringg.com/reference/getting-certified
-    type: Documentation
-  - url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
-    type: Documentation
-  - url: https://developers.bringg.com/reference/webhooks
-    type: Documentation
-  - url: https://developers.bringg.com/reference/webhooks-index
-    type: Documentation
-  - url: openapi/bringg-fleet-partners-api-openapi.yml
-    type: OpenAPI
-  - url: asyncapi/bringg-webhooks-asyncapi.yml
-    type: AsyncAPI
-  description: Integration surface for delivery providers and self-integrated fleets
-    connecting to the Bringg Delivery Hub. Partners host webhook endpoints Bringg
-    calls (Delivery Created, Get Quote, Delivery Updated, Delivery Cancelled, Merchant
-    Registered, Return Delivery Created) and expose endpoints for order acceptance,
-    status updates, driver location, and proof of delivery. Used by 250+ third-party
-    carriers and crowdsourced fleets in the Bringg Carrier Network.
+  - type: OpenAPI
+    url: openapi/bringg-floating-inventory-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-inventory-api
+  name: Bringg Inventory API
+  description: The Inventory API from Bringg — 2 operation(s) for inventory.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Inventory
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-inventory-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-notes-api
+  name: Bringg Notes API
+  description: The Notes API from Bringg — 3 operation(s) for notes.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Notes
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-notes-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-operations-api
+  name: Bringg Operations API
+  description: The Operations API from Bringg — 1 operation(s) for operations.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-operations-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-order-configurations-api
+  name: Bringg Order Configurations API
+  description: The Order Configurations API from Bringg — 2 operation(s) for order configurations.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Order Configurations
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-order-configurations-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-orders-api
+  name: Bringg Orders API
+  description: The Orders API from Bringg — 22 operation(s) for orders.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-packages-api
+  name: Bringg Packages API
+  description: The Packages API from Bringg — 6 operation(s) for packages.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Packages
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-packages-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-parking-spots-api
+  name: Bringg Parking Spots API
+  description: The Parking Spots API from Bringg — 5 operation(s) for parking spots.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Parking Spots
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-parking-spots-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-planned-routes-api
+  name: Bringg Planned Routes API
+  description: The Planned Routes API from Bringg — 2 operation(s) for planned routes.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Planned Routes
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-planned-routes-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-quotes-api
+  name: Bringg Quotes API
+  description: The Quotes API from Bringg — 1 operation(s) for quotes.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Quotes
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-quotes-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-recurring-orders-api
+  name: Bringg Recurring Orders API
+  description: The Recurring Orders API from Bringg — 3 operation(s) for recurring orders.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Recurring Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-recurring-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-routes-api
+  name: Bringg Routes API
+  description: The Routes API from Bringg — 4 operation(s) for routes.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Routes
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-routes-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-service-areas-api
+  name: Bringg Service Areas API
+  description: The Service Areas API from Bringg — 8 operation(s) for service areas.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Service Areas
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-service-areas-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-service-plans-api
+  name: Bringg Service Plans API
+  description: The Service Plans API from Bringg — 4 operation(s) for service plans.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Service Plans
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-service-plans-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-shifts-api
+  name: Bringg Shifts API
+  description: The Shifts API from Bringg — 2 operation(s) for shifts.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Shifts
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-shifts-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-teams-api
+  name: Bringg Teams API
+  description: The Teams API from Bringg — 8 operation(s) for teams.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-teams-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-users-api
+  name: Bringg Users API
+  description: The Users API from Bringg — 6 operation(s) for users.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-users-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-vehicle-profiles-api
+  name: Bringg Vehicle Profiles API
+  description: The Vehicle Profiles API from Bringg — 5 operation(s) for vehicle profiles.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Vehicle Profiles
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-vehicle-profiles-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-vehicles-api
+  name: Bringg Vehicles API
+  description: The Vehicles API from Bringg — 8 operation(s) for vehicles.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Vehicles
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-vehicles-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-waypoints-api
+  name: Bringg Waypoints API
+  description: The Waypoints API from Bringg — 6 operation(s) for waypoints.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Waypoints
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-waypoints-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
+- aid: bringg:bringg-webhooks-api
+  name: Bringg Webhooks API
+  description: The Webhooks API from Bringg — 7 operation(s) for webhooks.
+  humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  baseURL: https://us2-admin-api.bringg.com
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/bringg-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
+  - type: Documentation
+    url: https://developers.bringg.com/docs/overview
+  - type: Documentation
+    url: https://developers.bringg.com/docs/rest
+  - type: Authentication
+    url: https://developers.bringg.com/docs/bringg-api-access-management
+  - type: Authentication
+    url: https://developers.bringg.com/docs/oauth-20-urls
+  - type: JSONSchema
+    url: json-schema/bringg-order-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-customer-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-waypoint-schema.json
+  - type: JSONSchema
+    url: json-schema/bringg-run-schema.json
+  - type: JSONStructure
+    url: json-structure/bringg-order-structure.json
+  - type: JSONLD
+    url: json-ld/bringg-context.jsonld
+  - type: Examples
+    url: examples/bringg-create-task-example.json
+  - type: GraphQL
+    url: graphql/bringg-graphql.md
+  - type: Documentation
+    url: https://developers.bringg.com/reference/driver-shifts
+  - type: Documentation
+    url: https://developers.bringg.com/reference/users-3
+  - type: Documentation
+    url: https://developers.bringg.com/reference/vehicles
+  - type: Documentation
+    url: https://developers.bringg.com/reference/delivery-blocks
+  - type: JSONSchema
+    url: json-schema/bringg-driver-schema.json
+  - type: Documentation
+    url: https://developers.bringg.com/reference/overview-1
+  - type: GettingStarted
+    url: https://developers.bringg.com/reference/how-to-get-started
+  - type: Documentation
+    url: https://developers.bringg.com/reference/getting-certified
+  - type: Documentation
+    url: https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks
+  - type: Documentation
+    url: https://developers.bringg.com/reference/webhooks-index
+  - type: AsyncAPI
+    url: asyncapi/bringg-webhooks-asyncapi.yml
 name: Bringg
 tags:
 - Last-Mile Delivery
@@ -129,9 +1819,24 @@ tags:
 - Curbside Pickup
 - Returns
 kind: contract
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bringg.png
 access: 3rd-Party
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/bringg/overview
 - type: AgenticAccess
   url: agentic-access/bringg-agentic-access.yml
 - type: TrustCenter
