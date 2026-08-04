@@ -1,0 +1,259 @@
+{
+  "info": {
+    "_postman_id": "1f4ecc8c-4829-4012-a203-0040851e3f15",
+    "name": "Bringg Delivery Hub Administration Recurring Orders API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:41.000Z",
+    "updatedAt": "2026-07-28T01:16:41.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1f4ecc8c-4829-4012-a203-0040851e3f15"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_recurrent_order_template",
+          "item": [
+            {
+              "name": "Create Recurring Order Template",
+              "id": "3cd88faa-92b3-4893-b1d5-71f53142b9d7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_recurrent_order_template",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_recurrent_order_template"
+                  ]
+                },
+                "description": "Create a recurring order template."
+              },
+              "response": [
+                {
+                  "id": "c43a32fc-7501-40d4-b9b9-604ad1e3a0a0",
+                  "name": "Created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_recurrent_order_template",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_recurrent_order_template"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:42.000Z",
+                  "updatedAt": "2026-07-28T01:16:42.000Z",
+                  "uid": "35240-c43a32fc-7501-40d4-b9b9-604ad1e3a0a0"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:42.000Z",
+              "updatedAt": "2026-07-28T01:16:42.000Z",
+              "uid": "35240-3cd88faa-92b3-4893-b1d5-71f53142b9d7"
+            }
+          ],
+          "id": "7ebe16e4-094b-419c-b93f-02d4151c2755",
+          "createdAt": "2026-07-28T01:16:42.000Z",
+          "updatedAt": "2026-07-28T01:16:42.000Z",
+          "uid": "35240-7ebe16e4-094b-419c-b93f-02d4151c2755"
+        },
+        {
+          "name": "delete_recurrent_order_template",
+          "item": [
+            {
+              "name": "Delete Recurring Order Template",
+              "id": "a793c692-89ac-419d-93db-89fea456faaa",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_recurrent_order_template",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_recurrent_order_template"
+                  ]
+                },
+                "description": "Delete a recurring order template."
+              },
+              "response": [
+                {
+                  "id": "bcd5aabb-a0e7-42d9-aba6-61e4514dcd12",
+                  "name": "Deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_recurrent_order_template",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_recurrent_order_template"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:42.000Z",
+                  "updatedAt": "2026-07-28T01:16:42.000Z",
+                  "uid": "35240-bcd5aabb-a0e7-42d9-aba6-61e4514dcd12"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:42.000Z",
+              "updatedAt": "2026-07-28T01:16:42.000Z",
+              "uid": "35240-a793c692-89ac-419d-93db-89fea456faaa"
+            }
+          ],
+          "id": "3923796e-9238-40a6-aa5b-de87e485ac53",
+          "createdAt": "2026-07-28T01:16:42.000Z",
+          "updatedAt": "2026-07-28T01:16:42.000Z",
+          "uid": "35240-3923796e-9238-40a6-aa5b-de87e485ac53"
+        },
+        {
+          "name": "get_recurrent_order_templates_by_customer",
+          "item": [
+            {
+              "name": "Get Recurring Order Templates By Customer",
+              "id": "6576f093-55fa-4fed-939f-10fa11da415d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_recurrent_order_templates_by_customer",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_recurrent_order_templates_by_customer"
+                  ]
+                },
+                "description": "List recurring order templates for a customer."
+              },
+              "response": [
+                {
+                  "id": "5f2375ef-ec43-46a7-af31-fe063e96b4a7",
+                  "name": "List returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_recurrent_order_templates_by_customer",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_recurrent_order_templates_by_customer"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:42.000Z",
+                  "updatedAt": "2026-07-28T01:16:42.000Z",
+                  "uid": "35240-5f2375ef-ec43-46a7-af31-fe063e96b4a7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:42.000Z",
+              "updatedAt": "2026-07-28T01:16:42.000Z",
+              "uid": "35240-6576f093-55fa-4fed-939f-10fa11da415d"
+            }
+          ],
+          "id": "11c62fda-a194-45fc-8610-20c8fe410c85",
+          "createdAt": "2026-07-28T01:16:42.000Z",
+          "updatedAt": "2026-07-28T01:16:42.000Z",
+          "uid": "35240-11c62fda-a194-45fc-8610-20c8fe410c85"
+        }
+      ],
+      "id": "554aa4e2-2b1b-4fee-a2db-6ef70bc8765e",
+      "createdAt": "2026-07-28T01:16:42.000Z",
+      "updatedAt": "2026-07-28T01:16:42.000Z",
+      "uid": "35240-554aa4e2-2b1b-4fee-a2db-6ef70bc8765e"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

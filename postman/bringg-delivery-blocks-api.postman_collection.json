@@ -1,0 +1,609 @@
+{
+  "info": {
+    "_postman_id": "25712be2-1a8c-4f91-9f11-1935efafb519",
+    "name": "Bringg Delivery Hub Administration Delivery Blocks API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:15:59.000Z",
+    "updatedAt": "2026-07-28T01:15:59.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-25712be2-1a8c-4f91-9f11-1935efafb519"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_delivery_block",
+          "item": [
+            {
+              "name": "Create Delivery Block",
+              "id": "3a3f0a9c-f80c-4423-bf67-120b2b9699aa",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_delivery_block",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_delivery_block"
+                  ]
+                },
+                "description": "Create a delivery block (driver shift slot for delivery work)."
+              },
+              "response": [
+                {
+                  "id": "a99b18be-71e2-4fdb-821d-9204a1b5d186",
+                  "name": "Created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_delivery_block",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_delivery_block"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-a99b18be-71e2-4fdb-821d-9204a1b5d186"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-3a3f0a9c-f80c-4423-bf67-120b2b9699aa"
+            }
+          ],
+          "id": "ad2b3e07-e63c-4468-90d2-405537097488",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-ad2b3e07-e63c-4468-90d2-405537097488"
+        },
+        {
+          "name": "update_delivery_block",
+          "item": [
+            {
+              "name": "Update Delivery Block",
+              "id": "3ed81288-ccc3-4bc0-9ea1-d6a7a5f7935a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_delivery_block",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_delivery_block"
+                  ]
+                },
+                "description": "Update a delivery block."
+              },
+              "response": [
+                {
+                  "id": "d9699a6d-96ee-407d-a014-ee56974f504d",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_delivery_block",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_delivery_block"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-d9699a6d-96ee-407d-a014-ee56974f504d"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-3ed81288-ccc3-4bc0-9ea1-d6a7a5f7935a"
+            }
+          ],
+          "id": "06990475-c257-40cd-9f19-77023f391325",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-06990475-c257-40cd-9f19-77023f391325"
+        },
+        {
+          "name": "delete_delivery_block",
+          "item": [
+            {
+              "name": "Delete Delivery Block",
+              "id": "84898ddb-c316-4ab7-bb8f-6f33ded662ac",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_delivery_block",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_delivery_block"
+                  ]
+                },
+                "description": "Delete a delivery block."
+              },
+              "response": [
+                {
+                  "id": "144ae916-35fb-4ff4-be0e-a6ec44370534",
+                  "name": "Deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_delivery_block",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_delivery_block"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-144ae916-35fb-4ff4-be0e-a6ec44370534"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-84898ddb-c316-4ab7-bb8f-6f33ded662ac"
+            }
+          ],
+          "id": "29898d7d-65db-45e7-8279-7c5a7f4545bd",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-29898d7d-65db-45e7-8279-7c5a7f4545bd"
+        },
+        {
+          "name": "get_delivery_block",
+          "item": [
+            {
+              "name": "Get Delivery Block",
+              "id": "22f823c2-ea37-42ad-840e-9eb312252f98",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_delivery_block",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_delivery_block"
+                  ]
+                },
+                "description": "Get a delivery block by id."
+              },
+              "response": [
+                {
+                  "id": "46043fd8-83a6-4368-a19a-a6298e2efbe6",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_delivery_block",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_delivery_block"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-46043fd8-83a6-4368-a19a-a6298e2efbe6"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-22f823c2-ea37-42ad-840e-9eb312252f98"
+            }
+          ],
+          "id": "4dead0dd-37cc-4017-8c01-9a486ed63887",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-4dead0dd-37cc-4017-8c01-9a486ed63887"
+        },
+        {
+          "name": "assign_delivery_block",
+          "item": [
+            {
+              "name": "Assign Delivery Block",
+              "id": "5fc87dec-84c5-406d-ba2c-64c7c1b4df77",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/assign_delivery_block",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "assign_delivery_block"
+                  ]
+                },
+                "description": "Assign a driver to a delivery block."
+              },
+              "response": [
+                {
+                  "id": "fa6e4214-5d83-43fb-876d-df17323e6a06",
+                  "name": "Assigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/assign_delivery_block",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "assign_delivery_block"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-fa6e4214-5d83-43fb-876d-df17323e6a06"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-5fc87dec-84c5-406d-ba2c-64c7c1b4df77"
+            }
+          ],
+          "id": "c8896643-af05-4c0d-ba55-251ee41343a0",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-c8896643-af05-4c0d-ba55-251ee41343a0"
+        },
+        {
+          "name": "unassign_delivery_block",
+          "item": [
+            {
+              "name": "Unassign Delivery Block",
+              "id": "00e470c8-9d3c-49f1-856b-e1f1260fc287",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/unassign_delivery_block",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "unassign_delivery_block"
+                  ]
+                },
+                "description": "Unassign a driver from a delivery block."
+              },
+              "response": [
+                {
+                  "id": "ecf44643-e633-4ec8-aad9-9e27067714c8",
+                  "name": "Unassigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/unassign_delivery_block",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "unassign_delivery_block"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-ecf44643-e633-4ec8-aad9-9e27067714c8"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-00e470c8-9d3c-49f1-856b-e1f1260fc287"
+            }
+          ],
+          "id": "f9ef879c-7e09-4d5c-bf7f-6806c615e7d8",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-f9ef879c-7e09-4d5c-bf7f-6806c615e7d8"
+        },
+        {
+          "name": "users_delivery_blocks",
+          "item": [
+            {
+              "name": "Get Delivery Blocks By User",
+              "id": "6ac22980-260f-4422-99b4-0e1d0085a101",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/users_delivery_blocks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "users_delivery_blocks"
+                  ]
+                },
+                "description": "List delivery blocks assigned to specific users."
+              },
+              "response": [
+                {
+                  "id": "0e37d365-a1fd-4768-b755-880f370d2e21",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/users_delivery_blocks",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "users_delivery_blocks"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-0e37d365-a1fd-4768-b755-880f370d2e21"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-6ac22980-260f-4422-99b4-0e1d0085a101"
+            }
+          ],
+          "id": "2f03db87-4ef6-494f-9f41-3dce5b2c53c4",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-2f03db87-4ef6-494f-9f41-3dce5b2c53c4"
+        },
+        {
+          "name": "team_delivery_blocks",
+          "item": [
+            {
+              "name": "Get Delivery Blocks By Team",
+              "id": "6ec5f3bb-4206-4ac3-af27-e121de2ba61e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/team_delivery_blocks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "team_delivery_blocks"
+                  ]
+                },
+                "description": "List delivery blocks for a team."
+              },
+              "response": [
+                {
+                  "id": "d2fbfe11-05ae-4b19-ba06-a6da45436c43",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/team_delivery_blocks",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "team_delivery_blocks"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-d2fbfe11-05ae-4b19-ba06-a6da45436c43"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-6ec5f3bb-4206-4ac3-af27-e121de2ba61e"
+            }
+          ],
+          "id": "8df93d75-1740-4e9a-9b4b-7cf27379b689",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-8df93d75-1740-4e9a-9b4b-7cf27379b689"
+        }
+      ],
+      "id": "7d4433e6-3841-4698-b9d1-4f6c3b25e6d0",
+      "createdAt": "2026-07-28T01:16:00.000Z",
+      "updatedAt": "2026-07-28T01:16:00.000Z",
+      "uid": "35240-7d4433e6-3841-4698-b9d1-4f6c3b25e6d0"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

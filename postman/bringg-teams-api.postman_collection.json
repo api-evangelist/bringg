@@ -1,0 +1,609 @@
+{
+  "info": {
+    "_postman_id": "5cda896e-9eb1-4879-acb2-d655d687a7bd",
+    "name": "Bringg Delivery Hub Administration Teams API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:51.000Z",
+    "updatedAt": "2026-07-28T01:16:51.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5cda896e-9eb1-4879-acb2-d655d687a7bd"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_team",
+          "item": [
+            {
+              "name": "Create Team",
+              "id": "3652f823-963f-4caa-8231-34667cc300c5",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_team",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_team"
+                  ]
+                },
+                "description": "Create a new team."
+              },
+              "response": [
+                {
+                  "id": "5b6125b1-a942-4b39-8350-c6507c17a4e5",
+                  "name": "Team created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_team",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_team"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-5b6125b1-a942-4b39-8350-c6507c17a4e5"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-3652f823-963f-4caa-8231-34667cc300c5"
+            }
+          ],
+          "id": "7dbf6e20-a5cf-42b7-86d5-8fc8dd2e45d9",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-7dbf6e20-a5cf-42b7-86d5-8fc8dd2e45d9"
+        },
+        {
+          "name": "update_team",
+          "item": [
+            {
+              "name": "Update Team",
+              "id": "9f53fd30-c33f-425b-8117-13c75eb5d554",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_team",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_team"
+                  ]
+                },
+                "description": "Update an existing team."
+              },
+              "response": [
+                {
+                  "id": "dd22a86b-58af-42fb-af4c-36869ee85b79",
+                  "name": "Team updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_team",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_team"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-dd22a86b-58af-42fb-af4c-36869ee85b79"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-9f53fd30-c33f-425b-8117-13c75eb5d554"
+            }
+          ],
+          "id": "631a6769-0735-4907-9bfe-19bed4bfd529",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-631a6769-0735-4907-9bfe-19bed4bfd529"
+        },
+        {
+          "name": "delete_team",
+          "item": [
+            {
+              "name": "Delete Team",
+              "id": "1f09d9c1-7166-4a42-9319-1a1d0ac297c9",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_team",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_team"
+                  ]
+                },
+                "description": "Delete a team."
+              },
+              "response": [
+                {
+                  "id": "f5b3f3d1-41e3-4c2d-92cd-6f17f96c9d9f",
+                  "name": "Team deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_team",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_team"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-f5b3f3d1-41e3-4c2d-92cd-6f17f96c9d9f"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-1f09d9c1-7166-4a42-9319-1a1d0ac297c9"
+            }
+          ],
+          "id": "d567b560-eed4-4828-9ecb-d2cfbba1c982",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-d567b560-eed4-4828-9ecb-d2cfbba1c982"
+        },
+        {
+          "name": "get_team",
+          "item": [
+            {
+              "name": "Get Team",
+              "id": "2043d82b-d3cc-45af-8f58-50ed68d13268",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_team",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_team"
+                  ]
+                },
+                "description": "Retrieve a team by id."
+              },
+              "response": [
+                {
+                  "id": "5e8d3bcc-9675-469e-b491-0ddca15c321c",
+                  "name": "Team returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_team",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_team"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-5e8d3bcc-9675-469e-b491-0ddca15c321c"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-2043d82b-d3cc-45af-8f58-50ed68d13268"
+            }
+          ],
+          "id": "41b8d47b-c7cf-4b09-8a9b-8d8ed9c01d61",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-41b8d47b-c7cf-4b09-8a9b-8d8ed9c01d61"
+        },
+        {
+          "name": "team_index",
+          "item": [
+            {
+              "name": "List Teams",
+              "id": "9c7e9af9-6c89-4a79-967f-a11c4b9561f2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/team_index",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "team_index"
+                  ]
+                },
+                "description": "List all teams for the merchant."
+              },
+              "response": [
+                {
+                  "id": "b524f95a-3709-46b8-92b8-1cd8644fec66",
+                  "name": "Teams returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/team_index",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "team_index"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-b524f95a-3709-46b8-92b8-1cd8644fec66"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-9c7e9af9-6c89-4a79-967f-a11c4b9561f2"
+            }
+          ],
+          "id": "c4d89d41-2df6-448d-8d90-b74a35650afe",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-c4d89d41-2df6-448d-8d90-b74a35650afe"
+        },
+        {
+          "name": "create_team_service_area",
+          "item": [
+            {
+              "name": "Assign Team To Service Area",
+              "id": "394d482a-261d-41ce-89eb-e119541e4fa6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_team_service_area",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_team_service_area"
+                  ]
+                },
+                "description": "Assign one or more teams to a service area."
+              },
+              "response": [
+                {
+                  "id": "94e8bff9-0b35-4b48-ad45-79ff1de3b11e",
+                  "name": "Team assigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_team_service_area",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_team_service_area"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-94e8bff9-0b35-4b48-ad45-79ff1de3b11e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-394d482a-261d-41ce-89eb-e119541e4fa6"
+            }
+          ],
+          "id": "2ae1afd2-4f29-4186-b4c0-040844e09f12",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-2ae1afd2-4f29-4186-b4c0-040844e09f12"
+        },
+        {
+          "name": "get_teams_service_areas",
+          "item": [
+            {
+              "name": "Get Team Service Areas",
+              "id": "1e4187d0-6fda-4c9d-aa98-513a87c9138d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_teams_service_areas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_teams_service_areas"
+                  ]
+                },
+                "description": "Get the team-service-area coupling."
+              },
+              "response": [
+                {
+                  "id": "ec3cc5aa-55e5-4d14-b144-8d12f3d7e4ad",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_teams_service_areas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_teams_service_areas"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-ec3cc5aa-55e5-4d14-b144-8d12f3d7e4ad"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-1e4187d0-6fda-4c9d-aa98-513a87c9138d"
+            }
+          ],
+          "id": "91ec0247-ae71-44fa-92c9-7deca071f9e6",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-91ec0247-ae71-44fa-92c9-7deca071f9e6"
+        },
+        {
+          "name": "update_team_service_area",
+          "item": [
+            {
+              "name": "Update Team Service Area",
+              "id": "d51eb8f8-40e2-4255-8666-146a6670e999",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_team_service_area",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_team_service_area"
+                  ]
+                },
+                "description": "Update teams assigned to a service area."
+              },
+              "response": [
+                {
+                  "id": "0c2cc0d0-d53f-4e99-a3b2-8f3f2baacb9f",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_team_service_area",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_team_service_area"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-0c2cc0d0-d53f-4e99-a3b2-8f3f2baacb9f"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-d51eb8f8-40e2-4255-8666-146a6670e999"
+            }
+          ],
+          "id": "4034eb2e-04e0-4334-9353-7e5afaadc5fa",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-4034eb2e-04e0-4334-9353-7e5afaadc5fa"
+        }
+      ],
+      "id": "917d988e-2ba9-48fe-85ea-cdf71671e1c1",
+      "createdAt": "2026-07-28T01:16:52.000Z",
+      "updatedAt": "2026-07-28T01:16:52.000Z",
+      "uid": "35240-917d988e-2ba9-48fe-85ea-cdf71671e1c1"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

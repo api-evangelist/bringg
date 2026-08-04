@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "34ee20dc-79e3-44c0-8255-cb34ba831969",
+    "name": "Bringg Delivery Hub Administration Quotes API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:40.000Z",
+    "updatedAt": "2026-07-28T01:16:41.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-34ee20dc-79e3-44c0-8255-cb34ba831969"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "get_quotes",
+          "item": [
+            {
+              "name": "Get Quotes",
+              "id": "f2ca6567-dc39-4bb7-85a2-b3c4b216bd80",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_quotes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_quotes"
+                  ]
+                },
+                "description": "Get delivery quotes and availability for a proposed order."
+              },
+              "response": [
+                {
+                  "id": "f50581f0-e31d-4944-9bd5-61a824b2e5b9",
+                  "name": "Quotes returned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_quotes",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_quotes"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:41.000Z",
+                  "updatedAt": "2026-07-28T01:16:41.000Z",
+                  "uid": "35240-f50581f0-e31d-4944-9bd5-61a824b2e5b9"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:41.000Z",
+              "updatedAt": "2026-07-28T01:16:41.000Z",
+              "uid": "35240-f2ca6567-dc39-4bb7-85a2-b3c4b216bd80"
+            }
+          ],
+          "id": "9b3f2269-6b4f-4ecf-b4c3-b4af98217205",
+          "createdAt": "2026-07-28T01:16:41.000Z",
+          "updatedAt": "2026-07-28T01:16:41.000Z",
+          "uid": "35240-9b3f2269-6b4f-4ecf-b4c3-b4af98217205"
+        }
+      ],
+      "id": "0c99ee56-c218-40a9-bfbe-5af85f6aa92e",
+      "createdAt": "2026-07-28T01:16:41.000Z",
+      "updatedAt": "2026-07-28T01:16:41.000Z",
+      "uid": "35240-0c99ee56-c218-40a9-bfbe-5af85f6aa92e"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

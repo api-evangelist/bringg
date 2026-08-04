@@ -1,0 +1,1108 @@
+{
+  "info": {
+    "_postman_id": "e1a16214-e8ae-4544-9239-be4a489c57c1",
+    "name": "Bringg Delivery Hub Administration Drivers API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:03.000Z",
+    "updatedAt": "2026-07-28T01:16:03.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-e1a16214-e8ae-4544-9239-be4a489c57c1"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "assign_task",
+          "item": [
+            {
+              "name": "Assign Order To Driver",
+              "id": "e4f1eb90-63b5-4604-a511-1cf6d4e7a207",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/assign_task",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "assign_task"
+                  ]
+                },
+                "description": "Assign an order directly to a specific driver."
+              },
+              "response": [
+                {
+                  "id": "2bb9c755-f183-4a08-8485-9e1943d57b11",
+                  "name": "Assigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/assign_task",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "assign_task"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-2bb9c755-f183-4a08-8485-9e1943d57b11"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-e4f1eb90-63b5-4604-a511-1cf6d4e7a207"
+            }
+          ],
+          "id": "6c6559ea-2681-4bfd-8b0d-1ff324c713ba",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-6c6559ea-2681-4bfd-8b0d-1ff324c713ba"
+        },
+        {
+          "name": "assign_run_driver",
+          "item": [
+            {
+              "name": "Assign Driver To Route",
+              "id": "7a01beaf-a5eb-4c5e-8374-cc2e4c77593f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/assign_run_driver",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "assign_run_driver"
+                  ]
+                },
+                "description": "Assign a driver to a route (run) to fulfill its orders."
+              },
+              "response": [
+                {
+                  "id": "b10b251a-c54f-4660-adc3-7c5fa4b736b6",
+                  "name": "Driver assigned to run.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/assign_run_driver",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "assign_run_driver"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-b10b251a-c54f-4660-adc3-7c5fa4b736b6"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-7a01beaf-a5eb-4c5e-8374-cc2e4c77593f"
+            }
+          ],
+          "id": "7d02ea74-3499-4eaa-ab2a-500e7195710f",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-7d02ea74-3499-4eaa-ab2a-500e7195710f"
+        },
+        {
+          "name": "unassign_run_driver",
+          "item": [
+            {
+              "name": "Unassign Driver From Route",
+              "id": "3c9b5ed9-4a83-4e37-8d82-3eafb5327a2a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/unassign_run_driver",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "unassign_run_driver"
+                  ]
+                },
+                "description": "Remove a driver from a route assignment."
+              },
+              "response": [
+                {
+                  "id": "459ccd56-a764-48ac-9077-0aabafccd6a9",
+                  "name": "Driver unassigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/unassign_run_driver",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "unassign_run_driver"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-459ccd56-a764-48ac-9077-0aabafccd6a9"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-3c9b5ed9-4a83-4e37-8d82-3eafb5327a2a"
+            }
+          ],
+          "id": "055ce2ef-688e-4426-9408-5cf6044f6a3d",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-055ce2ef-688e-4426-9408-5cf6044f6a3d"
+        },
+        {
+          "name": "create_blacklisted_customer_user",
+          "item": [
+            {
+              "name": "Create Blacklisted Customer Driver",
+              "id": "43e0ef47-c157-4bd2-9898-c43df9d8a575",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_blacklisted_customer_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_blacklisted_customer_user"
+                  ]
+                },
+                "description": "Block a driver from delivering to a specific customer."
+              },
+              "response": [
+                {
+                  "id": "2cfe4e7a-2d82-4ddf-b759-e3e258a4eda3",
+                  "name": "Blacklist entry created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_blacklisted_customer_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_blacklisted_customer_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-2cfe4e7a-2d82-4ddf-b759-e3e258a4eda3"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-43e0ef47-c157-4bd2-9898-c43df9d8a575"
+            }
+          ],
+          "id": "36ed8d96-13e0-4c3d-adbe-2289cbe03bcc",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-36ed8d96-13e0-4c3d-adbe-2289cbe03bcc"
+        },
+        {
+          "name": "delete_blacklisted_customer_user",
+          "item": [
+            {
+              "name": "Delete Blacklisted Customer Driver",
+              "id": "d1beb5a2-21d5-478c-a605-793d8783483c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_blacklisted_customer_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_blacklisted_customer_user"
+                  ]
+                },
+                "description": "Remove a blacklist entry between customer and driver."
+              },
+              "response": [
+                {
+                  "id": "c522c040-ed52-4338-8a93-9b71b21acfbe",
+                  "name": "Blacklist removed.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_blacklisted_customer_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_blacklisted_customer_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-c522c040-ed52-4338-8a93-9b71b21acfbe"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-d1beb5a2-21d5-478c-a605-793d8783483c"
+            }
+          ],
+          "id": "739ad8f9-1ec5-4c51-b25c-40920d604eae",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-739ad8f9-1ec5-4c51-b25c-40920d604eae"
+        },
+        {
+          "name": "get_blacklisted_customer_users",
+          "item": [
+            {
+              "name": "Get Blacklisted Customer Drivers",
+              "id": "903795df-98cc-41b3-a1fe-e7cb69df7ae0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_blacklisted_customer_users",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_blacklisted_customer_users"
+                  ]
+                },
+                "description": "List blacklist entries between drivers and customers."
+              },
+              "response": [
+                {
+                  "id": "af3300bb-b10b-4f8e-a791-4301c8c43c18",
+                  "name": "Blacklist list.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_blacklisted_customer_users",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_blacklisted_customer_users"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-af3300bb-b10b-4f8e-a791-4301c8c43c18"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-903795df-98cc-41b3-a1fe-e7cb69df7ae0"
+            }
+          ],
+          "id": "44e05e73-b6ae-4be3-b617-5149ec9b959d",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-44e05e73-b6ae-4be3-b617-5149ec9b959d"
+        },
+        {
+          "name": "logoff_user",
+          "item": [
+            {
+              "name": "Logoff Driver",
+              "id": "99db91cc-9250-4e42-8b4d-c77dd749bf23",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/logoff_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "logoff_user"
+                  ]
+                },
+                "description": "Log a driver out of the Bringg Driver App."
+              },
+              "response": [
+                {
+                  "id": "fc8505a2-5ec9-44f1-8625-a0d673b97640",
+                  "name": "Logged off.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/logoff_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "logoff_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-fc8505a2-5ec9-44f1-8625-a0d673b97640"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-99db91cc-9250-4e42-8b4d-c77dd749bf23"
+            }
+          ],
+          "id": "9fbad0dc-1698-44db-a448-a354675a10bd",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-9fbad0dc-1698-44db-a448-a354675a10bd"
+        },
+        {
+          "name": "generate_driver_qr_code",
+          "item": [
+            {
+              "name": "Generate Driver QR Code",
+              "id": "a4bc031f-109a-4326-90e3-51f49c1a9dbc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/generate_driver_qr_code",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "generate_driver_qr_code"
+                  ]
+                },
+                "description": "Generate an access token and QR code for Driver App login of a specified driver."
+              },
+              "response": [
+                {
+                  "id": "0f666211-e980-4951-be7b-1abf19eb9e0d",
+                  "name": "QR code generated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/generate_driver_qr_code",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "generate_driver_qr_code"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-0f666211-e980-4951-be7b-1abf19eb9e0d"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-a4bc031f-109a-4326-90e3-51f49c1a9dbc"
+            }
+          ],
+          "id": "b2d80970-d147-49fe-9aba-30cd3668be27",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-b2d80970-d147-49fe-9aba-30cd3668be27"
+        },
+        {
+          "name": "generate_pickup_qr_code",
+          "item": [
+            {
+              "name": "Generate Pickup QR Code",
+              "id": "be900e47-2b99-44b5-b68e-b8897497ca82",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/generate_pickup_qr_code",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "generate_pickup_qr_code"
+                  ]
+                },
+                "description": "Generate a pickup QR code for an order or location."
+              },
+              "response": [
+                {
+                  "id": "f6f4920b-bc32-41ef-a14b-73e14d762820",
+                  "name": "QR code generated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/generate_pickup_qr_code",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "generate_pickup_qr_code"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-f6f4920b-bc32-41ef-a14b-73e14d762820"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-be900e47-2b99-44b5-b68e-b8897497ca82"
+            }
+          ],
+          "id": "36d1e560-ad1d-4d09-a2d0-146217e9bebc",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-36d1e560-ad1d-4d09-a2d0-146217e9bebc"
+        },
+        {
+          "name": "driver_home_events",
+          "item": [
+            {
+              "name": "Initiate Driver Home Events",
+              "id": "893be9d0-9672-4b4b-8739-6b062454f56a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/driver_home_events",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "driver_home_events"
+                  ]
+                },
+                "description": "Indicate whether a driver is at or has departed their home base."
+              },
+              "response": [
+                {
+                  "id": "6544fd46-389c-495a-989e-397e0839470e",
+                  "name": "Event recorded.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/driver_home_events",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "driver_home_events"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-6544fd46-389c-495a-989e-397e0839470e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-893be9d0-9672-4b4b-8739-6b062454f56a"
+            }
+          ],
+          "id": "b8077762-4c8f-4f1a-8869-61e61a7462be",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-b8077762-4c8f-4f1a-8869-61e61a7462be"
+        },
+        {
+          "name": "get_realtime_availability",
+          "item": [
+            {
+              "name": "Get Driver Availability",
+              "id": "04a1e285-00ba-4028-996f-2368ef931033",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_realtime_availability",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_realtime_availability"
+                  ]
+                },
+                "description": "Retrieve real-time driver availability across specified teams."
+              },
+              "response": [
+                {
+                  "id": "2c19f3f9-be35-411d-afac-594cd6c6f574",
+                  "name": "Availability returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_realtime_availability",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_realtime_availability"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-2c19f3f9-be35-411d-afac-594cd6c6f574"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-04a1e285-00ba-4028-996f-2368ef931033"
+            }
+          ],
+          "id": "adda664e-c756-4b7d-8f66-c8ab7221bbb8",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-adda664e-c756-4b7d-8f66-c8ab7221bbb8"
+        },
+        {
+          "name": "update_driver_location",
+          "item": [
+            {
+              "name": "Update Driver Location",
+              "id": "43c3377b-ed48-47ae-96f5-7a80e66f431f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_driver_location",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_driver_location"
+                  ]
+                },
+                "description": "Push a driver's GPS location for more accurate ETA calculations."
+              },
+              "response": [
+                {
+                  "id": "31bf263b-f0b2-46ad-b571-2799a44392b6",
+                  "name": "Location updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_driver_location",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_driver_location"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-31bf263b-f0b2-46ad-b571-2799a44392b6"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-43c3377b-ed48-47ae-96f5-7a80e66f431f"
+            }
+          ],
+          "id": "c4c7c8b7-5f3a-4bb7-b548-fe05cea024fd",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-c4c7c8b7-5f3a-4bb7-b548-fe05cea024fd"
+        }
+      ],
+      "id": "fd1b1d11-8288-473b-8dc3-a28f4b805c30",
+      "createdAt": "2026-07-28T01:16:04.000Z",
+      "updatedAt": "2026-07-28T01:16:04.000Z",
+      "uid": "35240-fd1b1d11-8288-473b-8dc3-a28f4b805c30"
+    },
+    {
+      "name": "partner",
+      "item": [
+        {
+          "name": "driver-is-assigned-to-order",
+          "item": [
+            {
+              "name": "Assign Driver",
+              "id": "285748ba-b728-4b58-bca1-205b5499d57b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/driver-is-assigned-to-order",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "driver-is-assigned-to-order"
+                  ]
+                },
+                "description": "Notify Bringg a partner driver has been assigned to an order."
+              },
+              "response": [
+                {
+                  "id": "f66676e8-87a2-4fd7-98a3-a011d1bb30dd",
+                  "name": "Assigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/driver-is-assigned-to-order",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "driver-is-assigned-to-order"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-f66676e8-87a2-4fd7-98a3-a011d1bb30dd"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-285748ba-b728-4b58-bca1-205b5499d57b"
+            }
+          ],
+          "id": "bac93a52-84b1-42bb-8ea2-059ae069aac7",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-bac93a52-84b1-42bb-8ea2-059ae069aac7"
+        },
+        {
+          "name": "update-driver-location",
+          "item": [
+            {
+              "name": "Update Driver Location",
+              "id": "7539325a-d9b4-4093-8611-c8817c335aba",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/update-driver-location",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "update-driver-location"
+                  ]
+                },
+                "description": "Partner pushes driver GPS coordinates to Bringg."
+              },
+              "response": [
+                {
+                  "id": "64a61d30-444b-4127-abd7-9a3cc6bb322f",
+                  "name": "Location updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/update-driver-location",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "update-driver-location"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-64a61d30-444b-4127-abd7-9a3cc6bb322f"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-7539325a-d9b4-4093-8611-c8817c335aba"
+            }
+          ],
+          "id": "d291bf84-1c69-41c5-b756-a9145dcc61b7",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-d291bf84-1c69-41c5-b756-a9145dcc61b7"
+        },
+        {
+          "name": "driver-location",
+          "item": [
+            {
+              "name": "Driver Location",
+              "id": "ec8455a3-3c36-47d2-b9ac-6433028a9f4f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/driver-location",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "driver-location"
+                  ]
+                },
+                "description": "Retrieve current driver location."
+              },
+              "response": [
+                {
+                  "id": "c8909b2c-0002-42e8-b919-df6587e1a49d",
+                  "name": "Location returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/driver-location",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "driver-location"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:04.000Z",
+                  "updatedAt": "2026-07-28T01:16:04.000Z",
+                  "uid": "35240-c8909b2c-0002-42e8-b919-df6587e1a49d"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:04.000Z",
+              "updatedAt": "2026-07-28T01:16:04.000Z",
+              "uid": "35240-ec8455a3-3c36-47d2-b9ac-6433028a9f4f"
+            }
+          ],
+          "id": "3fc49743-9b7b-4eab-9480-2261cd9d7c00",
+          "createdAt": "2026-07-28T01:16:04.000Z",
+          "updatedAt": "2026-07-28T01:16:04.000Z",
+          "uid": "35240-3fc49743-9b7b-4eab-9480-2261cd9d7c00"
+        }
+      ],
+      "id": "23abec45-e36f-41c1-9601-548905bc7a5c",
+      "createdAt": "2026-07-28T01:16:04.000Z",
+      "updatedAt": "2026-07-28T01:16:04.000Z",
+      "uid": "35240-23abec45-e36f-41c1-9601-548905bc7a5c"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

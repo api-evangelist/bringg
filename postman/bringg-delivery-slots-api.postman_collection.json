@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "3960f5ab-6a5e-48fd-b706-e9d3116e21ea",
+    "name": "Bringg Delivery Hub Administration Delivery Slots API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:00.000Z",
+    "updatedAt": "2026-07-28T01:16:00.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-3960f5ab-6a5e-48fd-b706-e9d3116e21ea"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_planned_delivery_window",
+          "item": [
+            {
+              "name": "Create Planned Delivery Window",
+              "id": "06f448b2-b644-496e-b69c-94b17f501bb4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_planned_delivery_window",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_planned_delivery_window"
+                  ]
+                },
+                "description": "Create a delivery slot (planned delivery window)."
+              },
+              "response": [
+                {
+                  "id": "fb92ae67-0781-4cee-8eaa-8996d42054e7",
+                  "name": "Slot created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_planned_delivery_window",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_planned_delivery_window"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-fb92ae67-0781-4cee-8eaa-8996d42054e7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-06f448b2-b644-496e-b69c-94b17f501bb4"
+            }
+          ],
+          "id": "c6972ec4-0dbf-40f7-975c-d93f47954877",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-c6972ec4-0dbf-40f7-975c-d93f47954877"
+        },
+        {
+          "name": "update_planned_delivery_window",
+          "item": [
+            {
+              "name": "Update Planned Delivery Window",
+              "id": "8c5c8f59-cb8c-4e44-9f2f-4d5a5f24c802",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_planned_delivery_window",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_planned_delivery_window"
+                  ]
+                },
+                "description": "Update a delivery slot."
+              },
+              "response": [
+                {
+                  "id": "e1787bf3-cc22-415c-a17a-87e07fbaa067",
+                  "name": "Slot updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_planned_delivery_window",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_planned_delivery_window"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:00.000Z",
+                  "updatedAt": "2026-07-28T01:16:00.000Z",
+                  "uid": "35240-e1787bf3-cc22-415c-a17a-87e07fbaa067"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:00.000Z",
+              "updatedAt": "2026-07-28T01:16:00.000Z",
+              "uid": "35240-8c5c8f59-cb8c-4e44-9f2f-4d5a5f24c802"
+            }
+          ],
+          "id": "3bb4c65c-ec53-4170-8709-150b291ed2a8",
+          "createdAt": "2026-07-28T01:16:00.000Z",
+          "updatedAt": "2026-07-28T01:16:00.000Z",
+          "uid": "35240-3bb4c65c-ec53-4170-8709-150b291ed2a8"
+        }
+      ],
+      "id": "745e631d-1c5b-4188-bb76-e740d0de8457",
+      "createdAt": "2026-07-28T01:16:00.000Z",
+      "updatedAt": "2026-07-28T01:16:00.000Z",
+      "uid": "35240-745e631d-1c5b-4188-bb76-e740d0de8457"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

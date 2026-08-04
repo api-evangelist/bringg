@@ -1,0 +1,329 @@
+{
+  "info": {
+    "_postman_id": "09d48b37-3636-4626-b069-644ea333b82f",
+    "name": "Bringg Delivery Hub Administration Service Plans API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:49.000Z",
+    "updatedAt": "2026-07-28T01:16:49.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-09d48b37-3636-4626-b069-644ea333b82f"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_service_plan",
+          "item": [
+            {
+              "name": "Create Service Plan",
+              "id": "ecb989e8-4cfe-4627-8ed6-f7f7fc85a656",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_service_plan",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_service_plan"
+                  ]
+                },
+                "description": "Create a service plan defining service level, time window, and requirements."
+              },
+              "response": [
+                {
+                  "id": "4c70cbb1-b660-42f4-b96e-c4a576b2bee5",
+                  "name": "Created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_service_plan",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_service_plan"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:50.000Z",
+                  "updatedAt": "2026-07-28T01:16:50.000Z",
+                  "uid": "35240-4c70cbb1-b660-42f4-b96e-c4a576b2bee5"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:50.000Z",
+              "updatedAt": "2026-07-28T01:16:50.000Z",
+              "uid": "35240-ecb989e8-4cfe-4627-8ed6-f7f7fc85a656"
+            }
+          ],
+          "id": "c1fa58da-b391-4733-82ca-bd52c7f802d4",
+          "createdAt": "2026-07-28T01:16:50.000Z",
+          "updatedAt": "2026-07-28T01:16:50.000Z",
+          "uid": "35240-c1fa58da-b391-4733-82ca-bd52c7f802d4"
+        },
+        {
+          "name": "update_service_plan",
+          "item": [
+            {
+              "name": "Update Service Plan",
+              "id": "1aaebd7d-fc33-4724-9710-fb0e667ee2ac",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_service_plan",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_service_plan"
+                  ]
+                },
+                "description": "Update an existing service plan."
+              },
+              "response": [
+                {
+                  "id": "fdcc7f48-31ac-4384-8d6b-50d2bfe47911",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_service_plan",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_service_plan"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:50.000Z",
+                  "updatedAt": "2026-07-28T01:16:50.000Z",
+                  "uid": "35240-fdcc7f48-31ac-4384-8d6b-50d2bfe47911"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:50.000Z",
+              "updatedAt": "2026-07-28T01:16:50.000Z",
+              "uid": "35240-1aaebd7d-fc33-4724-9710-fb0e667ee2ac"
+            }
+          ],
+          "id": "a6969e4a-3961-44f1-9341-5b7d9445b792",
+          "createdAt": "2026-07-28T01:16:50.000Z",
+          "updatedAt": "2026-07-28T01:16:50.000Z",
+          "uid": "35240-a6969e4a-3961-44f1-9341-5b7d9445b792"
+        },
+        {
+          "name": "get_service_plan",
+          "item": [
+            {
+              "name": "Get Service Plan",
+              "id": "48b73730-ff89-4e15-b905-4ec2dda5eb29",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_service_plan",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_service_plan"
+                  ]
+                },
+                "description": "Retrieve a service plan by id or external_id."
+              },
+              "response": [
+                {
+                  "id": "00010016-3f8b-4905-b166-976bd2440b1d",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_service_plan",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_service_plan"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:50.000Z",
+                  "updatedAt": "2026-07-28T01:16:50.000Z",
+                  "uid": "35240-00010016-3f8b-4905-b166-976bd2440b1d"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:50.000Z",
+              "updatedAt": "2026-07-28T01:16:50.000Z",
+              "uid": "35240-48b73730-ff89-4e15-b905-4ec2dda5eb29"
+            }
+          ],
+          "id": "e4ab3b25-23c1-443d-8948-99de92d08dbd",
+          "createdAt": "2026-07-28T01:16:50.000Z",
+          "updatedAt": "2026-07-28T01:16:50.000Z",
+          "uid": "35240-e4ab3b25-23c1-443d-8948-99de92d08dbd"
+        },
+        {
+          "name": "get_service_plans",
+          "item": [
+            {
+              "name": "Get Service Plans",
+              "id": "51b05ea1-5cc5-4cac-90aa-da57288a9893",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_service_plans",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_service_plans"
+                  ]
+                },
+                "description": "List all service plans."
+              },
+              "response": [
+                {
+                  "id": "778c6494-03c3-4a87-9912-d0f2878047ed",
+                  "name": "List returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_service_plans",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_service_plans"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:50.000Z",
+                  "updatedAt": "2026-07-28T01:16:50.000Z",
+                  "uid": "35240-778c6494-03c3-4a87-9912-d0f2878047ed"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:50.000Z",
+              "updatedAt": "2026-07-28T01:16:50.000Z",
+              "uid": "35240-51b05ea1-5cc5-4cac-90aa-da57288a9893"
+            }
+          ],
+          "id": "3e7037de-d7c3-478e-a8e2-b483ae1b55b3",
+          "createdAt": "2026-07-28T01:16:50.000Z",
+          "updatedAt": "2026-07-28T01:16:50.000Z",
+          "uid": "35240-3e7037de-d7c3-478e-a8e2-b483ae1b55b3"
+        }
+      ],
+      "id": "0d6dd306-723f-416f-ae0d-7a4f9b20485a",
+      "createdAt": "2026-07-28T01:16:50.000Z",
+      "updatedAt": "2026-07-28T01:16:50.000Z",
+      "uid": "35240-0d6dd306-723f-416f-ae0d-7a4f9b20485a"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

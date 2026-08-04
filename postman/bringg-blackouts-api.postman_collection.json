@@ -1,0 +1,329 @@
+{
+  "info": {
+    "_postman_id": "5f09aa65-d779-42f3-949e-bca6e7a1a47a",
+    "name": "Bringg Delivery Hub Administration Blackouts API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:15:56.000Z",
+    "updatedAt": "2026-07-28T01:15:57.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5f09aa65-d779-42f3-949e-bca6e7a1a47a"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_exclusion_window",
+          "item": [
+            {
+              "name": "Create Exclusion Window",
+              "id": "1bfe089d-3fe7-480f-80b8-2edb96ce126c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_exclusion_window",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_exclusion_window"
+                  ]
+                },
+                "description": "Create a blackout (exclusion window) for delivery availability."
+              },
+              "response": [
+                {
+                  "id": "8520406d-ad60-4b31-beea-a6799e8f52fa",
+                  "name": "Blackout created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_exclusion_window",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_exclusion_window"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:57.000Z",
+                  "updatedAt": "2026-07-28T01:15:57.000Z",
+                  "uid": "35240-8520406d-ad60-4b31-beea-a6799e8f52fa"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:57.000Z",
+              "updatedAt": "2026-07-28T01:15:57.000Z",
+              "uid": "35240-1bfe089d-3fe7-480f-80b8-2edb96ce126c"
+            }
+          ],
+          "id": "8cf27d57-2dda-44a0-92c8-e26c1bb3fa27",
+          "createdAt": "2026-07-28T01:15:57.000Z",
+          "updatedAt": "2026-07-28T01:15:57.000Z",
+          "uid": "35240-8cf27d57-2dda-44a0-92c8-e26c1bb3fa27"
+        },
+        {
+          "name": "update_exclusion_window",
+          "item": [
+            {
+              "name": "Update Exclusion Window",
+              "id": "11d0dda2-6a3d-4ce7-ba68-28bcff61058e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_exclusion_window",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_exclusion_window"
+                  ]
+                },
+                "description": "Update a blackout window."
+              },
+              "response": [
+                {
+                  "id": "dbe41490-2266-48f2-ad99-34d2a7b9158d",
+                  "name": "Blackout updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_exclusion_window",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_exclusion_window"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:57.000Z",
+                  "updatedAt": "2026-07-28T01:15:57.000Z",
+                  "uid": "35240-dbe41490-2266-48f2-ad99-34d2a7b9158d"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:57.000Z",
+              "updatedAt": "2026-07-28T01:15:57.000Z",
+              "uid": "35240-11d0dda2-6a3d-4ce7-ba68-28bcff61058e"
+            }
+          ],
+          "id": "7dd7c065-2846-489c-953f-bef0316e8b7b",
+          "createdAt": "2026-07-28T01:15:57.000Z",
+          "updatedAt": "2026-07-28T01:15:57.000Z",
+          "uid": "35240-7dd7c065-2846-489c-953f-bef0316e8b7b"
+        },
+        {
+          "name": "delete_exclusion_window",
+          "item": [
+            {
+              "name": "Delete Exclusion Window",
+              "id": "d84a2f1e-f5e3-41f3-9017-9f27f766de21",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_exclusion_window",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_exclusion_window"
+                  ]
+                },
+                "description": "Delete a blackout window."
+              },
+              "response": [
+                {
+                  "id": "217c6ae6-bec9-4637-bc5e-ff7fa3b68c97",
+                  "name": "Deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_exclusion_window",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_exclusion_window"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:57.000Z",
+                  "updatedAt": "2026-07-28T01:15:57.000Z",
+                  "uid": "35240-217c6ae6-bec9-4637-bc5e-ff7fa3b68c97"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:57.000Z",
+              "updatedAt": "2026-07-28T01:15:57.000Z",
+              "uid": "35240-d84a2f1e-f5e3-41f3-9017-9f27f766de21"
+            }
+          ],
+          "id": "521cd842-3ee2-4f37-95bf-00919e2b7f9f",
+          "createdAt": "2026-07-28T01:15:57.000Z",
+          "updatedAt": "2026-07-28T01:15:57.000Z",
+          "uid": "35240-521cd842-3ee2-4f37-95bf-00919e2b7f9f"
+        },
+        {
+          "name": "get_exclusion_windows",
+          "item": [
+            {
+              "name": "Get Exclusion Windows",
+              "id": "9dd4a059-16e5-4c13-b1e0-9ed29a2a3755",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_exclusion_windows",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_exclusion_windows"
+                  ]
+                },
+                "description": "List blackout windows."
+              },
+              "response": [
+                {
+                  "id": "7d9c879a-b6c0-4aa0-aab3-0474c0fa0b8e",
+                  "name": "List returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_exclusion_windows",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_exclusion_windows"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:57.000Z",
+                  "updatedAt": "2026-07-28T01:15:57.000Z",
+                  "uid": "35240-7d9c879a-b6c0-4aa0-aab3-0474c0fa0b8e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:57.000Z",
+              "updatedAt": "2026-07-28T01:15:57.000Z",
+              "uid": "35240-9dd4a059-16e5-4c13-b1e0-9ed29a2a3755"
+            }
+          ],
+          "id": "a64a76bd-9163-4f45-99d3-604e3603414d",
+          "createdAt": "2026-07-28T01:15:57.000Z",
+          "updatedAt": "2026-07-28T01:15:57.000Z",
+          "uid": "35240-a64a76bd-9163-4f45-99d3-604e3603414d"
+        }
+      ],
+      "id": "8a2d3c3c-b2e1-418f-a88b-302514932179",
+      "createdAt": "2026-07-28T01:15:57.000Z",
+      "updatedAt": "2026-07-28T01:15:57.000Z",
+      "uid": "35240-8a2d3c3c-b2e1-418f-a88b-302514932179"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

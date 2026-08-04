@@ -1,0 +1,399 @@
+{
+  "info": {
+    "_postman_id": "10a54d21-62ab-4cca-9fbb-ce9e2e7d9376",
+    "name": "Bringg Delivery Hub Administration Vehicle Profiles API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:53.000Z",
+    "updatedAt": "2026-07-28T01:16:53.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-10a54d21-62ab-4cca-9fbb-ce9e2e7d9376"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_vehicle_type",
+          "item": [
+            {
+              "name": "Create Vehicle Profile",
+              "id": "5bb20be4-0606-4949-875a-fee92ec7dc4b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_vehicle_type",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_vehicle_type"
+                  ]
+                },
+                "description": "Create a vehicle profile/type definition (capacity, constraints)."
+              },
+              "response": [
+                {
+                  "id": "30c17e7f-6d2f-4bb0-bf08-46d73b37758e",
+                  "name": "Created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_vehicle_type",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_vehicle_type"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:53.000Z",
+                  "updatedAt": "2026-07-28T01:16:53.000Z",
+                  "uid": "35240-30c17e7f-6d2f-4bb0-bf08-46d73b37758e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:53.000Z",
+              "updatedAt": "2026-07-28T01:16:53.000Z",
+              "uid": "35240-5bb20be4-0606-4949-875a-fee92ec7dc4b"
+            }
+          ],
+          "id": "d88c7297-bed0-4f57-a279-9dc2539d4e50",
+          "createdAt": "2026-07-28T01:16:53.000Z",
+          "updatedAt": "2026-07-28T01:16:53.000Z",
+          "uid": "35240-d88c7297-bed0-4f57-a279-9dc2539d4e50"
+        },
+        {
+          "name": "update_vehicle_type",
+          "item": [
+            {
+              "name": "Update Vehicle Profile",
+              "id": "964db612-6577-4178-9f77-7a09546a5f7a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_vehicle_type",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_vehicle_type"
+                  ]
+                },
+                "description": "Update a vehicle profile."
+              },
+              "response": [
+                {
+                  "id": "f6344494-5a1a-48d1-afb7-746fff4df0f4",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_vehicle_type",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_vehicle_type"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:53.000Z",
+                  "updatedAt": "2026-07-28T01:16:53.000Z",
+                  "uid": "35240-f6344494-5a1a-48d1-afb7-746fff4df0f4"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:53.000Z",
+              "updatedAt": "2026-07-28T01:16:53.000Z",
+              "uid": "35240-964db612-6577-4178-9f77-7a09546a5f7a"
+            }
+          ],
+          "id": "bd10c522-8a0d-41ce-9674-208ec023e1ef",
+          "createdAt": "2026-07-28T01:16:53.000Z",
+          "updatedAt": "2026-07-28T01:16:53.000Z",
+          "uid": "35240-bd10c522-8a0d-41ce-9674-208ec023e1ef"
+        },
+        {
+          "name": "destroy_vehicle_type",
+          "item": [
+            {
+              "name": "Delete Vehicle Profile",
+              "id": "4b8b8b58-a04d-4347-819a-7e1230b9dfc8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/destroy_vehicle_type",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "destroy_vehicle_type"
+                  ]
+                },
+                "description": "Delete a vehicle profile."
+              },
+              "response": [
+                {
+                  "id": "e7f8c700-10a8-4ac6-a2d8-f99100f3d026",
+                  "name": "Deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/destroy_vehicle_type",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "destroy_vehicle_type"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:53.000Z",
+                  "updatedAt": "2026-07-28T01:16:53.000Z",
+                  "uid": "35240-e7f8c700-10a8-4ac6-a2d8-f99100f3d026"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:53.000Z",
+              "updatedAt": "2026-07-28T01:16:53.000Z",
+              "uid": "35240-4b8b8b58-a04d-4347-819a-7e1230b9dfc8"
+            }
+          ],
+          "id": "97e2b034-64ae-4fc7-abf1-55a707798a33",
+          "createdAt": "2026-07-28T01:16:53.000Z",
+          "updatedAt": "2026-07-28T01:16:53.000Z",
+          "uid": "35240-97e2b034-64ae-4fc7-abf1-55a707798a33"
+        },
+        {
+          "name": "get_vehicle_type",
+          "item": [
+            {
+              "name": "Get Vehicle Profile",
+              "id": "6af08eb6-b0a2-46a2-a174-d8c1636600fb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_vehicle_type",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_vehicle_type"
+                  ]
+                },
+                "description": "Get a vehicle profile by id."
+              },
+              "response": [
+                {
+                  "id": "8e772657-4331-49fc-9c99-572087af5a72",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_vehicle_type",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_vehicle_type"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:53.000Z",
+                  "updatedAt": "2026-07-28T01:16:53.000Z",
+                  "uid": "35240-8e772657-4331-49fc-9c99-572087af5a72"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:53.000Z",
+              "updatedAt": "2026-07-28T01:16:53.000Z",
+              "uid": "35240-6af08eb6-b0a2-46a2-a174-d8c1636600fb"
+            }
+          ],
+          "id": "135e26b7-eca9-4523-854e-cb39092f4f78",
+          "createdAt": "2026-07-28T01:16:53.000Z",
+          "updatedAt": "2026-07-28T01:16:53.000Z",
+          "uid": "35240-135e26b7-eca9-4523-854e-cb39092f4f78"
+        },
+        {
+          "name": "get_vehicle_types",
+          "item": [
+            {
+              "name": "Get Vehicle Profiles",
+              "id": "d1a53631-9261-43ef-9eee-f06d5b585e4e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_vehicle_types",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_vehicle_types"
+                  ]
+                },
+                "description": "List vehicle profiles."
+              },
+              "response": [
+                {
+                  "id": "b400ee86-e9be-407f-bc28-10006362ecde",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_vehicle_types",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_vehicle_types"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:53.000Z",
+                  "updatedAt": "2026-07-28T01:16:53.000Z",
+                  "uid": "35240-b400ee86-e9be-407f-bc28-10006362ecde"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:53.000Z",
+              "updatedAt": "2026-07-28T01:16:53.000Z",
+              "uid": "35240-d1a53631-9261-43ef-9eee-f06d5b585e4e"
+            }
+          ],
+          "id": "ac95e964-a56b-4a29-bb60-d294bc7d2bdd",
+          "createdAt": "2026-07-28T01:16:53.000Z",
+          "updatedAt": "2026-07-28T01:16:53.000Z",
+          "uid": "35240-ac95e964-a56b-4a29-bb60-d294bc7d2bdd"
+        }
+      ],
+      "id": "883836cd-4f03-40c2-8365-a25e4f730168",
+      "createdAt": "2026-07-28T01:16:53.000Z",
+      "updatedAt": "2026-07-28T01:16:53.000Z",
+      "uid": "35240-883836cd-4f03-40c2-8365-a25e4f730168"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

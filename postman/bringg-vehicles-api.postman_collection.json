@@ -1,0 +1,609 @@
+{
+  "info": {
+    "_postman_id": "44d6794d-832a-4575-8e52-04c7ba1e21bd",
+    "name": "Bringg Delivery Hub Administration Vehicles API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:54.000Z",
+    "updatedAt": "2026-07-28T01:16:54.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-44d6794d-832a-4575-8e52-04c7ba1e21bd"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "assign_run_vehicle",
+          "item": [
+            {
+              "name": "Assign Vehicle To Route",
+              "id": "768a782c-6437-4dff-acda-6f873cea155a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/assign_run_vehicle",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "assign_run_vehicle"
+                  ]
+                },
+                "description": "Assign a vehicle to a route instance (run)."
+              },
+              "response": [
+                {
+                  "id": "2c98dd17-f155-4553-b3e1-7d892695e08d",
+                  "name": "Vehicle assigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/assign_run_vehicle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "assign_run_vehicle"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:54.000Z",
+                  "updatedAt": "2026-07-28T01:16:54.000Z",
+                  "uid": "35240-2c98dd17-f155-4553-b3e1-7d892695e08d"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:54.000Z",
+              "updatedAt": "2026-07-28T01:16:54.000Z",
+              "uid": "35240-768a782c-6437-4dff-acda-6f873cea155a"
+            }
+          ],
+          "id": "83a904fb-07ce-43da-af2e-f1c46b7319d5",
+          "createdAt": "2026-07-28T01:16:54.000Z",
+          "updatedAt": "2026-07-28T01:16:54.000Z",
+          "uid": "35240-83a904fb-07ce-43da-af2e-f1c46b7319d5"
+        },
+        {
+          "name": "unassign_run_vehicle",
+          "item": [
+            {
+              "name": "Unassign Vehicle From Route",
+              "id": "c5e3622e-5f0c-408b-a386-fc49c1c88ce8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/unassign_run_vehicle",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "unassign_run_vehicle"
+                  ]
+                },
+                "description": "Remove a vehicle from a route assignment."
+              },
+              "response": [
+                {
+                  "id": "b1348851-9e93-4eeb-b711-ada5629389ca",
+                  "name": "Vehicle unassigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/unassign_run_vehicle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "unassign_run_vehicle"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:54.000Z",
+                  "updatedAt": "2026-07-28T01:16:54.000Z",
+                  "uid": "35240-b1348851-9e93-4eeb-b711-ada5629389ca"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:54.000Z",
+              "updatedAt": "2026-07-28T01:16:54.000Z",
+              "uid": "35240-c5e3622e-5f0c-408b-a386-fc49c1c88ce8"
+            }
+          ],
+          "id": "260cfd53-d951-4f58-90ad-34a59527a79c",
+          "createdAt": "2026-07-28T01:16:54.000Z",
+          "updatedAt": "2026-07-28T01:16:54.000Z",
+          "uid": "35240-260cfd53-d951-4f58-90ad-34a59527a79c"
+        },
+        {
+          "name": "mass_custody_change_floating_inventory",
+          "item": [
+            {
+              "name": "Mass Custody Change To Vehicle",
+              "id": "7b9543bf-e02b-4c5d-8634-793c1a603204",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/mass_custody_change_floating_inventory",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "mass_custody_change_floating_inventory"
+                  ]
+                },
+                "description": "Move multiple floating inventory items to vehicle custody."
+              },
+              "response": [
+                {
+                  "id": "9df1377d-8353-4c89-b483-d7609e92ca95",
+                  "name": "Custody changed.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/mass_custody_change_floating_inventory",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "mass_custody_change_floating_inventory"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:54.000Z",
+                  "updatedAt": "2026-07-28T01:16:54.000Z",
+                  "uid": "35240-9df1377d-8353-4c89-b483-d7609e92ca95"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:54.000Z",
+              "updatedAt": "2026-07-28T01:16:54.000Z",
+              "uid": "35240-7b9543bf-e02b-4c5d-8634-793c1a603204"
+            }
+          ],
+          "id": "badce3d1-430c-4e95-9bf2-5022b36edc25",
+          "createdAt": "2026-07-28T01:16:54.000Z",
+          "updatedAt": "2026-07-28T01:16:54.000Z",
+          "uid": "35240-badce3d1-430c-4e95-9bf2-5022b36edc25"
+        },
+        {
+          "name": "create_vehicle",
+          "item": [
+            {
+              "name": "Create Vehicle",
+              "id": "d2572cc3-79ca-4609-a906-f2dba6777594",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_vehicle",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_vehicle"
+                  ]
+                },
+                "description": "Create a vehicle record."
+              },
+              "response": [
+                {
+                  "id": "62c6a9bf-0e07-4188-82e7-0126c7101430",
+                  "name": "Created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_vehicle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_vehicle"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:54.000Z",
+                  "updatedAt": "2026-07-28T01:16:54.000Z",
+                  "uid": "35240-62c6a9bf-0e07-4188-82e7-0126c7101430"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:54.000Z",
+              "updatedAt": "2026-07-28T01:16:54.000Z",
+              "uid": "35240-d2572cc3-79ca-4609-a906-f2dba6777594"
+            }
+          ],
+          "id": "44a1e9a9-f08a-435d-bd35-4bdeb232cd99",
+          "createdAt": "2026-07-28T01:16:54.000Z",
+          "updatedAt": "2026-07-28T01:16:54.000Z",
+          "uid": "35240-44a1e9a9-f08a-435d-bd35-4bdeb232cd99"
+        },
+        {
+          "name": "update_vehicle",
+          "item": [
+            {
+              "name": "Update Vehicle",
+              "id": "6c53d40e-935a-491d-a1b0-0f6ef29f4a12",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_vehicle",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_vehicle"
+                  ]
+                },
+                "description": "Update a vehicle."
+              },
+              "response": [
+                {
+                  "id": "5c2d5004-d507-4477-9c14-6a3aab6117fa",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_vehicle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_vehicle"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:54.000Z",
+                  "updatedAt": "2026-07-28T01:16:54.000Z",
+                  "uid": "35240-5c2d5004-d507-4477-9c14-6a3aab6117fa"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:54.000Z",
+              "updatedAt": "2026-07-28T01:16:54.000Z",
+              "uid": "35240-6c53d40e-935a-491d-a1b0-0f6ef29f4a12"
+            }
+          ],
+          "id": "d740f43f-39c8-4b27-a206-afeb632aa045",
+          "createdAt": "2026-07-28T01:16:54.000Z",
+          "updatedAt": "2026-07-28T01:16:54.000Z",
+          "uid": "35240-d740f43f-39c8-4b27-a206-afeb632aa045"
+        },
+        {
+          "name": "delete_vehicle",
+          "item": [
+            {
+              "name": "Delete Vehicle",
+              "id": "d434a334-b75a-4a19-bb9b-73144a5180ce",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_vehicle",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_vehicle"
+                  ]
+                },
+                "description": "Delete a vehicle."
+              },
+              "response": [
+                {
+                  "id": "b6ae5100-b239-4394-ab9e-1309363533af",
+                  "name": "Deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_vehicle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_vehicle"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:54.000Z",
+                  "updatedAt": "2026-07-28T01:16:54.000Z",
+                  "uid": "35240-b6ae5100-b239-4394-ab9e-1309363533af"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:54.000Z",
+              "updatedAt": "2026-07-28T01:16:54.000Z",
+              "uid": "35240-d434a334-b75a-4a19-bb9b-73144a5180ce"
+            }
+          ],
+          "id": "d2133893-acb5-4b3c-beef-63a024273aa0",
+          "createdAt": "2026-07-28T01:16:54.000Z",
+          "updatedAt": "2026-07-28T01:16:54.000Z",
+          "uid": "35240-d2133893-acb5-4b3c-beef-63a024273aa0"
+        },
+        {
+          "name": "get_vehicle_by_id",
+          "item": [
+            {
+              "name": "Get Vehicle",
+              "id": "d8107f15-a4c4-4ce5-9986-2d84fe9e18ce",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_vehicle_by_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_vehicle_by_id"
+                  ]
+                },
+                "description": "Get a vehicle by id."
+              },
+              "response": [
+                {
+                  "id": "52ba496f-bfdd-4a5e-aa55-3ab967024aa6",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_vehicle_by_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_vehicle_by_id"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:54.000Z",
+                  "updatedAt": "2026-07-28T01:16:54.000Z",
+                  "uid": "35240-52ba496f-bfdd-4a5e-aa55-3ab967024aa6"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:54.000Z",
+              "updatedAt": "2026-07-28T01:16:54.000Z",
+              "uid": "35240-d8107f15-a4c4-4ce5-9986-2d84fe9e18ce"
+            }
+          ],
+          "id": "9660afd2-65f1-458d-8b18-6698a26ef5ac",
+          "createdAt": "2026-07-28T01:16:54.000Z",
+          "updatedAt": "2026-07-28T01:16:54.000Z",
+          "uid": "35240-9660afd2-65f1-458d-8b18-6698a26ef5ac"
+        },
+        {
+          "name": "get_all_vehicles",
+          "item": [
+            {
+              "name": "Get All Vehicles",
+              "id": "53a510a1-807f-412b-8a81-cfdcd7f5a064",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_all_vehicles",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_all_vehicles"
+                  ]
+                },
+                "description": "List all vehicles."
+              },
+              "response": [
+                {
+                  "id": "15baeaaa-b1d4-4069-8335-c210f885afe3",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_all_vehicles",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_all_vehicles"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:54.000Z",
+                  "updatedAt": "2026-07-28T01:16:54.000Z",
+                  "uid": "35240-15baeaaa-b1d4-4069-8335-c210f885afe3"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:54.000Z",
+              "updatedAt": "2026-07-28T01:16:54.000Z",
+              "uid": "35240-53a510a1-807f-412b-8a81-cfdcd7f5a064"
+            }
+          ],
+          "id": "3d0f17c1-d8f7-4a23-9bd8-b8a0d0392bec",
+          "createdAt": "2026-07-28T01:16:54.000Z",
+          "updatedAt": "2026-07-28T01:16:54.000Z",
+          "uid": "35240-3d0f17c1-d8f7-4a23-9bd8-b8a0d0392bec"
+        }
+      ],
+      "id": "1d3bc246-6bb9-4cf7-aa1d-952af59bb600",
+      "createdAt": "2026-07-28T01:16:54.000Z",
+      "updatedAt": "2026-07-28T01:16:54.000Z",
+      "uid": "35240-1d3bc246-6bb9-4cf7-aa1d-952af59bb600"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

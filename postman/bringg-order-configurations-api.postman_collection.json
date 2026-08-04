@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "ece1aac7-39db-4c41-9a3a-98f60d029b33",
+    "name": "Bringg Delivery Hub Administration Order Configurations API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:07.000Z",
+    "updatedAt": "2026-07-28T01:16:08.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-ece1aac7-39db-4c41-9a3a-98f60d029b33"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_task_configuration",
+          "item": [
+            {
+              "name": "Create Order Configuration",
+              "id": "af835f38-8e3c-45a4-8557-ae577a7fd544",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_task_configuration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_task_configuration"
+                  ]
+                },
+                "description": "Create a task configuration (set of driver actions and operational capabilities)."
+              },
+              "response": [
+                {
+                  "id": "ab5e55a6-fb8d-4637-92d1-1a4c2b5f367c",
+                  "name": "Created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_task_configuration",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_task_configuration"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:08.000Z",
+                  "updatedAt": "2026-07-28T01:16:08.000Z",
+                  "uid": "35240-ab5e55a6-fb8d-4637-92d1-1a4c2b5f367c"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:08.000Z",
+              "updatedAt": "2026-07-28T01:16:08.000Z",
+              "uid": "35240-af835f38-8e3c-45a4-8557-ae577a7fd544"
+            }
+          ],
+          "id": "d8510387-8fe4-4f6b-a975-f3fbebe3e10e",
+          "createdAt": "2026-07-28T01:16:08.000Z",
+          "updatedAt": "2026-07-28T01:16:08.000Z",
+          "uid": "35240-d8510387-8fe4-4f6b-a975-f3fbebe3e10e"
+        },
+        {
+          "name": "update_task_configuration",
+          "item": [
+            {
+              "name": "Update Order Configuration",
+              "id": "9df9a9e6-60cd-4a34-9116-6530280389e9",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_task_configuration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_task_configuration"
+                  ]
+                },
+                "description": "Update an order configuration."
+              },
+              "response": [
+                {
+                  "id": "e337530f-410b-4c7a-9555-4e72efca40e7",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_task_configuration",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_task_configuration"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:08.000Z",
+                  "updatedAt": "2026-07-28T01:16:08.000Z",
+                  "uid": "35240-e337530f-410b-4c7a-9555-4e72efca40e7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:08.000Z",
+              "updatedAt": "2026-07-28T01:16:08.000Z",
+              "uid": "35240-9df9a9e6-60cd-4a34-9116-6530280389e9"
+            }
+          ],
+          "id": "dd691454-492c-4d0e-af64-e4c189bf80b5",
+          "createdAt": "2026-07-28T01:16:08.000Z",
+          "updatedAt": "2026-07-28T01:16:08.000Z",
+          "uid": "35240-dd691454-492c-4d0e-af64-e4c189bf80b5"
+        }
+      ],
+      "id": "104c73aa-9a82-4633-9466-0de0d424271a",
+      "createdAt": "2026-07-28T01:16:08.000Z",
+      "updatedAt": "2026-07-28T01:16:08.000Z",
+      "uid": "35240-104c73aa-9a82-4633-9466-0de0d424271a"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

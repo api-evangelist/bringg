@@ -1,0 +1,399 @@
+{
+  "info": {
+    "_postman_id": "d8af3388-f928-4fed-afb0-ac315f331a44",
+    "name": "Bringg Delivery Hub Administration Customers API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:15:58.000Z",
+    "updatedAt": "2026-07-28T01:15:58.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-d8af3388-f928-4fed-afb0-ac315f331a44"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_customer",
+          "item": [
+            {
+              "name": "Create Customer",
+              "id": "a3965157-2b91-4def-85f3-ed27fa80831c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_customer",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_customer"
+                  ]
+                },
+                "description": "Create a new customer record."
+              },
+              "response": [
+                {
+                  "id": "78ca37ed-6aed-45c9-9012-9741408fcb8f",
+                  "name": "Customer created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_customer",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_customer"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:59.000Z",
+                  "updatedAt": "2026-07-28T01:15:59.000Z",
+                  "uid": "35240-78ca37ed-6aed-45c9-9012-9741408fcb8f"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:59.000Z",
+              "updatedAt": "2026-07-28T01:15:59.000Z",
+              "uid": "35240-a3965157-2b91-4def-85f3-ed27fa80831c"
+            }
+          ],
+          "id": "eeb5091f-38da-4bea-b5e9-692299b64ae5",
+          "createdAt": "2026-07-28T01:15:59.000Z",
+          "updatedAt": "2026-07-28T01:15:59.000Z",
+          "uid": "35240-eeb5091f-38da-4bea-b5e9-692299b64ae5"
+        },
+        {
+          "name": "update_customer",
+          "item": [
+            {
+              "name": "Update Customer",
+              "id": "3081ebd7-f951-46ca-8350-10d233a600cc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_customer",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_customer"
+                  ]
+                },
+                "description": "Update an existing customer record."
+              },
+              "response": [
+                {
+                  "id": "dbfc816d-036b-4581-8f3e-0c2926797bc7",
+                  "name": "Customer updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_customer",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_customer"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:59.000Z",
+                  "updatedAt": "2026-07-28T01:15:59.000Z",
+                  "uid": "35240-dbfc816d-036b-4581-8f3e-0c2926797bc7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:59.000Z",
+              "updatedAt": "2026-07-28T01:15:59.000Z",
+              "uid": "35240-3081ebd7-f951-46ca-8350-10d233a600cc"
+            }
+          ],
+          "id": "d52b8534-5671-4859-a3d8-6691312190a3",
+          "createdAt": "2026-07-28T01:15:59.000Z",
+          "updatedAt": "2026-07-28T01:15:59.000Z",
+          "uid": "35240-d52b8534-5671-4859-a3d8-6691312190a3"
+        },
+        {
+          "name": "create_blacklisted_customer_user",
+          "item": [
+            {
+              "name": "Create Blacklisted Customer Driver",
+              "id": "7e2c4daa-d6b0-435f-b336-add6c8c3da3b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_blacklisted_customer_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_blacklisted_customer_user"
+                  ]
+                },
+                "description": "Block a driver from delivering to a specific customer."
+              },
+              "response": [
+                {
+                  "id": "c8d40d04-b8b3-49ea-bf73-fd43ac21d288",
+                  "name": "Blacklist entry created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_blacklisted_customer_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_blacklisted_customer_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:59.000Z",
+                  "updatedAt": "2026-07-28T01:15:59.000Z",
+                  "uid": "35240-c8d40d04-b8b3-49ea-bf73-fd43ac21d288"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:59.000Z",
+              "updatedAt": "2026-07-28T01:15:59.000Z",
+              "uid": "35240-7e2c4daa-d6b0-435f-b336-add6c8c3da3b"
+            }
+          ],
+          "id": "d33c487b-fb4a-4741-b855-cfcb4a630d02",
+          "createdAt": "2026-07-28T01:15:59.000Z",
+          "updatedAt": "2026-07-28T01:15:59.000Z",
+          "uid": "35240-d33c487b-fb4a-4741-b855-cfcb4a630d02"
+        },
+        {
+          "name": "delete_blacklisted_customer_user",
+          "item": [
+            {
+              "name": "Delete Blacklisted Customer Driver",
+              "id": "9a17124b-e98b-4ca2-9056-1c58bbd00e38",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_blacklisted_customer_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_blacklisted_customer_user"
+                  ]
+                },
+                "description": "Remove a blacklist entry between customer and driver."
+              },
+              "response": [
+                {
+                  "id": "c5a0318f-01f4-41f9-b588-4cd17675fe7c",
+                  "name": "Blacklist removed.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_blacklisted_customer_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_blacklisted_customer_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:59.000Z",
+                  "updatedAt": "2026-07-28T01:15:59.000Z",
+                  "uid": "35240-c5a0318f-01f4-41f9-b588-4cd17675fe7c"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:59.000Z",
+              "updatedAt": "2026-07-28T01:15:59.000Z",
+              "uid": "35240-9a17124b-e98b-4ca2-9056-1c58bbd00e38"
+            }
+          ],
+          "id": "f987f72b-c307-4f54-bdb6-277294bcab17",
+          "createdAt": "2026-07-28T01:15:59.000Z",
+          "updatedAt": "2026-07-28T01:15:59.000Z",
+          "uid": "35240-f987f72b-c307-4f54-bdb6-277294bcab17"
+        },
+        {
+          "name": "get_blacklisted_customer_users",
+          "item": [
+            {
+              "name": "Get Blacklisted Customer Drivers",
+              "id": "7db86daa-aa21-4d8d-bd16-95a5e95582fe",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_blacklisted_customer_users",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_blacklisted_customer_users"
+                  ]
+                },
+                "description": "List blacklist entries between drivers and customers."
+              },
+              "response": [
+                {
+                  "id": "97660ff9-7fe5-48a3-adf6-a7b6bccd36ca",
+                  "name": "Blacklist list.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_blacklisted_customer_users",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_blacklisted_customer_users"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:59.000Z",
+                  "updatedAt": "2026-07-28T01:15:59.000Z",
+                  "uid": "35240-97660ff9-7fe5-48a3-adf6-a7b6bccd36ca"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:59.000Z",
+              "updatedAt": "2026-07-28T01:15:59.000Z",
+              "uid": "35240-7db86daa-aa21-4d8d-bd16-95a5e95582fe"
+            }
+          ],
+          "id": "19f94bfa-819f-4fd9-8b04-24e28dae09cc",
+          "createdAt": "2026-07-28T01:15:59.000Z",
+          "updatedAt": "2026-07-28T01:15:59.000Z",
+          "uid": "35240-19f94bfa-819f-4fd9-8b04-24e28dae09cc"
+        }
+      ],
+      "id": "b6863ffd-d518-4c58-92df-347b1512ee9d",
+      "createdAt": "2026-07-28T01:15:59.000Z",
+      "updatedAt": "2026-07-28T01:15:59.000Z",
+      "uid": "35240-b6863ffd-d518-4c58-92df-347b1512ee9d"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

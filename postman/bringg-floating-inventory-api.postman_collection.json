@@ -1,0 +1,329 @@
+{
+  "info": {
+    "_postman_id": "acbdeb66-6c64-4397-ac4f-a2dc637259fe",
+    "name": "Bringg Delivery Hub Administration Floating Inventory API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:04.000Z",
+    "updatedAt": "2026-07-28T01:16:04.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-acbdeb66-6c64-4397-ac4f-a2dc637259fe"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "upsert_floating_inventory",
+          "item": [
+            {
+              "name": "Upsert Floating Inventory",
+              "id": "c8787a11-b448-458f-98b2-12eed9ad4b2a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/upsert_floating_inventory",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "upsert_floating_inventory"
+                  ]
+                },
+                "description": "Create or update a floating inventory item not associated with a specific order."
+              },
+              "response": [
+                {
+                  "id": "9509701c-629f-4677-ade4-bd87d284b3ec",
+                  "name": "Upserted.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/upsert_floating_inventory",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "upsert_floating_inventory"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:05.000Z",
+                  "updatedAt": "2026-07-28T01:16:05.000Z",
+                  "uid": "35240-9509701c-629f-4677-ade4-bd87d284b3ec"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:05.000Z",
+              "updatedAt": "2026-07-28T01:16:05.000Z",
+              "uid": "35240-c8787a11-b448-458f-98b2-12eed9ad4b2a"
+            }
+          ],
+          "id": "00273dc0-2b8c-43f5-b0cb-299dd1b1a286",
+          "createdAt": "2026-07-28T01:16:05.000Z",
+          "updatedAt": "2026-07-28T01:16:05.000Z",
+          "uid": "35240-00273dc0-2b8c-43f5-b0cb-299dd1b1a286"
+        },
+        {
+          "name": "soft_delete_floating_inventory",
+          "item": [
+            {
+              "name": "Soft Delete Floating Inventory",
+              "id": "10fe5f30-7d1c-4136-8c35-b3801f8c0efe",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/soft_delete_floating_inventory",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "soft_delete_floating_inventory"
+                  ]
+                },
+                "description": "Soft delete floating inventory items while retaining DB record."
+              },
+              "response": [
+                {
+                  "id": "b47a98c6-c7eb-4b37-8a28-ce3f5534ea44",
+                  "name": "Soft deleted.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/soft_delete_floating_inventory",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "soft_delete_floating_inventory"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:05.000Z",
+                  "updatedAt": "2026-07-28T01:16:05.000Z",
+                  "uid": "35240-b47a98c6-c7eb-4b37-8a28-ce3f5534ea44"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:05.000Z",
+              "updatedAt": "2026-07-28T01:16:05.000Z",
+              "uid": "35240-10fe5f30-7d1c-4136-8c35-b3801f8c0efe"
+            }
+          ],
+          "id": "d126f2fe-166b-4401-af17-c47f79c0d59b",
+          "createdAt": "2026-07-28T01:16:05.000Z",
+          "updatedAt": "2026-07-28T01:16:05.000Z",
+          "uid": "35240-d126f2fe-166b-4401-af17-c47f79c0d59b"
+        },
+        {
+          "name": "mass_delete_floating_inventory",
+          "item": [
+            {
+              "name": "Mass Delete Floating Inventory",
+              "id": "d87cad16-fd4d-4950-aa62-defc1c6d89d6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/mass_delete_floating_inventory",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "mass_delete_floating_inventory"
+                  ]
+                },
+                "description": "Delete multiple floating inventory items in bulk."
+              },
+              "response": [
+                {
+                  "id": "2310066a-20d6-46f4-91cc-9e6d0ea54473",
+                  "name": "Deleted.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/mass_delete_floating_inventory",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "mass_delete_floating_inventory"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:05.000Z",
+                  "updatedAt": "2026-07-28T01:16:05.000Z",
+                  "uid": "35240-2310066a-20d6-46f4-91cc-9e6d0ea54473"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:05.000Z",
+              "updatedAt": "2026-07-28T01:16:05.000Z",
+              "uid": "35240-d87cad16-fd4d-4950-aa62-defc1c6d89d6"
+            }
+          ],
+          "id": "7b222369-b365-49ec-9a0d-360946545612",
+          "createdAt": "2026-07-28T01:16:05.000Z",
+          "updatedAt": "2026-07-28T01:16:05.000Z",
+          "uid": "35240-7b222369-b365-49ec-9a0d-360946545612"
+        },
+        {
+          "name": "mass_custody_change_floating_inventory",
+          "item": [
+            {
+              "name": "Mass Custody Change To Vehicle",
+              "id": "5ce2db62-538c-4901-8507-b212ecb5a55c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/mass_custody_change_floating_inventory",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "mass_custody_change_floating_inventory"
+                  ]
+                },
+                "description": "Move multiple floating inventory items to vehicle custody."
+              },
+              "response": [
+                {
+                  "id": "2be4c346-9c7b-469d-bb04-45d4c3f22991",
+                  "name": "Custody changed.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/mass_custody_change_floating_inventory",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "mass_custody_change_floating_inventory"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:05.000Z",
+                  "updatedAt": "2026-07-28T01:16:05.000Z",
+                  "uid": "35240-2be4c346-9c7b-469d-bb04-45d4c3f22991"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:05.000Z",
+              "updatedAt": "2026-07-28T01:16:05.000Z",
+              "uid": "35240-5ce2db62-538c-4901-8507-b212ecb5a55c"
+            }
+          ],
+          "id": "1790dcdc-8e6b-48ac-99cb-373301ff70a7",
+          "createdAt": "2026-07-28T01:16:05.000Z",
+          "updatedAt": "2026-07-28T01:16:05.000Z",
+          "uid": "35240-1790dcdc-8e6b-48ac-99cb-373301ff70a7"
+        }
+      ],
+      "id": "2dbd068c-74f6-424d-b13c-80c9c420ec12",
+      "createdAt": "2026-07-28T01:16:05.000Z",
+      "updatedAt": "2026-07-28T01:16:05.000Z",
+      "uid": "35240-2dbd068c-74f6-424d-b13c-80c9c420ec12"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

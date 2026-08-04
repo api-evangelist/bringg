@@ -1,0 +1,1598 @@
+{
+  "info": {
+    "_postman_id": "140a2cbb-c4a1-4488-9dd1-c386bb5e5a1d",
+    "name": "Bringg Delivery Hub Administration Orders API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:12.000Z",
+    "updatedAt": "2026-07-28T01:16:12.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-140a2cbb-c4a1-4488-9dd1-c386bb5e5a1d"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_task",
+          "item": [
+            {
+              "name": "Create Order",
+              "id": "a1b3a43a-3e01-4cb1-a8b9-98d7f58bcf8b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_task",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_task"
+                  ]
+                },
+                "description": "Create a new order (task) in Bringg with one or more waypoints, customer, inventory, service plan, and team assignment."
+              },
+              "response": [
+                {
+                  "id": "218993dd-b596-4ac3-8e59-a1c928f7122a",
+                  "name": "Order created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_task",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_task"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-218993dd-b596-4ac3-8e59-a1c928f7122a"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-a1b3a43a-3e01-4cb1-a8b9-98d7f58bcf8b"
+            }
+          ],
+          "id": "8c128089-7697-4a13-a312-acb3729927a8",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-8c128089-7697-4a13-a312-acb3729927a8"
+        },
+        {
+          "name": "update_task",
+          "item": [
+            {
+              "name": "Update Order",
+              "id": "5a933999-ba82-46c1-b354-0167cffc1e5d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_task",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_task"
+                  ]
+                },
+                "description": "Update an existing order's details, waypoints, inventory, or service plan."
+              },
+              "response": [
+                {
+                  "id": "d3499b07-d00e-4bfe-bc3c-ac415516add8",
+                  "name": "Order updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_task",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_task"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-d3499b07-d00e-4bfe-bc3c-ac415516add8"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-5a933999-ba82-46c1-b354-0167cffc1e5d"
+            }
+          ],
+          "id": "5e09e380-f59c-484b-bec4-ec42be79382e",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-5e09e380-f59c-484b-bec4-ec42be79382e"
+        },
+        {
+          "name": "get_task",
+          "item": [
+            {
+              "name": "Get Order",
+              "id": "9b18e848-9928-46cb-81f5-c54bf75eef38",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_task",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_task"
+                  ]
+                },
+                "description": "Retrieve full details of an order by id or external_id."
+              },
+              "response": [
+                {
+                  "id": "40690524-6ae2-49f3-b736-8e4cb34b69ca",
+                  "name": "Order returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_task",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_task"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-40690524-6ae2-49f3-b736-8e4cb34b69ca"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-9b18e848-9928-46cb-81f5-c54bf75eef38"
+            }
+          ],
+          "id": "c379bcf0-e95f-4cc6-8f1b-b5add6b1003c",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-c379bcf0-e95f-4cc6-8f1b-b5add6b1003c"
+        },
+        {
+          "name": "get_open_tasks",
+          "item": [
+            {
+              "name": "Get Open Orders",
+              "id": "5ce17524-1ad9-4432-8105-3605e74acb9c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_open_tasks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_open_tasks"
+                  ]
+                },
+                "description": "List orders currently in an open state (not completed or cancelled)."
+              },
+              "response": [
+                {
+                  "id": "bf988ac0-3329-4c8b-b3f7-6aebfcbd53ca",
+                  "name": "List of open orders.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_open_tasks",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_open_tasks"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-bf988ac0-3329-4c8b-b3f7-6aebfcbd53ca"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-5ce17524-1ad9-4432-8105-3605e74acb9c"
+            }
+          ],
+          "id": "b85dc6c6-37b1-43bc-b81b-15ff00d93db5",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-b85dc6c6-37b1-43bc-b81b-15ff00d93db5"
+        },
+        {
+          "name": "get_post_optimization_tasks",
+          "item": [
+            {
+              "name": "Get Post-Optimization Orders",
+              "id": "7ac96ce7-9f78-4914-a2f8-55aa5b7c354e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_post_optimization_tasks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_post_optimization_tasks"
+                  ]
+                },
+                "description": "Retrieve orders after route optimization has been applied."
+              },
+              "response": [
+                {
+                  "id": "67541784-4ca5-4c72-b0f7-ec67d750728e",
+                  "name": "Post-optimization orders.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_post_optimization_tasks",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_post_optimization_tasks"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-67541784-4ca5-4c72-b0f7-ec67d750728e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-7ac96ce7-9f78-4914-a2f8-55aa5b7c354e"
+            }
+          ],
+          "id": "347cc09d-6ca8-44a9-b914-5f48b5190f40",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-347cc09d-6ca8-44a9-b914-5f48b5190f40"
+        },
+        {
+          "name": "get_open_orders_by_customer",
+          "item": [
+            {
+              "name": "Get Open Orders by Customer",
+              "id": "868f104d-0021-4857-baea-4307acfdea5f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_open_orders_by_customer",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_open_orders_by_customer"
+                  ]
+                },
+                "description": "List open orders for a specific customer."
+              },
+              "response": [
+                {
+                  "id": "69f3d8c2-7d91-497c-b281-568fff6124ce",
+                  "name": "Orders for customer.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_open_orders_by_customer",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_open_orders_by_customer"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-69f3d8c2-7d91-497c-b281-568fff6124ce"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-868f104d-0021-4857-baea-4307acfdea5f"
+            }
+          ],
+          "id": "ed8a9e45-b8be-4ffa-b55b-146345fc8c32",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-ed8a9e45-b8be-4ffa-b55b-146345fc8c32"
+        },
+        {
+          "name": "start_task",
+          "item": [
+            {
+              "name": "Start Order",
+              "id": "53675b73-f283-43e9-af5a-191aa8f8e91b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/start_task",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "start_task"
+                  ]
+                },
+                "description": "Mark an order as started (driver beginning execution)."
+              },
+              "response": [
+                {
+                  "id": "91012741-5644-4469-bb50-500d29e931b0",
+                  "name": "Order started.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/start_task",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "start_task"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-91012741-5644-4469-bb50-500d29e931b0"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-53675b73-f283-43e9-af5a-191aa8f8e91b"
+            }
+          ],
+          "id": "b7c9341e-c405-46ad-8bed-50f64a00c0b1",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-b7c9341e-c405-46ad-8bed-50f64a00c0b1"
+        },
+        {
+          "name": "end_task",
+          "item": [
+            {
+              "name": "End Order",
+              "id": "fa2c434b-f2ae-436d-b244-27a9a7fa0137",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/end_task",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "end_task"
+                  ]
+                },
+                "description": "Mark an order as ended/completed."
+              },
+              "response": [
+                {
+                  "id": "656ab139-8592-41e8-98ae-7201c10fd45d",
+                  "name": "Order ended.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/end_task",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "end_task"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-656ab139-8592-41e8-98ae-7201c10fd45d"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-fa2c434b-f2ae-436d-b244-27a9a7fa0137"
+            }
+          ],
+          "id": "fc658076-c429-4188-9789-ddf60b8ad2ed",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-fc658076-c429-4188-9789-ddf60b8ad2ed"
+        },
+        {
+          "name": "cancel_task",
+          "item": [
+            {
+              "name": "Cancel Order",
+              "id": "902e3959-f5c2-40c8-99d0-3b8858da77c1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/cancel_task",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "cancel_task"
+                  ]
+                },
+                "description": "Cancel an order with optional cancellation reason."
+              },
+              "response": [
+                {
+                  "id": "51942249-2174-4a27-baab-218e87c65d60",
+                  "name": "Order cancelled.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/cancel_task",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "cancel_task"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-51942249-2174-4a27-baab-218e87c65d60"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-902e3959-f5c2-40c8-99d0-3b8858da77c1"
+            }
+          ],
+          "id": "c83c490a-c623-45e0-beab-c2fd8852e0ad",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-c83c490a-c623-45e0-beab-c2fd8852e0ad"
+        },
+        {
+          "name": "update_task_external_id",
+          "item": [
+            {
+              "name": "Update Order External ID",
+              "id": "cd06aac1-a065-45a7-9d0b-3d593621325c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_task_external_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_task_external_id"
+                  ]
+                },
+                "description": "Update an order's external_id without other changes."
+              },
+              "response": [
+                {
+                  "id": "77e7a3ae-f738-4de4-802a-2e4aa64b8df7",
+                  "name": "External id updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_task_external_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_task_external_id"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-77e7a3ae-f738-4de4-802a-2e4aa64b8df7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-cd06aac1-a065-45a7-9d0b-3d593621325c"
+            }
+          ],
+          "id": "635d1415-0bcf-43f1-86e5-2f6623668aa1",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-635d1415-0bcf-43f1-86e5-2f6623668aa1"
+        },
+        {
+          "name": "create_task_refund",
+          "item": [
+            {
+              "name": "Create Order Refund",
+              "id": "e5cc1991-d9d9-46bd-96c7-9b8faa74e1cd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_task_refund",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_task_refund"
+                  ]
+                },
+                "description": "Create a refund record on a task."
+              },
+              "response": [
+                {
+                  "id": "1d69d840-a32c-4adf-aa74-25ca673ab6c4",
+                  "name": "Refund created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_task_refund",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_task_refund"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-1d69d840-a32c-4adf-aa74-25ca673ab6c4"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-e5cc1991-d9d9-46bd-96c7-9b8faa74e1cd"
+            }
+          ],
+          "id": "7acb5b21-4d0f-48b3-ae21-f467f2c83a1e",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-7acb5b21-4d0f-48b3-ae21-f467f2c83a1e"
+        },
+        {
+          "name": "create_task_payment_history",
+          "item": [
+            {
+              "name": "Create Order Payment History",
+              "id": "b46fa907-d903-46d8-a496-9167f6b21e59",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_task_payment_history",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_task_payment_history"
+                  ]
+                },
+                "description": "Add a payment history entry to an order."
+              },
+              "response": [
+                {
+                  "id": "668c12d9-c59f-458f-a8bc-60d54df3b9ea",
+                  "name": "Payment recorded.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_task_payment_history",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_task_payment_history"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-668c12d9-c59f-458f-a8bc-60d54df3b9ea"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-b46fa907-d903-46d8-a496-9167f6b21e59"
+            }
+          ],
+          "id": "919a51c3-d21b-49f9-8365-07170b3dec9a",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-919a51c3-d21b-49f9-8365-07170b3dec9a"
+        },
+        {
+          "name": "checkin",
+          "item": [
+            {
+              "name": "Check-in (Arrived to Destination)",
+              "id": "5a0468da-f8d6-49ec-b4a7-50500816db12",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/checkin",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "checkin"
+                  ]
+                },
+                "description": "Record driver arrival at an order waypoint."
+              },
+              "response": [
+                {
+                  "id": "4568e796-7c2d-4c77-97ee-1028281b2404",
+                  "name": "Check-in recorded.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/checkin",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "checkin"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-4568e796-7c2d-4c77-97ee-1028281b2404"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-5a0468da-f8d6-49ec-b4a7-50500816db12"
+            }
+          ],
+          "id": "50ece130-3247-4a43-b068-98e119b8bc67",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-50ece130-3247-4a43-b068-98e119b8bc67"
+        },
+        {
+          "name": "checkout",
+          "item": [
+            {
+              "name": "Check-out (Left Destination)",
+              "id": "cfd9b270-a664-449a-8580-71de8e1fff51",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/checkout",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "checkout"
+                  ]
+                },
+                "description": "Record driver leaving an order waypoint. Final checkout completes the order."
+              },
+              "response": [
+                {
+                  "id": "bbffda47-aa39-49ce-9774-44a69d0e86d0",
+                  "name": "Check-out recorded.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/checkout",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "checkout"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-bbffda47-aa39-49ce-9774-44a69d0e86d0"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-cfd9b270-a664-449a-8580-71de8e1fff51"
+            }
+          ],
+          "id": "412d3dd7-f6f0-4bea-9a0c-48e926c2d8cb",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-412d3dd7-f6f0-4bea-9a0c-48e926c2d8cb"
+        },
+        {
+          "name": "mass_checkout",
+          "item": [
+            {
+              "name": "Multi-Order Checkout",
+              "id": "443158b0-2014-4da0-b109-457aa6266d11",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/mass_checkout",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "mass_checkout"
+                  ]
+                },
+                "description": "Trigger checkout for multiple orders sharing a checkout location."
+              },
+              "response": [
+                {
+                  "id": "de4fdf1f-d49f-425e-bd21-81f344355edb",
+                  "name": "Bulk checkout accepted.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/mass_checkout",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "mass_checkout"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-de4fdf1f-d49f-425e-bd21-81f344355edb"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-443158b0-2014-4da0-b109-457aa6266d11"
+            }
+          ],
+          "id": "583733c5-3188-406f-80d8-3ca0a99c8eef",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-583733c5-3188-406f-80d8-3ca0a99c8eef"
+        },
+        {
+          "name": "release_tasks",
+          "item": [
+            {
+              "name": "Release Orders",
+              "id": "e4cb2db3-9ae6-4d31-a5c5-ad8a58cb5f9b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/release_tasks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "release_tasks"
+                  ]
+                },
+                "description": "Release orders from Planning to Dispatch, making them available to drivers."
+              },
+              "response": [
+                {
+                  "id": "5cfcede9-60da-407f-934c-6908cd5a5964",
+                  "name": "Orders released.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/release_tasks",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "release_tasks"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-5cfcede9-60da-407f-934c-6908cd5a5964"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-e4cb2db3-9ae6-4d31-a5c5-ad8a58cb5f9b"
+            }
+          ],
+          "id": "e3b4b989-0859-4626-9153-1c2fa2e149d1",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-e3b4b989-0859-4626-9153-1c2fa2e149d1"
+        },
+        {
+          "name": "assign_task",
+          "item": [
+            {
+              "name": "Assign Order To Driver",
+              "id": "d4be093e-dd95-42b6-a905-2d622e134486",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/assign_task",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "assign_task"
+                  ]
+                },
+                "description": "Assign an order directly to a specific driver."
+              },
+              "response": [
+                {
+                  "id": "0b0f17ce-5d27-4d68-a56b-a01188994889",
+                  "name": "Assigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/assign_task",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "assign_task"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-0b0f17ce-5d27-4d68-a56b-a01188994889"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-d4be093e-dd95-42b6-a905-2d622e134486"
+            }
+          ],
+          "id": "be57b566-fca2-484f-9c23-5003f78e18fd",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-be57b566-fca2-484f-9c23-5003f78e18fd"
+        }
+      ],
+      "id": "14dc1d91-33de-4bda-bf2c-f4211c0c8679",
+      "createdAt": "2026-07-28T01:16:12.000Z",
+      "updatedAt": "2026-07-28T01:16:12.000Z",
+      "uid": "35240-14dc1d91-33de-4bda-bf2c-f4211c0c8679"
+    },
+    {
+      "name": "partner",
+      "item": [
+        {
+          "name": "request-driver",
+          "item": [
+            {
+              "name": "Request Driver",
+              "id": "7b2c446f-5069-40d3-a5de-cb4d6723429b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/request-driver",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "request-driver"
+                  ]
+                },
+                "description": "Create a delivery request from a merchant or third-party system asking the partner to fulfill an order."
+              },
+              "response": [
+                {
+                  "id": "b21237c9-a9df-4ca6-8fce-66cfd28cd0e9",
+                  "name": "Request created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/request-driver",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "request-driver"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-b21237c9-a9df-4ca6-8fce-66cfd28cd0e9"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-7b2c446f-5069-40d3-a5de-cb4d6723429b"
+            }
+          ],
+          "id": "9e01aa88-fd70-4847-96cc-97fb68aaa9e9",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-9e01aa88-fd70-4847-96cc-97fb68aaa9e9"
+        },
+        {
+          "name": "cancel-order",
+          "item": [
+            {
+              "name": "Cancel Order",
+              "id": "7bcdf17a-e406-49be-a031-6e8378f207af",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/cancel-order",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "cancel-order"
+                  ]
+                },
+                "description": "Cancel a delivery order at the partner side."
+              },
+              "response": [
+                {
+                  "id": "49256d1f-bf49-4a67-af55-ffd9567f56da",
+                  "name": "Cancelled.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/cancel-order",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "cancel-order"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-49256d1f-bf49-4a67-af55-ffd9567f56da"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-7bcdf17a-e406-49be-a031-6e8378f207af"
+            }
+          ],
+          "id": "206e31bf-5a80-46db-a25b-9853ec791179",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-206e31bf-5a80-46db-a25b-9853ec791179"
+        },
+        {
+          "name": "complete-order",
+          "item": [
+            {
+              "name": "Complete Order",
+              "id": "a859530c-e99a-40e9-9037-619ce6d125d4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/complete-order",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "complete-order"
+                  ]
+                },
+                "description": "Notify Bringg the partner has completed the delivery."
+              },
+              "response": [
+                {
+                  "id": "e01904f1-15c2-49f2-92df-4c4cb1d931e4",
+                  "name": "Completed.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/complete-order",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "complete-order"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-e01904f1-15c2-49f2-92df-4c4cb1d931e4"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-a859530c-e99a-40e9-9037-619ce6d125d4"
+            }
+          ],
+          "id": "2136ec05-5136-47bc-b9e5-b0e485c3e404",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-2136ec05-5136-47bc-b9e5-b0e485c3e404"
+        },
+        {
+          "name": "update-order",
+          "item": [
+            {
+              "name": "Update Order",
+              "id": "ad97aeac-9acd-4bea-8e07-27b1cdd8ac27",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/update-order",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "update-order"
+                  ]
+                },
+                "description": "Update order status, driver, or other fields from the partner side."
+              },
+              "response": [
+                {
+                  "id": "85575879-5c6f-4ceb-9a76-87b5ba8d760e",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/update-order",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "update-order"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-85575879-5c6f-4ceb-9a76-87b5ba8d760e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-ad97aeac-9acd-4bea-8e07-27b1cdd8ac27"
+            }
+          ],
+          "id": "82885fd4-14ee-4f13-93a2-e5d5f59f86b6",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-82885fd4-14ee-4f13-93a2-e5d5f59f86b6"
+        },
+        {
+          "name": "start-order",
+          "item": [
+            {
+              "name": "Start Order",
+              "id": "caec736e-0ada-4906-a257-a6047c5fcb25",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/start-order",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "start-order"
+                  ]
+                },
+                "description": "Indicate the partner driver has started an order."
+              },
+              "response": [
+                {
+                  "id": "ae22cd61-6563-41b5-9c9e-d70d4f6252fa",
+                  "name": "Started.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/start-order",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "start-order"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:12.000Z",
+                  "updatedAt": "2026-07-28T01:16:12.000Z",
+                  "uid": "35240-ae22cd61-6563-41b5-9c9e-d70d4f6252fa"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:12.000Z",
+              "updatedAt": "2026-07-28T01:16:12.000Z",
+              "uid": "35240-caec736e-0ada-4906-a257-a6047c5fcb25"
+            }
+          ],
+          "id": "91f6fc6e-1d76-4754-aa4e-67691bc06ac8",
+          "createdAt": "2026-07-28T01:16:12.000Z",
+          "updatedAt": "2026-07-28T01:16:12.000Z",
+          "uid": "35240-91f6fc6e-1d76-4754-aa4e-67691bc06ac8"
+        }
+      ],
+      "id": "48236be4-0952-4c21-ac8b-91aaa6964e51",
+      "createdAt": "2026-07-28T01:16:12.000Z",
+      "updatedAt": "2026-07-28T01:16:12.000Z",
+      "uid": "35240-48236be4-0952-4c21-ac8b-91aaa6964e51"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

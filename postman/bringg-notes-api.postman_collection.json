@@ -1,0 +1,268 @@
+{
+  "info": {
+    "_postman_id": "1db3d5b8-824e-4ed6-af12-fd0f7e59e032",
+    "name": "Bringg Delivery Hub Administration Notes API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:06.000Z",
+    "updatedAt": "2026-07-28T01:16:06.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1db3d5b8-824e-4ed6-af12-fd0f7e59e032"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_note",
+          "item": [
+            {
+              "name": "Create Note",
+              "id": "68f2f3bd-4b3b-4d91-b290-e76b1437d072",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_note",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_note"
+                  ]
+                },
+                "description": "Create a note attached to a waypoint or order."
+              },
+              "response": [
+                {
+                  "id": "603af59c-759e-4aa7-a702-80909092dd79",
+                  "name": "Note created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_note",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_note"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:06.000Z",
+                  "updatedAt": "2026-07-28T01:16:06.000Z",
+                  "uid": "35240-603af59c-759e-4aa7-a702-80909092dd79"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:06.000Z",
+              "updatedAt": "2026-07-28T01:16:06.000Z",
+              "uid": "35240-68f2f3bd-4b3b-4d91-b290-e76b1437d072"
+            }
+          ],
+          "id": "399adc8f-2644-4e99-b797-75c5d483329e",
+          "createdAt": "2026-07-28T01:16:06.000Z",
+          "updatedAt": "2026-07-28T01:16:06.000Z",
+          "uid": "35240-399adc8f-2644-4e99-b797-75c5d483329e"
+        },
+        {
+          "name": "update_note",
+          "item": [
+            {
+              "name": "Update Note",
+              "id": "0e04ebd6-6b5e-407a-87f0-e84a52d47f6f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_note",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_note"
+                  ]
+                },
+                "description": "Update an existing note's text."
+              },
+              "response": [
+                {
+                  "id": "9d1ff63c-d80f-4015-98c1-51ff85af77b2",
+                  "name": "Note updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_note",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_note"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:06.000Z",
+                  "updatedAt": "2026-07-28T01:16:06.000Z",
+                  "uid": "35240-9d1ff63c-d80f-4015-98c1-51ff85af77b2"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:06.000Z",
+              "updatedAt": "2026-07-28T01:16:06.000Z",
+              "uid": "35240-0e04ebd6-6b5e-407a-87f0-e84a52d47f6f"
+            }
+          ],
+          "id": "ff3ce104-5fa9-4b95-a321-b355cb5f5d61",
+          "createdAt": "2026-07-28T01:16:06.000Z",
+          "updatedAt": "2026-07-28T01:16:06.000Z",
+          "uid": "35240-ff3ce104-5fa9-4b95-a321-b355cb5f5d61"
+        }
+      ],
+      "id": "3cb67a88-71b2-49d3-883a-5d793cd831a5",
+      "createdAt": "2026-07-28T01:16:06.000Z",
+      "updatedAt": "2026-07-28T01:16:06.000Z",
+      "uid": "35240-3cb67a88-71b2-49d3-883a-5d793cd831a5"
+    },
+    {
+      "name": "partner",
+      "item": [
+        {
+          "name": "note-added",
+          "item": [
+            {
+              "name": "Add Note Or POD",
+              "id": "fc2cd0e5-cf96-4cca-9cdd-86c7fd9bd79d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/note-added",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "note-added"
+                  ]
+                },
+                "description": "Add a note or proof-of-delivery artifact (photo, signature) to an order."
+              },
+              "response": [
+                {
+                  "id": "ba0d3e56-cd91-4488-a2af-47a65129ffc8",
+                  "name": "Note added.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/note-added",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "note-added"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:06.000Z",
+                  "updatedAt": "2026-07-28T01:16:06.000Z",
+                  "uid": "35240-ba0d3e56-cd91-4488-a2af-47a65129ffc8"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:06.000Z",
+              "updatedAt": "2026-07-28T01:16:06.000Z",
+              "uid": "35240-fc2cd0e5-cf96-4cca-9cdd-86c7fd9bd79d"
+            }
+          ],
+          "id": "775fc587-a735-4f91-a56b-70603159da4c",
+          "createdAt": "2026-07-28T01:16:06.000Z",
+          "updatedAt": "2026-07-28T01:16:06.000Z",
+          "uid": "35240-775fc587-a735-4f91-a56b-70603159da4c"
+        }
+      ],
+      "id": "710715d2-5786-4ac7-87e3-720f8fc54538",
+      "createdAt": "2026-07-28T01:16:06.000Z",
+      "updatedAt": "2026-07-28T01:16:06.000Z",
+      "uid": "35240-710715d2-5786-4ac7-87e3-720f8fc54538"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

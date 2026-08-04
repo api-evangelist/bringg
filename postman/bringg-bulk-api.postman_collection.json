@@ -1,0 +1,259 @@
+{
+  "info": {
+    "_postman_id": "3b5bbf5b-0838-4452-bfd5-41d6f3a09754",
+    "name": "Bringg Delivery Hub Administration Bulk API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:15:57.000Z",
+    "updatedAt": "2026-07-28T01:15:57.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-3b5bbf5b-0838-4452-bfd5-41d6f3a09754"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "prepare_resource",
+          "item": [
+            {
+              "name": "Prepare Bulk Resource",
+              "id": "7f7f82b8-2160-4720-810f-80cd45eab79e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/prepare_resource",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "prepare_resource"
+                  ]
+                },
+                "description": "Prepare a JSONL bulk upload resource (step 1 of bulk pipeline)."
+              },
+              "response": [
+                {
+                  "id": "9e1f0f5b-f291-4934-a467-0426376fc18a",
+                  "name": "Resource prepared.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/prepare_resource",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "prepare_resource"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:58.000Z",
+                  "updatedAt": "2026-07-28T01:15:58.000Z",
+                  "uid": "35240-9e1f0f5b-f291-4934-a467-0426376fc18a"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:58.000Z",
+              "updatedAt": "2026-07-28T01:15:58.000Z",
+              "uid": "35240-7f7f82b8-2160-4720-810f-80cd45eab79e"
+            }
+          ],
+          "id": "2f6ecdd2-9368-47e6-bc7c-b9b42b8e7e75",
+          "createdAt": "2026-07-28T01:15:58.000Z",
+          "updatedAt": "2026-07-28T01:15:58.000Z",
+          "uid": "35240-2f6ecdd2-9368-47e6-bc7c-b9b42b8e7e75"
+        },
+        {
+          "name": "process_resource",
+          "item": [
+            {
+              "name": "Process Bulk Resource",
+              "id": "614bd6df-f272-45c9-8d65-0ddf6e6a1be5",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/process_resource",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "process_resource"
+                  ]
+                },
+                "description": "Process the uploaded bulk resource (step 4 of bulk pipeline)."
+              },
+              "response": [
+                {
+                  "id": "93e0ee55-1df3-4ff9-8fe7-56ed589959b5",
+                  "name": "Processing started.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/process_resource",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "process_resource"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:58.000Z",
+                  "updatedAt": "2026-07-28T01:15:58.000Z",
+                  "uid": "35240-93e0ee55-1df3-4ff9-8fe7-56ed589959b5"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:58.000Z",
+              "updatedAt": "2026-07-28T01:15:58.000Z",
+              "uid": "35240-614bd6df-f272-45c9-8d65-0ddf6e6a1be5"
+            }
+          ],
+          "id": "d04570cb-9aa6-4a33-870d-90840393a777",
+          "createdAt": "2026-07-28T01:15:58.000Z",
+          "updatedAt": "2026-07-28T01:15:58.000Z",
+          "uid": "35240-d04570cb-9aa6-4a33-870d-90840393a777"
+        },
+        {
+          "name": "get_process_resource",
+          "item": [
+            {
+              "name": "Get Bulk Resource Status",
+              "id": "b7ce28ab-be26-48df-84e6-c3fe01478d7f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_process_resource",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_process_resource"
+                  ]
+                },
+                "description": "Get bulk processing status and results."
+              },
+              "response": [
+                {
+                  "id": "6b3d505d-e3e0-41a5-8246-20c99221e2a7",
+                  "name": "Status returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_process_resource",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_process_resource"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:58.000Z",
+                  "updatedAt": "2026-07-28T01:15:58.000Z",
+                  "uid": "35240-6b3d505d-e3e0-41a5-8246-20c99221e2a7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:58.000Z",
+              "updatedAt": "2026-07-28T01:15:58.000Z",
+              "uid": "35240-b7ce28ab-be26-48df-84e6-c3fe01478d7f"
+            }
+          ],
+          "id": "2f6e3dd8-13c9-4583-b5f6-4bf433e5ee5e",
+          "createdAt": "2026-07-28T01:15:58.000Z",
+          "updatedAt": "2026-07-28T01:15:58.000Z",
+          "uid": "35240-2f6e3dd8-13c9-4583-b5f6-4bf433e5ee5e"
+        }
+      ],
+      "id": "14c1a05b-e942-4c0a-918a-c3b698286221",
+      "createdAt": "2026-07-28T01:15:58.000Z",
+      "updatedAt": "2026-07-28T01:15:58.000Z",
+      "uid": "35240-14c1a05b-e942-4c0a-918a-c3b698286221"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

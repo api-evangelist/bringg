@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "fc02d8dd-f72f-4352-8e4e-4e72bb058a9b",
+    "name": "Bringg Delivery Hub Administration Shifts API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:50.000Z",
+    "updatedAt": "2026-07-28T01:16:50.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-fc02d8dd-f72f-4352-8e4e-4e72bb058a9b"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "start_shift",
+          "item": [
+            {
+              "name": "Start Shift",
+              "id": "bd725bba-1614-4f28-8105-715b45bb804f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/start_shift",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "start_shift"
+                  ]
+                },
+                "description": "Start a driver's shift."
+              },
+              "response": [
+                {
+                  "id": "70891e2c-a9e1-47c3-bb6a-a17cbb1ab980",
+                  "name": "Shift started.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/start_shift",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "start_shift"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:51.000Z",
+                  "updatedAt": "2026-07-28T01:16:51.000Z",
+                  "uid": "35240-70891e2c-a9e1-47c3-bb6a-a17cbb1ab980"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:51.000Z",
+              "updatedAt": "2026-07-28T01:16:51.000Z",
+              "uid": "35240-bd725bba-1614-4f28-8105-715b45bb804f"
+            }
+          ],
+          "id": "72876973-5316-4d6c-bbc5-11feb3040628",
+          "createdAt": "2026-07-28T01:16:51.000Z",
+          "updatedAt": "2026-07-28T01:16:51.000Z",
+          "uid": "35240-72876973-5316-4d6c-bbc5-11feb3040628"
+        },
+        {
+          "name": "end_shift",
+          "item": [
+            {
+              "name": "End Shift",
+              "id": "4c7a5358-1fee-4250-af09-fbeed75a1384",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/end_shift",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "end_shift"
+                  ]
+                },
+                "description": "End a driver's shift."
+              },
+              "response": [
+                {
+                  "id": "23c8c53b-ad93-4069-a7e0-e6c1cc7350e1",
+                  "name": "Shift ended.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/end_shift",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "end_shift"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:51.000Z",
+                  "updatedAt": "2026-07-28T01:16:51.000Z",
+                  "uid": "35240-23c8c53b-ad93-4069-a7e0-e6c1cc7350e1"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:51.000Z",
+              "updatedAt": "2026-07-28T01:16:51.000Z",
+              "uid": "35240-4c7a5358-1fee-4250-af09-fbeed75a1384"
+            }
+          ],
+          "id": "08551d5a-8e40-40ec-9f0b-1487e3c9fe38",
+          "createdAt": "2026-07-28T01:16:51.000Z",
+          "updatedAt": "2026-07-28T01:16:51.000Z",
+          "uid": "35240-08551d5a-8e40-40ec-9f0b-1487e3c9fe38"
+        }
+      ],
+      "id": "3498aea4-e3a7-49fb-bd73-a830684fe4f0",
+      "createdAt": "2026-07-28T01:16:51.000Z",
+      "updatedAt": "2026-07-28T01:16:51.000Z",
+      "uid": "35240-3498aea4-e3a7-49fb-bd73-a830684fe4f0"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

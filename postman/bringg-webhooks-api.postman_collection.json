@@ -1,0 +1,548 @@
+{
+  "info": {
+    "_postman_id": "9d5991c4-e773-4b1e-9c83-33bc2bf6b834",
+    "name": "Bringg Delivery Hub Administration Webhooks API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:17:10.000Z",
+    "updatedAt": "2026-07-28T01:17:10.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-9d5991c4-e773-4b1e-9c83-33bc2bf6b834"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "get_undelivered_webhooks",
+          "item": [
+            {
+              "name": "Generate Undelivered Webhooks Report",
+              "id": "32e0e2c4-b278-4eb9-bd8b-8aaffd16c279",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_undelivered_webhooks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_undelivered_webhooks"
+                  ]
+                },
+                "description": "Retrieve a report of webhooks Bringg sent without receiving confirmation."
+              },
+              "response": [
+                {
+                  "id": "df9c2d99-8723-4eee-9874-19da00778d2e",
+                  "name": "Report returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_undelivered_webhooks",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_undelivered_webhooks"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:11.000Z",
+                  "updatedAt": "2026-07-28T01:17:11.000Z",
+                  "uid": "35240-df9c2d99-8723-4eee-9874-19da00778d2e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:11.000Z",
+              "updatedAt": "2026-07-28T01:17:11.000Z",
+              "uid": "35240-32e0e2c4-b278-4eb9-bd8b-8aaffd16c279"
+            }
+          ],
+          "id": "3b67b35f-eff8-4e0f-a2ce-8daee3cbcc1e",
+          "createdAt": "2026-07-28T01:17:11.000Z",
+          "updatedAt": "2026-07-28T01:17:11.000Z",
+          "uid": "35240-3b67b35f-eff8-4e0f-a2ce-8daee3cbcc1e"
+        }
+      ],
+      "id": "7237a59b-1555-49b6-a9fc-c21bd24cba29",
+      "createdAt": "2026-07-28T01:17:11.000Z",
+      "updatedAt": "2026-07-28T01:17:11.000Z",
+      "uid": "35240-7237a59b-1555-49b6-a9fc-c21bd24cba29"
+    },
+    {
+      "name": "webhooks",
+      "item": [
+        {
+          "name": "delivery-created",
+          "item": [
+            {
+              "name": "Delivery Created Webhook",
+              "id": "734c4ee4-42f2-4629-b735-1296751b2d11",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/webhooks/delivery-created",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "webhooks",
+                    "delivery-created"
+                  ]
+                },
+                "description": "Bringg notifies the partner of a new delivery to fulfill."
+              },
+              "response": [
+                {
+                  "id": "67100393-924b-4ff0-bf65-cf2dc46606b5",
+                  "name": "Acknowledged.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/webhooks/delivery-created",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "webhooks",
+                        "delivery-created"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:11.000Z",
+                  "updatedAt": "2026-07-28T01:17:11.000Z",
+                  "uid": "35240-67100393-924b-4ff0-bf65-cf2dc46606b5"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:11.000Z",
+              "updatedAt": "2026-07-28T01:17:11.000Z",
+              "uid": "35240-734c4ee4-42f2-4629-b735-1296751b2d11"
+            }
+          ],
+          "id": "9c10f8bc-e6eb-4787-a0dd-cbec94ed15cd",
+          "createdAt": "2026-07-28T01:17:11.000Z",
+          "updatedAt": "2026-07-28T01:17:11.000Z",
+          "uid": "35240-9c10f8bc-e6eb-4787-a0dd-cbec94ed15cd"
+        },
+        {
+          "name": "get-quote",
+          "item": [
+            {
+              "name": "Get Quote Webhook",
+              "id": "74887a4b-b796-4bce-a001-e6503923e616",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/webhooks/get-quote",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "webhooks",
+                    "get-quote"
+                  ]
+                },
+                "description": "Bringg requests a delivery quote (price and ETA) from the partner."
+              },
+              "response": [
+                {
+                  "id": "f8bbffa1-0f7d-48eb-a702-2e6c8352bd99",
+                  "name": "Quote returned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/webhooks/get-quote",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "webhooks",
+                        "get-quote"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:11.000Z",
+                  "updatedAt": "2026-07-28T01:17:11.000Z",
+                  "uid": "35240-f8bbffa1-0f7d-48eb-a702-2e6c8352bd99"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:11.000Z",
+              "updatedAt": "2026-07-28T01:17:11.000Z",
+              "uid": "35240-74887a4b-b796-4bce-a001-e6503923e616"
+            }
+          ],
+          "id": "6ef86587-5ab6-469b-956a-70cdb6c0bd00",
+          "createdAt": "2026-07-28T01:17:11.000Z",
+          "updatedAt": "2026-07-28T01:17:11.000Z",
+          "uid": "35240-6ef86587-5ab6-469b-956a-70cdb6c0bd00"
+        },
+        {
+          "name": "order-updated",
+          "item": [
+            {
+              "name": "Delivery Updated Webhook",
+              "id": "324bd437-2e8c-4e4a-a898-6619adf23793",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/webhooks/order-updated",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "webhooks",
+                    "order-updated"
+                  ]
+                },
+                "description": "Bringg notifies the partner an order has been updated."
+              },
+              "response": [
+                {
+                  "id": "2b287fb3-d111-424b-8fdd-85000bc4e4a9",
+                  "name": "Acknowledged.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/webhooks/order-updated",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "webhooks",
+                        "order-updated"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:11.000Z",
+                  "updatedAt": "2026-07-28T01:17:11.000Z",
+                  "uid": "35240-2b287fb3-d111-424b-8fdd-85000bc4e4a9"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:11.000Z",
+              "updatedAt": "2026-07-28T01:17:11.000Z",
+              "uid": "35240-324bd437-2e8c-4e4a-a898-6619adf23793"
+            }
+          ],
+          "id": "bef6f5c8-5110-4ec3-9aed-f6417d6aa0e3",
+          "createdAt": "2026-07-28T01:17:11.000Z",
+          "updatedAt": "2026-07-28T01:17:11.000Z",
+          "uid": "35240-bef6f5c8-5110-4ec3-9aed-f6417d6aa0e3"
+        },
+        {
+          "name": "order-cancelled",
+          "item": [
+            {
+              "name": "Delivery Cancelled Webhook",
+              "id": "dde43302-568d-4a52-893d-479e94a973bf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/webhooks/order-cancelled",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "webhooks",
+                    "order-cancelled"
+                  ]
+                },
+                "description": "Bringg notifies the partner an order has been cancelled."
+              },
+              "response": [
+                {
+                  "id": "e1b8cc61-5f00-454c-abca-bfbca68663e0",
+                  "name": "Acknowledged.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/webhooks/order-cancelled",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "webhooks",
+                        "order-cancelled"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:11.000Z",
+                  "updatedAt": "2026-07-28T01:17:11.000Z",
+                  "uid": "35240-e1b8cc61-5f00-454c-abca-bfbca68663e0"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:11.000Z",
+              "updatedAt": "2026-07-28T01:17:11.000Z",
+              "uid": "35240-dde43302-568d-4a52-893d-479e94a973bf"
+            }
+          ],
+          "id": "b69544fc-28b2-4bff-871c-8a2444182fbe",
+          "createdAt": "2026-07-28T01:17:11.000Z",
+          "updatedAt": "2026-07-28T01:17:11.000Z",
+          "uid": "35240-b69544fc-28b2-4bff-871c-8a2444182fbe"
+        },
+        {
+          "name": "merchant-registered",
+          "item": [
+            {
+              "name": "Merchant Registered Webhook",
+              "id": "75e83989-da0f-4212-adf7-812010c78f9a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/webhooks/merchant-registered",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "webhooks",
+                    "merchant-registered"
+                  ]
+                },
+                "description": "Bringg notifies the partner a new merchant has subscribed to the partner's fleet."
+              },
+              "response": [
+                {
+                  "id": "a7b03cd9-eef7-47b2-824c-49bac1187b3b",
+                  "name": "Acknowledged.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/webhooks/merchant-registered",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "webhooks",
+                        "merchant-registered"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:11.000Z",
+                  "updatedAt": "2026-07-28T01:17:11.000Z",
+                  "uid": "35240-a7b03cd9-eef7-47b2-824c-49bac1187b3b"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:11.000Z",
+              "updatedAt": "2026-07-28T01:17:11.000Z",
+              "uid": "35240-75e83989-da0f-4212-adf7-812010c78f9a"
+            }
+          ],
+          "id": "e1c4b9a4-cac2-41f6-810f-5eae276688fe",
+          "createdAt": "2026-07-28T01:17:11.000Z",
+          "updatedAt": "2026-07-28T01:17:11.000Z",
+          "uid": "35240-e1c4b9a4-cac2-41f6-810f-5eae276688fe"
+        },
+        {
+          "name": "return-delivery-created",
+          "item": [
+            {
+              "name": "Return Delivery Created Webhook",
+              "id": "bdd1299f-3cfc-4645-a1d8-2fbd3a1f253d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/webhooks/return-delivery-created",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "webhooks",
+                    "return-delivery-created"
+                  ]
+                },
+                "description": "Bringg notifies the partner of a return delivery to pick up."
+              },
+              "response": [
+                {
+                  "id": "1799292c-2875-4224-b16c-ebf1853e1b32",
+                  "name": "Acknowledged.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/webhooks/return-delivery-created",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "webhooks",
+                        "return-delivery-created"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:11.000Z",
+                  "updatedAt": "2026-07-28T01:17:11.000Z",
+                  "uid": "35240-1799292c-2875-4224-b16c-ebf1853e1b32"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:11.000Z",
+              "updatedAt": "2026-07-28T01:17:11.000Z",
+              "uid": "35240-bdd1299f-3cfc-4645-a1d8-2fbd3a1f253d"
+            }
+          ],
+          "id": "e442c80c-aaad-43af-b9ad-ee6bfdecb4e6",
+          "createdAt": "2026-07-28T01:17:11.000Z",
+          "updatedAt": "2026-07-28T01:17:11.000Z",
+          "uid": "35240-e442c80c-aaad-43af-b9ad-ee6bfdecb4e6"
+        }
+      ],
+      "id": "dd671c07-b486-4d6e-8272-f0087b06637f",
+      "createdAt": "2026-07-28T01:17:11.000Z",
+      "updatedAt": "2026-07-28T01:17:11.000Z",
+      "uid": "35240-dd671c07-b486-4d6e-8272-f0087b06637f"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

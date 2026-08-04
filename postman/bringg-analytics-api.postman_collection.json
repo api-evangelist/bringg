@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "09aecd4e-6b87-4e20-9ad7-9468d52b0ac2",
+    "name": "Bringg Delivery Hub Administration Analytics API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:15:54.000Z",
+    "updatedAt": "2026-07-28T01:15:54.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-09aecd4e-6b87-4e20-9ad7-9468d52b0ac2"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "analytics_reports",
+          "item": [
+            {
+              "name": "Get Analytics Report",
+              "id": "8927cc9f-055f-4b47-a864-6e665d33a7f4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/analytics_reports",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "analytics_reports"
+                  ]
+                },
+                "description": "Retrieve an analytics report for a scheduled report."
+              },
+              "response": [
+                {
+                  "id": "aed7c216-7b14-4026-b958-6c3e47275f10",
+                  "name": "Report returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/analytics_reports",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "analytics_reports"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:55.000Z",
+                  "updatedAt": "2026-07-28T01:15:55.000Z",
+                  "uid": "35240-aed7c216-7b14-4026-b958-6c3e47275f10"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:55.000Z",
+              "updatedAt": "2026-07-28T01:15:55.000Z",
+              "uid": "35240-8927cc9f-055f-4b47-a864-6e665d33a7f4"
+            }
+          ],
+          "id": "5786c223-5fd8-4525-848d-d251a96d0cb0",
+          "createdAt": "2026-07-28T01:15:55.000Z",
+          "updatedAt": "2026-07-28T01:15:55.000Z",
+          "uid": "35240-5786c223-5fd8-4525-848d-d251a96d0cb0"
+        },
+        {
+          "name": "get_report",
+          "item": [
+            {
+              "name": "Get Report",
+              "id": "98387247-69ef-490a-a643-abbb1e849ec7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_report",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_report"
+                  ]
+                },
+                "description": "Get the latest version of a scheduled analytics report. Redirects to data file."
+              },
+              "response": [
+                {
+                  "id": "880cf242-270b-4c83-b1f3-bad7bfd9bce7",
+                  "name": "Redirect to data file.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_report",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_report"
+                      ]
+                    }
+                  },
+                  "status": "Found",
+                  "code": 302,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:55.000Z",
+                  "updatedAt": "2026-07-28T01:15:55.000Z",
+                  "uid": "35240-880cf242-270b-4c83-b1f3-bad7bfd9bce7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:55.000Z",
+              "updatedAt": "2026-07-28T01:15:55.000Z",
+              "uid": "35240-98387247-69ef-490a-a643-abbb1e849ec7"
+            }
+          ],
+          "id": "5103fed0-8ae5-40fb-a15e-709ef5e5fdbd",
+          "createdAt": "2026-07-28T01:15:55.000Z",
+          "updatedAt": "2026-07-28T01:15:55.000Z",
+          "uid": "35240-5103fed0-8ae5-40fb-a15e-709ef5e5fdbd"
+        }
+      ],
+      "id": "37f670f3-ef1f-4e56-997c-35804a22dfad",
+      "createdAt": "2026-07-28T01:15:55.000Z",
+      "updatedAt": "2026-07-28T01:15:55.000Z",
+      "uid": "35240-37f670f3-ef1f-4e56-997c-35804a22dfad"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

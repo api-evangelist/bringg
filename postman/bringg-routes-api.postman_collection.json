@@ -1,0 +1,329 @@
+{
+  "info": {
+    "_postman_id": "1bf0548e-6b17-44c1-89b4-a4d79c02174b",
+    "name": "Bringg Delivery Hub Administration Routes API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:42.000Z",
+    "updatedAt": "2026-07-28T01:16:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1bf0548e-6b17-44c1-89b4-a4d79c02174b"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "assign_run_driver",
+          "item": [
+            {
+              "name": "Assign Driver To Route",
+              "id": "f9b0b14b-a5af-429c-b28b-5abef9ea5936",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/assign_run_driver",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "assign_run_driver"
+                  ]
+                },
+                "description": "Assign a driver to a route (run) to fulfill its orders."
+              },
+              "response": [
+                {
+                  "id": "9039496d-8508-434a-bc3f-2743103952f9",
+                  "name": "Driver assigned to run.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/assign_run_driver",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "assign_run_driver"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:43.000Z",
+                  "updatedAt": "2026-07-28T01:16:43.000Z",
+                  "uid": "35240-9039496d-8508-434a-bc3f-2743103952f9"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:43.000Z",
+              "updatedAt": "2026-07-28T01:16:43.000Z",
+              "uid": "35240-f9b0b14b-a5af-429c-b28b-5abef9ea5936"
+            }
+          ],
+          "id": "6db5f6d4-db52-4726-b952-e37ce31191b2",
+          "createdAt": "2026-07-28T01:16:43.000Z",
+          "updatedAt": "2026-07-28T01:16:43.000Z",
+          "uid": "35240-6db5f6d4-db52-4726-b952-e37ce31191b2"
+        },
+        {
+          "name": "assign_run_vehicle",
+          "item": [
+            {
+              "name": "Assign Vehicle To Route",
+              "id": "997be5e9-e073-4463-8868-3bb195031988",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/assign_run_vehicle",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "assign_run_vehicle"
+                  ]
+                },
+                "description": "Assign a vehicle to a route instance (run)."
+              },
+              "response": [
+                {
+                  "id": "c5673897-e5b4-4abd-ac5b-b77fdf28c198",
+                  "name": "Vehicle assigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/assign_run_vehicle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "assign_run_vehicle"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:43.000Z",
+                  "updatedAt": "2026-07-28T01:16:43.000Z",
+                  "uid": "35240-c5673897-e5b4-4abd-ac5b-b77fdf28c198"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:43.000Z",
+              "updatedAt": "2026-07-28T01:16:43.000Z",
+              "uid": "35240-997be5e9-e073-4463-8868-3bb195031988"
+            }
+          ],
+          "id": "a307423f-2edc-495d-b7b2-641c33e585f8",
+          "createdAt": "2026-07-28T01:16:43.000Z",
+          "updatedAt": "2026-07-28T01:16:43.000Z",
+          "uid": "35240-a307423f-2edc-495d-b7b2-641c33e585f8"
+        },
+        {
+          "name": "unassign_run_driver",
+          "item": [
+            {
+              "name": "Unassign Driver From Route",
+              "id": "869ff519-60e7-42ea-9e35-23137ca46e43",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/unassign_run_driver",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "unassign_run_driver"
+                  ]
+                },
+                "description": "Remove a driver from a route assignment."
+              },
+              "response": [
+                {
+                  "id": "82ab4d70-b377-49a4-bf77-bc0e66f2f9d8",
+                  "name": "Driver unassigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/unassign_run_driver",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "unassign_run_driver"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:43.000Z",
+                  "updatedAt": "2026-07-28T01:16:43.000Z",
+                  "uid": "35240-82ab4d70-b377-49a4-bf77-bc0e66f2f9d8"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:43.000Z",
+              "updatedAt": "2026-07-28T01:16:43.000Z",
+              "uid": "35240-869ff519-60e7-42ea-9e35-23137ca46e43"
+            }
+          ],
+          "id": "3b13509e-1c2d-4a6c-b7f5-72d0831771f6",
+          "createdAt": "2026-07-28T01:16:43.000Z",
+          "updatedAt": "2026-07-28T01:16:43.000Z",
+          "uid": "35240-3b13509e-1c2d-4a6c-b7f5-72d0831771f6"
+        },
+        {
+          "name": "unassign_run_vehicle",
+          "item": [
+            {
+              "name": "Unassign Vehicle From Route",
+              "id": "c8392831-c745-4fab-b279-4104c0091065",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/unassign_run_vehicle",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "unassign_run_vehicle"
+                  ]
+                },
+                "description": "Remove a vehicle from a route assignment."
+              },
+              "response": [
+                {
+                  "id": "55cd4f80-ad9a-44e9-bc6d-28fb21f59c97",
+                  "name": "Vehicle unassigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/unassign_run_vehicle",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "unassign_run_vehicle"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:43.000Z",
+                  "updatedAt": "2026-07-28T01:16:43.000Z",
+                  "uid": "35240-55cd4f80-ad9a-44e9-bc6d-28fb21f59c97"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:43.000Z",
+              "updatedAt": "2026-07-28T01:16:43.000Z",
+              "uid": "35240-c8392831-c745-4fab-b279-4104c0091065"
+            }
+          ],
+          "id": "b364aba2-7aeb-4594-a2a9-afd97801f161",
+          "createdAt": "2026-07-28T01:16:43.000Z",
+          "updatedAt": "2026-07-28T01:16:43.000Z",
+          "uid": "35240-b364aba2-7aeb-4594-a2a9-afd97801f161"
+        }
+      ],
+      "id": "e3413111-47f7-4cdd-beda-a5421e660541",
+      "createdAt": "2026-07-28T01:16:43.000Z",
+      "updatedAt": "2026-07-28T01:16:43.000Z",
+      "uid": "35240-e3413111-47f7-4cdd-beda-a5421e660541"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

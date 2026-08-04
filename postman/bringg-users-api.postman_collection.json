@@ -1,0 +1,469 @@
+{
+  "info": {
+    "_postman_id": "0a60c759-5d51-43c6-925f-439bdda54f34",
+    "name": "Bringg Delivery Hub Administration Users API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:52.000Z",
+    "updatedAt": "2026-07-28T01:16:52.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0a60c759-5d51-43c6-925f-439bdda54f34"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_user",
+          "item": [
+            {
+              "name": "Create User",
+              "id": "85666836-0f61-41d0-85eb-f50a3f052084",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_user"
+                  ]
+                },
+                "description": "Create a new user (driver, dispatcher, or other role)."
+              },
+              "response": [
+                {
+                  "id": "3eb65dd2-b0f7-4c4a-8bcf-0a454c1aa00c",
+                  "name": "User created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-3eb65dd2-b0f7-4c4a-8bcf-0a454c1aa00c"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-85666836-0f61-41d0-85eb-f50a3f052084"
+            }
+          ],
+          "id": "13207eb4-766e-49f5-b8a0-88cf1cfc4eb9",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-13207eb4-766e-49f5-b8a0-88cf1cfc4eb9"
+        },
+        {
+          "name": "update_user",
+          "item": [
+            {
+              "name": "Update User",
+              "id": "2fb80880-49ff-442c-b3ce-6cb550c9f4fb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_user"
+                  ]
+                },
+                "description": "Update an existing user."
+              },
+              "response": [
+                {
+                  "id": "2ef5d962-2085-4233-ad81-219d61f416e9",
+                  "name": "User updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-2ef5d962-2085-4233-ad81-219d61f416e9"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-2fb80880-49ff-442c-b3ce-6cb550c9f4fb"
+            }
+          ],
+          "id": "0d89740a-f061-4a29-bda1-14d592f72c4f",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-0d89740a-f061-4a29-bda1-14d592f72c4f"
+        },
+        {
+          "name": "get_user",
+          "item": [
+            {
+              "name": "Get User",
+              "id": "bbe6fae2-dd74-47a4-9880-2ccbb45cf3f3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_user"
+                  ]
+                },
+                "description": "Get a user by id."
+              },
+              "response": [
+                {
+                  "id": "c9130928-73ae-49cb-b2f1-1a5181728b3a",
+                  "name": "User returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-c9130928-73ae-49cb-b2f1-1a5181728b3a"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-bbe6fae2-dd74-47a4-9880-2ccbb45cf3f3"
+            }
+          ],
+          "id": "ff831392-87a0-4c25-88ee-a9913af9e0eb",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-ff831392-87a0-4c25-88ee-a9913af9e0eb"
+        },
+        {
+          "name": "get_users",
+          "item": [
+            {
+              "name": "Get Users",
+              "id": "72322405-0148-4bb4-a9ab-490d8934dbd0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_users",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_users"
+                  ]
+                },
+                "description": "List all users."
+              },
+              "response": [
+                {
+                  "id": "f1f43c2b-8c93-4980-a37a-cf43c08acc93",
+                  "name": "Users returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_users",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_users"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-f1f43c2b-8c93-4980-a37a-cf43c08acc93"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-72322405-0148-4bb4-a9ab-490d8934dbd0"
+            }
+          ],
+          "id": "e4d4d991-4233-44e7-9d56-99ed35e234b4",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-e4d4d991-4233-44e7-9d56-99ed35e234b4"
+        },
+        {
+          "name": "delete_user",
+          "item": [
+            {
+              "name": "Delete User",
+              "id": "7f729221-a9c8-4d87-82a3-c242ff530645",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_user",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_user"
+                  ]
+                },
+                "description": "Delete a user."
+              },
+              "response": [
+                {
+                  "id": "1a1ff22c-093b-4aad-921d-997d0b67566f",
+                  "name": "User deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_user",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_user"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-1a1ff22c-093b-4aad-921d-997d0b67566f"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-7f729221-a9c8-4d87-82a3-c242ff530645"
+            }
+          ],
+          "id": "fb1d12ed-3609-42a0-b36d-ccdddaedc422",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-fb1d12ed-3609-42a0-b36d-ccdddaedc422"
+        },
+        {
+          "name": "create_user_type",
+          "item": [
+            {
+              "name": "Create User Role",
+              "id": "757265ce-1163-436c-bb9a-4693b8e40f7d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_user_type",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_user_type"
+                  ]
+                },
+                "description": "Create a custom user role/type."
+              },
+              "response": [
+                {
+                  "id": "84f12bc4-450d-47dc-9893-4b84dafd176e",
+                  "name": "Created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_user_type",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_user_type"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:52.000Z",
+                  "updatedAt": "2026-07-28T01:16:52.000Z",
+                  "uid": "35240-84f12bc4-450d-47dc-9893-4b84dafd176e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:52.000Z",
+              "updatedAt": "2026-07-28T01:16:52.000Z",
+              "uid": "35240-757265ce-1163-436c-bb9a-4693b8e40f7d"
+            }
+          ],
+          "id": "8fc8cb37-882d-4205-9876-17156ebe4b65",
+          "createdAt": "2026-07-28T01:16:52.000Z",
+          "updatedAt": "2026-07-28T01:16:52.000Z",
+          "uid": "35240-8fc8cb37-882d-4205-9876-17156ebe4b65"
+        }
+      ],
+      "id": "fca659a0-d6c3-4a71-8760-12445ab575d0",
+      "createdAt": "2026-07-28T01:16:52.000Z",
+      "updatedAt": "2026-07-28T01:16:52.000Z",
+      "uid": "35240-fca659a0-d6c3-4a71-8760-12445ab575d0"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

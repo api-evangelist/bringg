@@ -1,0 +1,189 @@
+{
+  "info": {
+    "_postman_id": "95d2ae56-de4a-425e-b15a-7a3fa3c0ac95",
+    "name": "Bringg Delivery Hub Administration Authentication API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:15:55.000Z",
+    "updatedAt": "2026-07-28T01:15:55.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-95d2ae56-de4a-425e-b15a-7a3fa3c0ac95"
+  },
+  "item": [
+    {
+      "name": "partner",
+      "item": [
+        {
+          "name": "get-token",
+          "item": [
+            {
+              "name": "Get Token",
+              "id": "356bc815-c187-4242-8f54-6e172d3c9586",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/get-token",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "get-token"
+                  ]
+                },
+                "description": "Exchange partner credentials for an access token used to call Bringg from the partner side."
+              },
+              "response": [
+                {
+                  "id": "e65a1e23-70a5-4299-b701-1c79b17d8e2f",
+                  "name": "Token returned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/get-token",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "get-token"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:56.000Z",
+                  "updatedAt": "2026-07-28T01:15:56.000Z",
+                  "uid": "35240-e65a1e23-70a5-4299-b701-1c79b17d8e2f"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:56.000Z",
+              "updatedAt": "2026-07-28T01:15:56.000Z",
+              "uid": "35240-356bc815-c187-4242-8f54-6e172d3c9586"
+            }
+          ],
+          "id": "b4d9a42e-976b-4c81-845b-27f764b2722e",
+          "createdAt": "2026-07-28T01:15:56.000Z",
+          "updatedAt": "2026-07-28T01:15:56.000Z",
+          "uid": "35240-b4d9a42e-976b-4c81-845b-27f764b2722e"
+        },
+        {
+          "name": "merchant-credentials",
+          "item": [
+            {
+              "name": "Get Merchant Credentials",
+              "id": "85e7ed6e-0e0b-4918-8a35-08872c4fcfe8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/merchant-credentials",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "merchant-credentials"
+                  ]
+                },
+                "description": "Retrieve merchant-specific credentials issued by Bringg to the fleet partner."
+              },
+              "response": [
+                {
+                  "id": "1498bd7c-27d1-4b57-93de-0007b8dfbabc",
+                  "name": "Credentials returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/merchant-credentials",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "merchant-credentials"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:15:56.000Z",
+                  "updatedAt": "2026-07-28T01:15:56.000Z",
+                  "uid": "35240-1498bd7c-27d1-4b57-93de-0007b8dfbabc"
+                }
+              ],
+              "createdAt": "2026-07-28T01:15:56.000Z",
+              "updatedAt": "2026-07-28T01:15:56.000Z",
+              "uid": "35240-85e7ed6e-0e0b-4918-8a35-08872c4fcfe8"
+            }
+          ],
+          "id": "0e205329-e2ea-4d3f-8f11-822c8d824dee",
+          "createdAt": "2026-07-28T01:15:56.000Z",
+          "updatedAt": "2026-07-28T01:15:56.000Z",
+          "uid": "35240-0e205329-e2ea-4d3f-8f11-822c8d824dee"
+        }
+      ],
+      "id": "372e29fe-8039-499e-851d-456dd51df24e",
+      "createdAt": "2026-07-28T01:15:56.000Z",
+      "updatedAt": "2026-07-28T01:15:56.000Z",
+      "uid": "35240-372e29fe-8039-499e-851d-456dd51df24e"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

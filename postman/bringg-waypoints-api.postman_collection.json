@@ -1,0 +1,478 @@
+{
+  "info": {
+    "_postman_id": "5deb23e1-b42e-4ca9-b128-5889878e0be6",
+    "name": "Bringg Delivery Hub Administration Waypoints API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:17:09.000Z",
+    "updatedAt": "2026-07-28T01:17:10.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5deb23e1-b42e-4ca9-b128-5889878e0be6"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "checkin",
+          "item": [
+            {
+              "name": "Check-in (Arrived to Destination)",
+              "id": "87b815d8-b985-4a1d-a07d-5c5504794cb3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/checkin",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "checkin"
+                  ]
+                },
+                "description": "Record driver arrival at an order waypoint."
+              },
+              "response": [
+                {
+                  "id": "4e152ade-1043-470b-a379-6494b60286c8",
+                  "name": "Check-in recorded.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/checkin",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "checkin"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:10.000Z",
+                  "updatedAt": "2026-07-28T01:17:10.000Z",
+                  "uid": "35240-4e152ade-1043-470b-a379-6494b60286c8"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:10.000Z",
+              "updatedAt": "2026-07-28T01:17:10.000Z",
+              "uid": "35240-87b815d8-b985-4a1d-a07d-5c5504794cb3"
+            }
+          ],
+          "id": "846daf40-4c69-4f19-9971-f183f44a0c7c",
+          "createdAt": "2026-07-28T01:17:10.000Z",
+          "updatedAt": "2026-07-28T01:17:10.000Z",
+          "uid": "35240-846daf40-4c69-4f19-9971-f183f44a0c7c"
+        },
+        {
+          "name": "checkout",
+          "item": [
+            {
+              "name": "Check-out (Left Destination)",
+              "id": "23a24bd8-4101-42f0-91d9-fa8a1f709ab4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/checkout",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "checkout"
+                  ]
+                },
+                "description": "Record driver leaving an order waypoint. Final checkout completes the order."
+              },
+              "response": [
+                {
+                  "id": "34bfb4b5-33ff-43f6-89db-770f79ca2a62",
+                  "name": "Check-out recorded.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/checkout",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "checkout"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:10.000Z",
+                  "updatedAt": "2026-07-28T01:17:10.000Z",
+                  "uid": "35240-34bfb4b5-33ff-43f6-89db-770f79ca2a62"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:10.000Z",
+              "updatedAt": "2026-07-28T01:17:10.000Z",
+              "uid": "35240-23a24bd8-4101-42f0-91d9-fa8a1f709ab4"
+            }
+          ],
+          "id": "f93785b9-99e3-4479-82df-d2d093003d8c",
+          "createdAt": "2026-07-28T01:17:10.000Z",
+          "updatedAt": "2026-07-28T01:17:10.000Z",
+          "uid": "35240-f93785b9-99e3-4479-82df-d2d093003d8c"
+        },
+        {
+          "name": "mass_checkout",
+          "item": [
+            {
+              "name": "Multi-Order Checkout",
+              "id": "d32e0768-9752-40ed-9457-4cd26d4e5bb0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/mass_checkout",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "mass_checkout"
+                  ]
+                },
+                "description": "Trigger checkout for multiple orders sharing a checkout location."
+              },
+              "response": [
+                {
+                  "id": "4a96435d-0d1e-49fd-b895-8c4fffae8dc7",
+                  "name": "Bulk checkout accepted.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/mass_checkout",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "mass_checkout"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:10.000Z",
+                  "updatedAt": "2026-07-28T01:17:10.000Z",
+                  "uid": "35240-4a96435d-0d1e-49fd-b895-8c4fffae8dc7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:10.000Z",
+              "updatedAt": "2026-07-28T01:17:10.000Z",
+              "uid": "35240-d32e0768-9752-40ed-9457-4cd26d4e5bb0"
+            }
+          ],
+          "id": "b0c9ea90-4be5-46e4-849d-702c60339632",
+          "createdAt": "2026-07-28T01:17:10.000Z",
+          "updatedAt": "2026-07-28T01:17:10.000Z",
+          "uid": "35240-b0c9ea90-4be5-46e4-849d-702c60339632"
+        }
+      ],
+      "id": "ef601849-dd01-499f-8243-1e896aaeb1e2",
+      "createdAt": "2026-07-28T01:17:10.000Z",
+      "updatedAt": "2026-07-28T01:17:10.000Z",
+      "uid": "35240-ef601849-dd01-499f-8243-1e896aaeb1e2"
+    },
+    {
+      "name": "partner",
+      "item": [
+        {
+          "name": "check-in",
+          "item": [
+            {
+              "name": "Check In / Driver Arrived To Location",
+              "id": "8e35188f-0cc5-450e-8e57-57c84b4711fd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/check-in",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "check-in"
+                  ]
+                },
+                "description": "Partner driver arrived at a waypoint."
+              },
+              "response": [
+                {
+                  "id": "59655284-3185-4b8b-9c77-ca41c7863340",
+                  "name": "Arrived.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/check-in",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "check-in"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:10.000Z",
+                  "updatedAt": "2026-07-28T01:17:10.000Z",
+                  "uid": "35240-59655284-3185-4b8b-9c77-ca41c7863340"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:10.000Z",
+              "updatedAt": "2026-07-28T01:17:10.000Z",
+              "uid": "35240-8e35188f-0cc5-450e-8e57-57c84b4711fd"
+            }
+          ],
+          "id": "d638ac44-dfbf-4f36-82e1-3128b0117a6e",
+          "createdAt": "2026-07-28T01:17:10.000Z",
+          "updatedAt": "2026-07-28T01:17:10.000Z",
+          "uid": "35240-d638ac44-dfbf-4f36-82e1-3128b0117a6e"
+        },
+        {
+          "name": "check-out",
+          "item": [
+            {
+              "name": "Check Out / Driver Left Location",
+              "id": "31870a07-6b75-419b-b4da-b20b0c2d6c20",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/check-out",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "check-out"
+                  ]
+                },
+                "description": "Partner driver left a waypoint."
+              },
+              "response": [
+                {
+                  "id": "07224dac-da0f-46a1-b6b2-a275307f0ee0",
+                  "name": "Departed.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/check-out",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "check-out"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:10.000Z",
+                  "updatedAt": "2026-07-28T01:17:10.000Z",
+                  "uid": "35240-07224dac-da0f-46a1-b6b2-a275307f0ee0"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:10.000Z",
+              "updatedAt": "2026-07-28T01:17:10.000Z",
+              "uid": "35240-31870a07-6b75-419b-b4da-b20b0c2d6c20"
+            }
+          ],
+          "id": "044f1569-9a4b-4bf6-a473-a8e7195018c4",
+          "createdAt": "2026-07-28T01:17:10.000Z",
+          "updatedAt": "2026-07-28T01:17:10.000Z",
+          "uid": "35240-044f1569-9a4b-4bf6-a473-a8e7195018c4"
+        },
+        {
+          "name": "cluster-checkin-checkout",
+          "item": [
+            {
+              "name": "Cluster Check-in / Check-out",
+              "id": "f3eb218d-1325-4681-a3dc-81ef5d72ce32",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/partner/cluster-checkin-checkout",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "partner",
+                    "cluster-checkin-checkout"
+                  ]
+                },
+                "description": "Indicate multiple bulk arrival or departure events for clustered orders."
+              },
+              "response": [
+                {
+                  "id": "ea673e2e-3adb-41a5-bbf0-22942522eae1",
+                  "name": "Cluster recorded.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/partner/cluster-checkin-checkout",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "partner",
+                        "cluster-checkin-checkout"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:17:10.000Z",
+                  "updatedAt": "2026-07-28T01:17:10.000Z",
+                  "uid": "35240-ea673e2e-3adb-41a5-bbf0-22942522eae1"
+                }
+              ],
+              "createdAt": "2026-07-28T01:17:10.000Z",
+              "updatedAt": "2026-07-28T01:17:10.000Z",
+              "uid": "35240-f3eb218d-1325-4681-a3dc-81ef5d72ce32"
+            }
+          ],
+          "id": "c001bd62-1369-4931-a3ea-de14b76a64a2",
+          "createdAt": "2026-07-28T01:17:10.000Z",
+          "updatedAt": "2026-07-28T01:17:10.000Z",
+          "uid": "35240-c001bd62-1369-4931-a3ea-de14b76a64a2"
+        }
+      ],
+      "id": "24cebb6d-a144-4533-a35d-7cba9f7fc5bc",
+      "createdAt": "2026-07-28T01:17:10.000Z",
+      "updatedAt": "2026-07-28T01:17:10.000Z",
+      "uid": "35240-24cebb6d-a144-4533-a35d-7cba9f7fc5bc"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

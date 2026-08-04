@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "3fa1a6a2-46c6-47d2-807c-c180eae09cfa",
+    "name": "Bringg Delivery Hub Administration Operations API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:07.000Z",
+    "updatedAt": "2026-07-28T01:16:07.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-3fa1a6a2-46c6-47d2-807c-c180eae09cfa"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "async_operation_status",
+          "item": [
+            {
+              "name": "Async Operation Status",
+              "id": "6a3c76bb-9d9c-4a95-8ed7-d61f3a521fcb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/async_operation_status",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "async_operation_status"
+                  ]
+                },
+                "description": "Check the status of an asynchronous operation."
+              },
+              "response": [
+                {
+                  "id": "182b7e7b-ecec-44bd-bf36-fb0fc48d6ac7",
+                  "name": "Status returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/async_operation_status",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "async_operation_status"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:07.000Z",
+                  "updatedAt": "2026-07-28T01:16:07.000Z",
+                  "uid": "35240-182b7e7b-ecec-44bd-bf36-fb0fc48d6ac7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:07.000Z",
+              "updatedAt": "2026-07-28T01:16:07.000Z",
+              "uid": "35240-6a3c76bb-9d9c-4a95-8ed7-d61f3a521fcb"
+            }
+          ],
+          "id": "b5e3fe3d-db06-4057-9b9f-29f98b1c96be",
+          "createdAt": "2026-07-28T01:16:07.000Z",
+          "updatedAt": "2026-07-28T01:16:07.000Z",
+          "uid": "35240-b5e3fe3d-db06-4057-9b9f-29f98b1c96be"
+        }
+      ],
+      "id": "2d7a5e8f-eacb-48a0-9525-2f03314f05e5",
+      "createdAt": "2026-07-28T01:16:07.000Z",
+      "updatedAt": "2026-07-28T01:16:07.000Z",
+      "uid": "35240-2d7a5e8f-eacb-48a0-9525-2f03314f05e5"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

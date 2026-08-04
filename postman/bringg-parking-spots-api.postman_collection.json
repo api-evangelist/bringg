@@ -1,0 +1,399 @@
+{
+  "info": {
+    "_postman_id": "07647d4d-91c4-4497-ab38-d020c66f1c5e",
+    "name": "Bringg Delivery Hub Administration Parking Spots API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:31.000Z",
+    "updatedAt": "2026-07-28T01:16:31.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-07647d4d-91c4-4497-ab38-d020c66f1c5e"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_parking_spot",
+          "item": [
+            {
+              "name": "Create Parking Spot",
+              "id": "82d1840a-2c05-4ab7-9a49-ad19c621b38e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_parking_spot",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_parking_spot"
+                  ]
+                },
+                "description": "Create a parking spot for vehicles."
+              },
+              "response": [
+                {
+                  "id": "824b53b6-addd-43e8-9148-61301e03e788",
+                  "name": "Created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_parking_spot",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_parking_spot"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:32.000Z",
+                  "updatedAt": "2026-07-28T01:16:32.000Z",
+                  "uid": "35240-824b53b6-addd-43e8-9148-61301e03e788"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:32.000Z",
+              "updatedAt": "2026-07-28T01:16:32.000Z",
+              "uid": "35240-82d1840a-2c05-4ab7-9a49-ad19c621b38e"
+            }
+          ],
+          "id": "6cea2697-d6e2-4cff-afa2-3d3e6cac76d7",
+          "createdAt": "2026-07-28T01:16:32.000Z",
+          "updatedAt": "2026-07-28T01:16:32.000Z",
+          "uid": "35240-6cea2697-d6e2-4cff-afa2-3d3e6cac76d7"
+        },
+        {
+          "name": "update_parking_spot",
+          "item": [
+            {
+              "name": "Update Parking Spot",
+              "id": "30be781c-7922-4925-9524-a5822a121908",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_parking_spot",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_parking_spot"
+                  ]
+                },
+                "description": "Update a parking spot."
+              },
+              "response": [
+                {
+                  "id": "d669e5d8-9791-4d4a-b2b1-767fd370b876",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_parking_spot",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_parking_spot"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:32.000Z",
+                  "updatedAt": "2026-07-28T01:16:32.000Z",
+                  "uid": "35240-d669e5d8-9791-4d4a-b2b1-767fd370b876"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:32.000Z",
+              "updatedAt": "2026-07-28T01:16:32.000Z",
+              "uid": "35240-30be781c-7922-4925-9524-a5822a121908"
+            }
+          ],
+          "id": "c98b78d6-fc01-4d44-866c-b5e66f8f788e",
+          "createdAt": "2026-07-28T01:16:32.000Z",
+          "updatedAt": "2026-07-28T01:16:32.000Z",
+          "uid": "35240-c98b78d6-fc01-4d44-866c-b5e66f8f788e"
+        },
+        {
+          "name": "delete_parking_spot",
+          "item": [
+            {
+              "name": "Delete Parking Spot",
+              "id": "c05a19d3-0cad-4eab-884e-2e0091b111b7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_parking_spot",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_parking_spot"
+                  ]
+                },
+                "description": "Delete a parking spot."
+              },
+              "response": [
+                {
+                  "id": "6d9b512a-0b52-4ff5-93ca-9342f3a36d5e",
+                  "name": "Deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_parking_spot",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_parking_spot"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:32.000Z",
+                  "updatedAt": "2026-07-28T01:16:32.000Z",
+                  "uid": "35240-6d9b512a-0b52-4ff5-93ca-9342f3a36d5e"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:32.000Z",
+              "updatedAt": "2026-07-28T01:16:32.000Z",
+              "uid": "35240-c05a19d3-0cad-4eab-884e-2e0091b111b7"
+            }
+          ],
+          "id": "49dcbedc-59e9-4bb8-b41b-ef0b042246b1",
+          "createdAt": "2026-07-28T01:16:32.000Z",
+          "updatedAt": "2026-07-28T01:16:32.000Z",
+          "uid": "35240-49dcbedc-59e9-4bb8-b41b-ef0b042246b1"
+        },
+        {
+          "name": "get_parking_spot_by_id",
+          "item": [
+            {
+              "name": "Get Parking Spot",
+              "id": "c6627044-1093-442f-9d94-4a98eaac0bdb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_parking_spot_by_id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_parking_spot_by_id"
+                  ]
+                },
+                "description": "Get a parking spot by id."
+              },
+              "response": [
+                {
+                  "id": "0a7b54f8-84e4-422e-ba78-a767aec36b99",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_parking_spot_by_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_parking_spot_by_id"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:32.000Z",
+                  "updatedAt": "2026-07-28T01:16:32.000Z",
+                  "uid": "35240-0a7b54f8-84e4-422e-ba78-a767aec36b99"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:32.000Z",
+              "updatedAt": "2026-07-28T01:16:32.000Z",
+              "uid": "35240-c6627044-1093-442f-9d94-4a98eaac0bdb"
+            }
+          ],
+          "id": "ed698a22-a313-4f02-856a-dcbcefaee9ef",
+          "createdAt": "2026-07-28T01:16:32.000Z",
+          "updatedAt": "2026-07-28T01:16:32.000Z",
+          "uid": "35240-ed698a22-a313-4f02-856a-dcbcefaee9ef"
+        },
+        {
+          "name": "get_all_parking_spots",
+          "item": [
+            {
+              "name": "Get All Parking Spots",
+              "id": "ead4eacc-090a-41cb-bce9-646cb608a68e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_all_parking_spots",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_all_parking_spots"
+                  ]
+                },
+                "description": "List all parking spots."
+              },
+              "response": [
+                {
+                  "id": "b204f1c4-417d-4200-be09-8592bb741749",
+                  "name": "List returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_all_parking_spots",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_all_parking_spots"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:32.000Z",
+                  "updatedAt": "2026-07-28T01:16:32.000Z",
+                  "uid": "35240-b204f1c4-417d-4200-be09-8592bb741749"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:32.000Z",
+              "updatedAt": "2026-07-28T01:16:32.000Z",
+              "uid": "35240-ead4eacc-090a-41cb-bce9-646cb608a68e"
+            }
+          ],
+          "id": "1f2768b9-49f0-4859-8b0e-c22da2febe6c",
+          "createdAt": "2026-07-28T01:16:32.000Z",
+          "updatedAt": "2026-07-28T01:16:32.000Z",
+          "uid": "35240-1f2768b9-49f0-4859-8b0e-c22da2febe6c"
+        }
+      ],
+      "id": "d031ac50-5e30-40f0-b7b9-0f35e0204de1",
+      "createdAt": "2026-07-28T01:16:32.000Z",
+      "updatedAt": "2026-07-28T01:16:32.000Z",
+      "uid": "35240-d031ac50-5e30-40f0-b7b9-0f35e0204de1"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}

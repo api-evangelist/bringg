@@ -1,0 +1,609 @@
+{
+  "info": {
+    "_postman_id": "2978b137-f045-42fb-8c27-5cc9d44145b4",
+    "name": "Bringg Delivery Hub Administration Service Areas API",
+    "description": "Bringg's Delivery Hub REST API provides programmatic access to last-mile delivery\norchestration: orders (tasks), routes (runs), customers, teams, service areas,\nservice plans, planned delivery windows (delivery slots), exclusion windows\n(blackouts), parking spots, packages, inventory, recurring orders, vehicles,\ndelivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client\nCredentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and\nfollow the pattern https://{region}-admin-api.bringg.com.\n\n\nContact Support:\n Name: Bringg Developer Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:16:44.000Z",
+    "updatedAt": "2026-07-28T01:16:44.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-2978b137-f045-42fb-8c27-5cc9d44145b4"
+  },
+  "item": [
+    {
+      "name": "services",
+      "item": [
+        {
+          "name": "create_service_area",
+          "item": [
+            {
+              "name": "Create Service Area",
+              "id": "aef597f8-5b8b-4c00-98f7-7d5d0af6305f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_service_area",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_service_area"
+                  ]
+                },
+                "description": "Create a service area defined by a polygon."
+              },
+              "response": [
+                {
+                  "id": "79952c3f-e931-4c15-a9cf-282b9db0dda8",
+                  "name": "Service area created.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_service_area",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_service_area"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:45.000Z",
+                  "updatedAt": "2026-07-28T01:16:45.000Z",
+                  "uid": "35240-79952c3f-e931-4c15-a9cf-282b9db0dda8"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:45.000Z",
+              "updatedAt": "2026-07-28T01:16:45.000Z",
+              "uid": "35240-aef597f8-5b8b-4c00-98f7-7d5d0af6305f"
+            }
+          ],
+          "id": "44db72c9-8fef-48db-8abe-18311fe521e7",
+          "createdAt": "2026-07-28T01:16:45.000Z",
+          "updatedAt": "2026-07-28T01:16:45.000Z",
+          "uid": "35240-44db72c9-8fef-48db-8abe-18311fe521e7"
+        },
+        {
+          "name": "update_service_area",
+          "item": [
+            {
+              "name": "Update Service Area",
+              "id": "1042c015-1b30-4927-8ab3-1461a8cef427",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_service_area",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_service_area"
+                  ]
+                },
+                "description": "Update an existing service area."
+              },
+              "response": [
+                {
+                  "id": "b8001247-6fba-4f1a-98f4-040a3c9eeea4",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_service_area",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_service_area"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:45.000Z",
+                  "updatedAt": "2026-07-28T01:16:45.000Z",
+                  "uid": "35240-b8001247-6fba-4f1a-98f4-040a3c9eeea4"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:45.000Z",
+              "updatedAt": "2026-07-28T01:16:45.000Z",
+              "uid": "35240-1042c015-1b30-4927-8ab3-1461a8cef427"
+            }
+          ],
+          "id": "264b76dc-3fc5-4148-a412-13086f134e2f",
+          "createdAt": "2026-07-28T01:16:45.000Z",
+          "updatedAt": "2026-07-28T01:16:45.000Z",
+          "uid": "35240-264b76dc-3fc5-4148-a412-13086f134e2f"
+        },
+        {
+          "name": "get_service_area",
+          "item": [
+            {
+              "name": "Get Service Area",
+              "id": "17ae6be9-e90b-49fb-af28-f644376638c2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_service_area",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_service_area"
+                  ]
+                },
+                "description": "Get a service area by id."
+              },
+              "response": [
+                {
+                  "id": "c0d2b858-8306-4e5c-9696-7422d9733bd7",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_service_area",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_service_area"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:45.000Z",
+                  "updatedAt": "2026-07-28T01:16:45.000Z",
+                  "uid": "35240-c0d2b858-8306-4e5c-9696-7422d9733bd7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:45.000Z",
+              "updatedAt": "2026-07-28T01:16:45.000Z",
+              "uid": "35240-17ae6be9-e90b-49fb-af28-f644376638c2"
+            }
+          ],
+          "id": "0c1699e6-a5bb-4859-9994-130f65f0eba2",
+          "createdAt": "2026-07-28T01:16:45.000Z",
+          "updatedAt": "2026-07-28T01:16:45.000Z",
+          "uid": "35240-0c1699e6-a5bb-4859-9994-130f65f0eba2"
+        },
+        {
+          "name": "get_service_areas",
+          "item": [
+            {
+              "name": "Get Service Areas",
+              "id": "1a495d4d-eb94-49d2-8401-d06ba48f8971",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_service_areas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_service_areas"
+                  ]
+                },
+                "description": "List all service areas."
+              },
+              "response": [
+                {
+                  "id": "de0bd3af-0dfc-4a8c-a1f3-174b5e348b0b",
+                  "name": "List returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_service_areas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_service_areas"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:45.000Z",
+                  "updatedAt": "2026-07-28T01:16:45.000Z",
+                  "uid": "35240-de0bd3af-0dfc-4a8c-a1f3-174b5e348b0b"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:45.000Z",
+              "updatedAt": "2026-07-28T01:16:45.000Z",
+              "uid": "35240-1a495d4d-eb94-49d2-8401-d06ba48f8971"
+            }
+          ],
+          "id": "8c42d639-2c12-4039-91fe-26f03f30181b",
+          "createdAt": "2026-07-28T01:16:45.000Z",
+          "updatedAt": "2026-07-28T01:16:45.000Z",
+          "uid": "35240-8c42d639-2c12-4039-91fe-26f03f30181b"
+        },
+        {
+          "name": "delete_service_area",
+          "item": [
+            {
+              "name": "Delete Service Area",
+              "id": "13ec08cf-eed4-4c6d-a33d-f7f1662a0d2a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/delete_service_area",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "delete_service_area"
+                  ]
+                },
+                "description": "Delete a service area."
+              },
+              "response": [
+                {
+                  "id": "e3cf8238-83a0-43b1-bf43-d49d00ea2165",
+                  "name": "Deleted.",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/delete_service_area",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "delete_service_area"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:45.000Z",
+                  "updatedAt": "2026-07-28T01:16:45.000Z",
+                  "uid": "35240-e3cf8238-83a0-43b1-bf43-d49d00ea2165"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:45.000Z",
+              "updatedAt": "2026-07-28T01:16:45.000Z",
+              "uid": "35240-13ec08cf-eed4-4c6d-a33d-f7f1662a0d2a"
+            }
+          ],
+          "id": "771893a4-71e8-47a2-98e2-2edb2f7b0b3d",
+          "createdAt": "2026-07-28T01:16:45.000Z",
+          "updatedAt": "2026-07-28T01:16:45.000Z",
+          "uid": "35240-771893a4-71e8-47a2-98e2-2edb2f7b0b3d"
+        },
+        {
+          "name": "create_team_service_area",
+          "item": [
+            {
+              "name": "Assign Team To Service Area",
+              "id": "2ff4001c-b334-4cf1-994e-d99e978a43e0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/create_team_service_area",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "create_team_service_area"
+                  ]
+                },
+                "description": "Assign one or more teams to a service area."
+              },
+              "response": [
+                {
+                  "id": "603ab5b4-50f6-4b3d-b551-ba53eb5f5daf",
+                  "name": "Team assigned.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/create_team_service_area",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "create_team_service_area"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:45.000Z",
+                  "updatedAt": "2026-07-28T01:16:45.000Z",
+                  "uid": "35240-603ab5b4-50f6-4b3d-b551-ba53eb5f5daf"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:45.000Z",
+              "updatedAt": "2026-07-28T01:16:45.000Z",
+              "uid": "35240-2ff4001c-b334-4cf1-994e-d99e978a43e0"
+            }
+          ],
+          "id": "aee14fa5-1f8b-4feb-a0a2-4f1ac559ce87",
+          "createdAt": "2026-07-28T01:16:45.000Z",
+          "updatedAt": "2026-07-28T01:16:45.000Z",
+          "uid": "35240-aee14fa5-1f8b-4feb-a0a2-4f1ac559ce87"
+        },
+        {
+          "name": "get_teams_service_areas",
+          "item": [
+            {
+              "name": "Get Team Service Areas",
+              "id": "c66f1a32-2fa4-4e60-83c6-164afa853680",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/get_teams_service_areas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "get_teams_service_areas"
+                  ]
+                },
+                "description": "Get the team-service-area coupling."
+              },
+              "response": [
+                {
+                  "id": "2393563e-3baf-4028-b5d8-c14958c905c5",
+                  "name": "Returned.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/get_teams_service_areas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "get_teams_service_areas"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:45.000Z",
+                  "updatedAt": "2026-07-28T01:16:45.000Z",
+                  "uid": "35240-2393563e-3baf-4028-b5d8-c14958c905c5"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:45.000Z",
+              "updatedAt": "2026-07-28T01:16:45.000Z",
+              "uid": "35240-c66f1a32-2fa4-4e60-83c6-164afa853680"
+            }
+          ],
+          "id": "567ee55f-852f-45d8-a04e-bc082a555598",
+          "createdAt": "2026-07-28T01:16:45.000Z",
+          "updatedAt": "2026-07-28T01:16:45.000Z",
+          "uid": "35240-567ee55f-852f-45d8-a04e-bc082a555598"
+        },
+        {
+          "name": "update_team_service_area",
+          "item": [
+            {
+              "name": "Update Team Service Area",
+              "id": "9be7ca98-f9d8-4689-858d-0720636ae672",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/services/update_team_service_area",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "services",
+                    "update_team_service_area"
+                  ]
+                },
+                "description": "Update teams assigned to a service area."
+              },
+              "response": [
+                {
+                  "id": "fce2b92d-08c2-4c3e-8992-4167d323b6c4",
+                  "name": "Updated.",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: oauth2",
+                        "key": "Authorization",
+                        "value": "<token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/services/update_team_service_area",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "services",
+                        "update_team_service_area"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:16:45.000Z",
+                  "updatedAt": "2026-07-28T01:16:45.000Z",
+                  "uid": "35240-fce2b92d-08c2-4c3e-8992-4167d323b6c4"
+                }
+              ],
+              "createdAt": "2026-07-28T01:16:45.000Z",
+              "updatedAt": "2026-07-28T01:16:45.000Z",
+              "uid": "35240-9be7ca98-f9d8-4689-858d-0720636ae672"
+            }
+          ],
+          "id": "e8b2f11e-8074-43ea-b450-bd04d281730b",
+          "createdAt": "2026-07-28T01:16:45.000Z",
+          "updatedAt": "2026-07-28T01:16:45.000Z",
+          "uid": "35240-e8b2f11e-8074-43ea-b450-bd04d281730b"
+        }
+      ],
+      "id": "83685a98-ffa1-4289-bf22-4586c6d61ef7",
+      "createdAt": "2026-07-28T01:16:45.000Z",
+      "updatedAt": "2026-07-28T01:16:45.000Z",
+      "uid": "35240-83685a98-ffa1-4289-bf22-4586c6d61ef7"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "create_task update_task get_task cancel_task assign_task checkin checkout create_customer update_customer create_team create_service_area create_service_plan get_quotes",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://admin-api.bringg.com/oauth/token",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://us2-admin-api.bringg.com"
+    }
+  ]
+}
