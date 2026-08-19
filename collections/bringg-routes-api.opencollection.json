@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Routes API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Routes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Assign Driver To Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_run_driver"
+          },
+          "docs": "Assign a driver to a route (run) to fulfill its orders."
+        },
+        {
+          "info": {
+            "name": "Assign Vehicle To Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_run_vehicle"
+          },
+          "docs": "Assign a vehicle to a route instance (run)."
+        },
+        {
+          "info": {
+            "name": "Unassign Driver From Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/unassign_run_driver"
+          },
+          "docs": "Remove a driver from a route assignment."
+        },
+        {
+          "info": {
+            "name": "Unassign Vehicle From Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/unassign_run_vehicle"
+          },
+          "docs": "Remove a vehicle from a route assignment."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

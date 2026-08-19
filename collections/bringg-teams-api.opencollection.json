@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Teams API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Teams",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_team"
+          },
+          "docs": "Create a new team."
+        },
+        {
+          "info": {
+            "name": "Update Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_team"
+          },
+          "docs": "Update an existing team."
+        },
+        {
+          "info": {
+            "name": "Delete Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_team"
+          },
+          "docs": "Delete a team."
+        },
+        {
+          "info": {
+            "name": "Get Team",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_team"
+          },
+          "docs": "Retrieve a team by id."
+        },
+        {
+          "info": {
+            "name": "List Teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/team_index"
+          },
+          "docs": "List all teams for the merchant."
+        },
+        {
+          "info": {
+            "name": "Assign Team To Service Area",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_team_service_area"
+          },
+          "docs": "Assign one or more teams to a service area."
+        },
+        {
+          "info": {
+            "name": "Get Team Service Areas",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_teams_service_areas"
+          },
+          "docs": "Get the team-service-area coupling."
+        },
+        {
+          "info": {
+            "name": "Update Team Service Area",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_team_service_area"
+          },
+          "docs": "Update teams assigned to a service area."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

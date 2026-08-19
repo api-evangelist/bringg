@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Delivery Slots API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Delivery Slots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Planned Delivery Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_planned_delivery_window"
+          },
+          "docs": "Create a delivery slot (planned delivery window)."
+        },
+        {
+          "info": {
+            "name": "Update Planned Delivery Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_planned_delivery_window"
+          },
+          "docs": "Update a delivery slot."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

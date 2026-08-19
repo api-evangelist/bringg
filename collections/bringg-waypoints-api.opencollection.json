@@ -1,0 +1,95 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Waypoints API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Waypoints",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Check-in (Arrived to Destination)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/checkin"
+          },
+          "docs": "Record driver arrival at an order waypoint."
+        },
+        {
+          "info": {
+            "name": "Check-out (Left Destination)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/checkout"
+          },
+          "docs": "Record driver leaving an order waypoint. Final checkout completes the order."
+        },
+        {
+          "info": {
+            "name": "Multi-Order Checkout",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/mass_checkout"
+          },
+          "docs": "Trigger checkout for multiple orders sharing a checkout location."
+        },
+        {
+          "info": {
+            "name": "Check In / Driver Arrived To Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/check-in"
+          },
+          "docs": "Partner driver arrived at a waypoint."
+        },
+        {
+          "info": {
+            "name": "Check Out / Driver Left Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/check-out"
+          },
+          "docs": "Partner driver left a waypoint."
+        },
+        {
+          "info": {
+            "name": "Cluster Check-in / Check-out",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/cluster-checkin-checkout"
+          },
+          "docs": "Indicate multiple bulk arrival or departure events for clustered orders."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

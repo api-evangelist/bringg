@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Customers API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_customer"
+          },
+          "docs": "Create a new customer record."
+        },
+        {
+          "info": {
+            "name": "Update Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_customer"
+          },
+          "docs": "Update an existing customer record."
+        },
+        {
+          "info": {
+            "name": "Create Blacklisted Customer Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_blacklisted_customer_user"
+          },
+          "docs": "Block a driver from delivering to a specific customer."
+        },
+        {
+          "info": {
+            "name": "Delete Blacklisted Customer Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_blacklisted_customer_user"
+          },
+          "docs": "Remove a blacklist entry between customer and driver."
+        },
+        {
+          "info": {
+            "name": "Get Blacklisted Customer Drivers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_blacklisted_customer_users"
+          },
+          "docs": "List blacklist entries between drivers and customers."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

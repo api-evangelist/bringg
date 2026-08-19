@@ -1,0 +1,271 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Orders API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_task"
+          },
+          "docs": "Create a new order (task) in Bringg with one or more waypoints, customer, inventory, service plan, and team assignment."
+        },
+        {
+          "info": {
+            "name": "Update Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_task"
+          },
+          "docs": "Update an existing order's details, waypoints, inventory, or service plan."
+        },
+        {
+          "info": {
+            "name": "Get Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_task"
+          },
+          "docs": "Retrieve full details of an order by id or external_id."
+        },
+        {
+          "info": {
+            "name": "Get Open Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_open_tasks"
+          },
+          "docs": "List orders currently in an open state (not completed or cancelled)."
+        },
+        {
+          "info": {
+            "name": "Get Post-Optimization Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_post_optimization_tasks"
+          },
+          "docs": "Retrieve orders after route optimization has been applied."
+        },
+        {
+          "info": {
+            "name": "Get Open Orders by Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_open_orders_by_customer"
+          },
+          "docs": "List open orders for a specific customer."
+        },
+        {
+          "info": {
+            "name": "Start Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/start_task"
+          },
+          "docs": "Mark an order as started (driver beginning execution)."
+        },
+        {
+          "info": {
+            "name": "End Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/end_task"
+          },
+          "docs": "Mark an order as ended/completed."
+        },
+        {
+          "info": {
+            "name": "Cancel Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/cancel_task"
+          },
+          "docs": "Cancel an order with optional cancellation reason."
+        },
+        {
+          "info": {
+            "name": "Update Order External ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_task_external_id"
+          },
+          "docs": "Update an order's external_id without other changes."
+        },
+        {
+          "info": {
+            "name": "Create Order Refund",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_task_refund"
+          },
+          "docs": "Create a refund record on a task."
+        },
+        {
+          "info": {
+            "name": "Create Order Payment History",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_task_payment_history"
+          },
+          "docs": "Add a payment history entry to an order."
+        },
+        {
+          "info": {
+            "name": "Check-in (Arrived to Destination)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/checkin"
+          },
+          "docs": "Record driver arrival at an order waypoint."
+        },
+        {
+          "info": {
+            "name": "Check-out (Left Destination)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/checkout"
+          },
+          "docs": "Record driver leaving an order waypoint. Final checkout completes the order."
+        },
+        {
+          "info": {
+            "name": "Multi-Order Checkout",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/mass_checkout"
+          },
+          "docs": "Trigger checkout for multiple orders sharing a checkout location."
+        },
+        {
+          "info": {
+            "name": "Release Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/release_tasks"
+          },
+          "docs": "Release orders from Planning to Dispatch, making them available to drivers."
+        },
+        {
+          "info": {
+            "name": "Assign Order To Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_task"
+          },
+          "docs": "Assign an order directly to a specific driver."
+        },
+        {
+          "info": {
+            "name": "Request Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/request-driver"
+          },
+          "docs": "Create a delivery request from a merchant or third-party system asking the partner to fulfill an order."
+        },
+        {
+          "info": {
+            "name": "Cancel Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/cancel-order"
+          },
+          "docs": "Cancel a delivery order at the partner side."
+        },
+        {
+          "info": {
+            "name": "Complete Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/complete-order"
+          },
+          "docs": "Notify Bringg the partner has completed the delivery."
+        },
+        {
+          "info": {
+            "name": "Update Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/update-order"
+          },
+          "docs": "Update order status, driver, or other fields from the partner side."
+        },
+        {
+          "info": {
+            "name": "Start Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/start-order"
+          },
+          "docs": "Indicate the partner driver has started an order."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

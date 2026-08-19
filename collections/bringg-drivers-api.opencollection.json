@@ -1,0 +1,194 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Drivers API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Drivers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Assign Order To Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_task"
+          },
+          "docs": "Assign an order directly to a specific driver."
+        },
+        {
+          "info": {
+            "name": "Assign Driver To Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_run_driver"
+          },
+          "docs": "Assign a driver to a route (run) to fulfill its orders."
+        },
+        {
+          "info": {
+            "name": "Unassign Driver From Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/unassign_run_driver"
+          },
+          "docs": "Remove a driver from a route assignment."
+        },
+        {
+          "info": {
+            "name": "Create Blacklisted Customer Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_blacklisted_customer_user"
+          },
+          "docs": "Block a driver from delivering to a specific customer."
+        },
+        {
+          "info": {
+            "name": "Delete Blacklisted Customer Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_blacklisted_customer_user"
+          },
+          "docs": "Remove a blacklist entry between customer and driver."
+        },
+        {
+          "info": {
+            "name": "Get Blacklisted Customer Drivers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_blacklisted_customer_users"
+          },
+          "docs": "List blacklist entries between drivers and customers."
+        },
+        {
+          "info": {
+            "name": "Logoff Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/logoff_user"
+          },
+          "docs": "Log a driver out of the Bringg Driver App."
+        },
+        {
+          "info": {
+            "name": "Generate Driver QR Code",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/generate_driver_qr_code"
+          },
+          "docs": "Generate an access token and QR code for Driver App login of a specified driver."
+        },
+        {
+          "info": {
+            "name": "Generate Pickup QR Code",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/generate_pickup_qr_code"
+          },
+          "docs": "Generate a pickup QR code for an order or location."
+        },
+        {
+          "info": {
+            "name": "Initiate Driver Home Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/driver_home_events"
+          },
+          "docs": "Indicate whether a driver is at or has departed their home base."
+        },
+        {
+          "info": {
+            "name": "Get Driver Availability",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_realtime_availability"
+          },
+          "docs": "Retrieve real-time driver availability across specified teams."
+        },
+        {
+          "info": {
+            "name": "Update Driver Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_driver_location"
+          },
+          "docs": "Push a driver's GPS location for more accurate ETA calculations."
+        },
+        {
+          "info": {
+            "name": "Assign Driver",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/driver-is-assigned-to-order"
+          },
+          "docs": "Notify Bringg a partner driver has been assigned to an order."
+        },
+        {
+          "info": {
+            "name": "Update Driver Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/partner/update-driver-location"
+          },
+          "docs": "Partner pushes driver GPS coordinates to Bringg."
+        },
+        {
+          "info": {
+            "name": "Driver Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/partner/driver-location"
+          },
+          "docs": "Retrieve current driver location."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

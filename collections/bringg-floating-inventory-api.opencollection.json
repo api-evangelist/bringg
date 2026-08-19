@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Floating Inventory API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Floating Inventory",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upsert Floating Inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/upsert_floating_inventory"
+          },
+          "docs": "Create or update a floating inventory item not associated with a specific order."
+        },
+        {
+          "info": {
+            "name": "Soft Delete Floating Inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/soft_delete_floating_inventory"
+          },
+          "docs": "Soft delete floating inventory items while retaining DB record."
+        },
+        {
+          "info": {
+            "name": "Mass Delete Floating Inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/mass_delete_floating_inventory"
+          },
+          "docs": "Delete multiple floating inventory items in bulk."
+        },
+        {
+          "info": {
+            "name": "Mass Custody Change To Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/mass_custody_change_floating_inventory"
+          },
+          "docs": "Move multiple floating inventory items to vehicle custody."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

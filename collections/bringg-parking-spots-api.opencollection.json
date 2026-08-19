@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Parking Spots API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Parking Spots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Parking Spot",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_parking_spot"
+          },
+          "docs": "Create a parking spot for vehicles."
+        },
+        {
+          "info": {
+            "name": "Update Parking Spot",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_parking_spot"
+          },
+          "docs": "Update a parking spot."
+        },
+        {
+          "info": {
+            "name": "Delete Parking Spot",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_parking_spot"
+          },
+          "docs": "Delete a parking spot."
+        },
+        {
+          "info": {
+            "name": "Get Parking Spot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_parking_spot_by_id"
+          },
+          "docs": "Get a parking spot by id."
+        },
+        {
+          "info": {
+            "name": "Get All Parking Spots",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_all_parking_spots"
+          },
+          "docs": "List all parking spots."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Blackouts API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Blackouts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Exclusion Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_exclusion_window"
+          },
+          "docs": "Create a blackout (exclusion window) for delivery availability."
+        },
+        {
+          "info": {
+            "name": "Update Exclusion Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_exclusion_window"
+          },
+          "docs": "Update a blackout window."
+        },
+        {
+          "info": {
+            "name": "Delete Exclusion Window",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_exclusion_window"
+          },
+          "docs": "Delete a blackout window."
+        },
+        {
+          "info": {
+            "name": "Get Exclusion Windows",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_exclusion_windows"
+          },
+          "docs": "List blackout windows."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Vehicle Profiles API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Vehicle Profiles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Vehicle Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_vehicle_type"
+          },
+          "docs": "Create a vehicle profile/type definition (capacity, constraints)."
+        },
+        {
+          "info": {
+            "name": "Update Vehicle Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_vehicle_type"
+          },
+          "docs": "Update a vehicle profile."
+        },
+        {
+          "info": {
+            "name": "Delete Vehicle Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/destroy_vehicle_type"
+          },
+          "docs": "Delete a vehicle profile."
+        },
+        {
+          "info": {
+            "name": "Get Vehicle Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_vehicle_type"
+          },
+          "docs": "Get a vehicle profile by id."
+        },
+        {
+          "info": {
+            "name": "Get Vehicle Profiles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_vehicle_types"
+          },
+          "docs": "List vehicle profiles."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

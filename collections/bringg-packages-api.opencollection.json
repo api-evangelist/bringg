@@ -1,0 +1,95 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Packages API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Packages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_package"
+          },
+          "docs": "Create a package associated with an order."
+        },
+        {
+          "info": {
+            "name": "Update Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_package"
+          },
+          "docs": "Update a package."
+        },
+        {
+          "info": {
+            "name": "Upsert Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/upsert_package"
+          },
+          "docs": "Create or update a package by external_id."
+        },
+        {
+          "info": {
+            "name": "Delete Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_package"
+          },
+          "docs": "Delete a package."
+        },
+        {
+          "info": {
+            "name": "Get Package",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_package"
+          },
+          "docs": "Retrieve a package by id."
+        },
+        {
+          "info": {
+            "name": "Get Task Packages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_task_packages"
+          },
+          "docs": "List all packages for an order."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

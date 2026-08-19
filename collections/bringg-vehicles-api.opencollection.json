@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Vehicles API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Vehicles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Assign Vehicle To Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/assign_run_vehicle"
+          },
+          "docs": "Assign a vehicle to a route instance (run)."
+        },
+        {
+          "info": {
+            "name": "Unassign Vehicle From Route",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/unassign_run_vehicle"
+          },
+          "docs": "Remove a vehicle from a route assignment."
+        },
+        {
+          "info": {
+            "name": "Mass Custody Change To Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/mass_custody_change_floating_inventory"
+          },
+          "docs": "Move multiple floating inventory items to vehicle custody."
+        },
+        {
+          "info": {
+            "name": "Create Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_vehicle"
+          },
+          "docs": "Create a vehicle record."
+        },
+        {
+          "info": {
+            "name": "Update Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_vehicle"
+          },
+          "docs": "Update a vehicle."
+        },
+        {
+          "info": {
+            "name": "Delete Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://us2-admin-api.bringg.com/services/delete_vehicle"
+          },
+          "docs": "Delete a vehicle."
+        },
+        {
+          "info": {
+            "name": "Get Vehicle",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_vehicle_by_id"
+          },
+          "docs": "Get a vehicle by id."
+        },
+        {
+          "info": {
+            "name": "Get All Vehicles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_all_vehicles"
+          },
+          "docs": "List all vehicles."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

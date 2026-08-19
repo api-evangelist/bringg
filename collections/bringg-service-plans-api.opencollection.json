@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Bringg Delivery Hub Administration Service Plans API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://admin-api.bringg.com/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Service Plans",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create Service Plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/create_service_plan"
+          },
+          "docs": "Create a service plan defining service level, time window, and requirements."
+        },
+        {
+          "info": {
+            "name": "Update Service Plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://us2-admin-api.bringg.com/services/update_service_plan"
+          },
+          "docs": "Update an existing service plan."
+        },
+        {
+          "info": {
+            "name": "Get Service Plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_service_plan"
+          },
+          "docs": "Retrieve a service plan by id or external_id."
+        },
+        {
+          "info": {
+            "name": "Get Service Plans",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://us2-admin-api.bringg.com/services/get_service_plans"
+          },
+          "docs": "List all service plans."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
