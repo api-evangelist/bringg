@@ -726,7 +726,8 @@ apis:
   description: The Operations API from Bringg — 1 operation(s) for operations.
   humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
   baseURL: https://us2-admin-api.bringg.com
-  tags:
+  tags: []
+  tags_raw:
   - Operations
   properties:
   - type: OpenAPI
@@ -847,6 +848,8 @@ apis:
   humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
   baseURL: https://us2-admin-api.bringg.com
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
@@ -1447,6 +1450,8 @@ apis:
   humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
   baseURL: https://us2-admin-api.bringg.com
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
@@ -1507,6 +1512,8 @@ apis:
   humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
   baseURL: https://us2-admin-api.bringg.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -1747,6 +1754,8 @@ apis:
   humanURL: https://developers.bringg.com/reference/welcome-to-bringgs-api-reference
   baseURL: https://us2-admin-api.bringg.com
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
@@ -1803,6 +1812,22 @@ apis:
     url: asyncapi/bringg-webhooks-asyncapi.yml
 name: Bringg
 tags:
+- Last Mile Delivery
+- Delivery Orchestration
+- Fulfillment
+- Logistics
+- Retail
+- Dispatch
+- Routing
+- Driver App
+- Carrier Network
+- Fleet Management
+- Supply Chain
+- E-Commerce
+- Same-Day Delivery
+- Curbside Pickup
+- Returns
+tags_raw:
 - Last-Mile Delivery
 - Delivery Orchestration
 - Fulfillment
