@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Bringg Delivery Hub Administration Recurring Orders API
+  title: Bringg Delivery Hub Recurring Orders API
   version: '1.0'
   description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
 

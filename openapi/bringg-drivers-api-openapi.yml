@@ -1,29 +1,14 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Bringg Delivery Hub Administration Drivers API
+  title: Bringg Drivers API
   version: '1.0'
-  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
-
-    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
-
-    service plans, planned delivery windows (delivery slots), exclusion windows
-
-    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
-
-    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
-
-    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
-
-    follow the pattern https://{region}-admin-api.bringg.com.
-
-    '
   contact:
     name: Bringg Developer Support
     url: https://developers.bringg.com
-  termsOfService: https://developers.bringg.com/reference/terms-of-service
   license:
     name: Bringg API Terms of Service
     url: https://developers.bringg.com/reference/terms-of-service
+  description: 'Operations tagged Drivers across 3 of this provider''s published API definitions: bringg-delivery-hub-api-openapi.yml, bringg-drivers-shifts-api-openapi.yml, bringg-fleet-partners-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://us2-admin-api.bringg.com
   description: US2 region (GCP)
@@ -35,6 +20,10 @@ servers:
   description: EU2 region (GCP)
 - url: https://eu3-admin-api.bringg.com
   description: EU3 region (GCP)
+- url: https://app.bringg.com
+  description: Bringg security gateway
+- url: https://partner.example.com
+  description: Partner-hosted endpoints (replace with your base URL for callbacks)
 security:
 - OAuth2ClientCredentials: []
 tags:
@@ -50,6 +39,17 @@ paths:
       responses:
         '200':
           description: Assigned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/assign_run_driver:
     post:
       summary: Assign Driver To Route
@@ -60,6 +60,17 @@ paths:
       responses:
         '200':
           description: Driver assigned to run.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/unassign_run_driver:
     post:
       summary: Unassign Driver From Route
@@ -70,6 +81,17 @@ paths:
       responses:
         '200':
           description: Driver unassigned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/create_blacklisted_customer_user:
     post:
       summary: Create Blacklisted Customer Driver
@@ -80,6 +102,17 @@ paths:
       responses:
         '200':
           description: Blacklist entry created.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/delete_blacklisted_customer_user:
     delete:
       summary: Delete Blacklisted Customer Driver
@@ -90,6 +123,17 @@ paths:
       responses:
         '200':
           description: Blacklist removed.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/get_blacklisted_customer_users:
     get:
       summary: Get Blacklisted Customer Drivers
@@ -100,6 +144,17 @@ paths:
       responses:
         '200':
           description: Blacklist list.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/logoff_user:
     post:
       summary: Logoff Driver
@@ -110,6 +165,17 @@ paths:
       responses:
         '200':
           description: Logged off.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/generate_driver_qr_code:
     post:
       summary: Generate Driver QR Code
@@ -120,6 +186,17 @@ paths:
       responses:
         '200':
           description: QR code generated.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/generate_pickup_qr_code:
     post:
       summary: Generate Pickup QR Code
@@ -130,6 +207,17 @@ paths:
       responses:
         '200':
           description: QR code generated.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/driver_home_events:
     post:
       summary: Initiate Driver Home Events
@@ -140,6 +228,17 @@ paths:
       responses:
         '200':
           description: Event recorded.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/get_realtime_availability:
     get:
       summary: Get Driver Availability
@@ -150,6 +249,17 @@ paths:
       responses:
         '200':
           description: Availability returned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/update_driver_location:
     post:
       summary: Update Driver Location
@@ -160,6 +270,17 @@ paths:
       responses:
         '200':
           description: Location updated.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /partner/driver-is-assigned-to-order:
     post:
       summary: Assign Driver
@@ -170,6 +291,11 @@ paths:
       responses:
         '200':
           description: Assigned.
+    servers:
+    - url: https://app.bringg.com
+      description: Bringg security gateway
+    - url: https://partner.example.com
+      description: Partner-hosted endpoints (replace with your base URL for callbacks)
   /partner/update-driver-location:
     post:
       summary: Update Driver Location
@@ -180,6 +306,11 @@ paths:
       responses:
         '200':
           description: Location updated.
+    servers:
+    - url: https://app.bringg.com
+      description: Bringg security gateway
+    - url: https://partner.example.com
+      description: Partner-hosted endpoints (replace with your base URL for callbacks)
   /partner/driver-location:
     get:
       summary: Driver Location
@@ -190,6 +321,11 @@ paths:
       responses:
         '200':
           description: Location returned.
+    servers:
+    - url: https://app.bringg.com
+      description: Bringg security gateway
+    - url: https://partner.example.com
+      description: Partner-hosted endpoints (replace with your base URL for callbacks)
 components:
   securitySchemes:
     OAuth2ClientCredentials:
@@ -218,3 +354,7 @@ components:
             create_service_area: Create service areas
             create_service_plan: Create service plans
             get_quotes: Get delivery quotes
+x-refined-from:
+- bringg-delivery-hub-api-openapi.yml
+- bringg-drivers-shifts-api-openapi.yml
+- bringg-fleet-partners-api-openapi.yml

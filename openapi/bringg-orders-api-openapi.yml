@@ -1,29 +1,14 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Bringg Delivery Hub Administration Orders API
+  title: Bringg Orders API
   version: '1.0'
-  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
-
-    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
-
-    service plans, planned delivery windows (delivery slots), exclusion windows
-
-    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
-
-    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
-
-    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
-
-    follow the pattern https://{region}-admin-api.bringg.com.
-
-    '
   contact:
     name: Bringg Developer Support
     url: https://developers.bringg.com
-  termsOfService: https://developers.bringg.com/reference/terms-of-service
   license:
     name: Bringg API Terms of Service
     url: https://developers.bringg.com/reference/terms-of-service
+  description: 'Operations tagged Orders across 2 of this provider''s published API definitions: bringg-delivery-hub-api-openapi.yml, bringg-fleet-partners-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://us2-admin-api.bringg.com
   description: US2 region (GCP)
@@ -35,6 +20,10 @@ servers:
   description: EU2 region (GCP)
 - url: https://eu3-admin-api.bringg.com
   description: EU3 region (GCP)
+- url: https://app.bringg.com
+  description: Bringg security gateway
+- url: https://partner.example.com
+  description: Partner-hosted endpoints (replace with your base URL for callbacks)
 security:
 - OAuth2ClientCredentials: []
 tags:
@@ -50,6 +39,17 @@ paths:
       responses:
         '200':
           description: Order created.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/update_task:
     post:
       summary: Update Order
@@ -60,6 +60,17 @@ paths:
       responses:
         '200':
           description: Order updated.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/get_task:
     get:
       summary: Get Order
@@ -70,6 +81,17 @@ paths:
       responses:
         '200':
           description: Order returned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/get_open_tasks:
     get:
       summary: Get Open Orders
@@ -80,6 +102,17 @@ paths:
       responses:
         '200':
           description: List of open orders.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/get_post_optimization_tasks:
     get:
       summary: Get Post-Optimization Orders
@@ -90,6 +123,17 @@ paths:
       responses:
         '200':
           description: Post-optimization orders.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/get_open_orders_by_customer:
     get:
       summary: Get Open Orders by Customer
@@ -100,6 +144,17 @@ paths:
       responses:
         '200':
           description: Orders for customer.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/start_task:
     post:
       summary: Start Order
@@ -110,6 +165,17 @@ paths:
       responses:
         '200':
           description: Order started.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/end_task:
     post:
       summary: End Order
@@ -120,6 +186,17 @@ paths:
       responses:
         '200':
           description: Order ended.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/cancel_task:
     post:
       summary: Cancel Order
@@ -130,6 +207,17 @@ paths:
       responses:
         '200':
           description: Order cancelled.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/update_task_external_id:
     post:
       summary: Update Order External ID
@@ -140,6 +228,17 @@ paths:
       responses:
         '200':
           description: External id updated.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/create_task_refund:
     post:
       summary: Create Order Refund
@@ -150,6 +249,17 @@ paths:
       responses:
         '200':
           description: Refund created.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/create_task_payment_history:
     post:
       summary: Create Order Payment History
@@ -160,6 +270,17 @@ paths:
       responses:
         '200':
           description: Payment recorded.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/checkin:
     post:
       summary: Check-in (Arrived to Destination)
@@ -170,6 +291,17 @@ paths:
       responses:
         '200':
           description: Check-in recorded.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/checkout:
     post:
       summary: Check-out (Left Destination)
@@ -180,6 +312,17 @@ paths:
       responses:
         '200':
           description: Check-out recorded.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/mass_checkout:
     post:
       summary: Multi-Order Checkout
@@ -190,6 +333,17 @@ paths:
       responses:
         '200':
           description: Bulk checkout accepted.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/release_tasks:
     post:
       summary: Release Orders
@@ -200,6 +354,17 @@ paths:
       responses:
         '200':
           description: Orders released.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/assign_task:
     post:
       summary: Assign Order To Driver
@@ -210,6 +375,17 @@ paths:
       responses:
         '200':
           description: Assigned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /partner/request-driver:
     post:
       summary: Request Driver
@@ -220,6 +396,11 @@ paths:
       responses:
         '200':
           description: Request created.
+    servers:
+    - url: https://app.bringg.com
+      description: Bringg security gateway
+    - url: https://partner.example.com
+      description: Partner-hosted endpoints (replace with your base URL for callbacks)
   /partner/cancel-order:
     post:
       summary: Cancel Order
@@ -230,6 +411,11 @@ paths:
       responses:
         '200':
           description: Cancelled.
+    servers:
+    - url: https://app.bringg.com
+      description: Bringg security gateway
+    - url: https://partner.example.com
+      description: Partner-hosted endpoints (replace with your base URL for callbacks)
   /partner/complete-order:
     post:
       summary: Complete Order
@@ -240,6 +426,11 @@ paths:
       responses:
         '200':
           description: Completed.
+    servers:
+    - url: https://app.bringg.com
+      description: Bringg security gateway
+    - url: https://partner.example.com
+      description: Partner-hosted endpoints (replace with your base URL for callbacks)
   /partner/update-order:
     post:
       summary: Update Order
@@ -250,6 +441,11 @@ paths:
       responses:
         '200':
           description: Updated.
+    servers:
+    - url: https://app.bringg.com
+      description: Bringg security gateway
+    - url: https://partner.example.com
+      description: Partner-hosted endpoints (replace with your base URL for callbacks)
   /partner/start-order:
     post:
       summary: Start Order
@@ -260,6 +456,11 @@ paths:
       responses:
         '200':
           description: Started.
+    servers:
+    - url: https://app.bringg.com
+      description: Bringg security gateway
+    - url: https://partner.example.com
+      description: Partner-hosted endpoints (replace with your base URL for callbacks)
 components:
   securitySchemes:
     OAuth2ClientCredentials:
@@ -288,3 +489,6 @@ components:
             create_service_area: Create service areas
             create_service_plan: Create service plans
             get_quotes: Get delivery quotes
+x-refined-from:
+- bringg-delivery-hub-api-openapi.yml
+- bringg-fleet-partners-api-openapi.yml

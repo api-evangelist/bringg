@@ -1,29 +1,14 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Bringg Delivery Hub Administration Vehicles API
+  title: Bringg Vehicles API
   version: '1.0'
-  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
-
-    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
-
-    service plans, planned delivery windows (delivery slots), exclusion windows
-
-    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
-
-    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
-
-    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
-
-    follow the pattern https://{region}-admin-api.bringg.com.
-
-    '
   contact:
     name: Bringg Developer Support
     url: https://developers.bringg.com
-  termsOfService: https://developers.bringg.com/reference/terms-of-service
   license:
     name: Bringg API Terms of Service
     url: https://developers.bringg.com/reference/terms-of-service
+  description: 'Operations tagged Vehicles across 2 of this provider''s published API definitions: bringg-delivery-hub-api-openapi.yml, bringg-drivers-shifts-api-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://us2-admin-api.bringg.com
   description: US2 region (GCP)
@@ -50,6 +35,17 @@ paths:
       responses:
         '200':
           description: Vehicle assigned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/unassign_run_vehicle:
     post:
       summary: Unassign Vehicle From Route
@@ -60,6 +56,17 @@ paths:
       responses:
         '200':
           description: Vehicle unassigned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/mass_custody_change_floating_inventory:
     post:
       summary: Mass Custody Change To Vehicle
@@ -70,6 +77,17 @@ paths:
       responses:
         '200':
           description: Custody changed.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/create_vehicle:
     post:
       summary: Create Vehicle
@@ -80,6 +98,17 @@ paths:
       responses:
         '200':
           description: Created.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/update_vehicle:
     post:
       summary: Update Vehicle
@@ -90,6 +119,17 @@ paths:
       responses:
         '200':
           description: Updated.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/delete_vehicle:
     delete:
       summary: Delete Vehicle
@@ -100,6 +140,17 @@ paths:
       responses:
         '200':
           description: Deleted.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/get_vehicle_by_id:
     get:
       summary: Get Vehicle
@@ -110,6 +161,17 @@ paths:
       responses:
         '200':
           description: Returned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
   /services/get_all_vehicles:
     get:
       summary: Get All Vehicles
@@ -120,6 +182,17 @@ paths:
       responses:
         '200':
           description: Returned.
+    servers:
+    - url: https://us2-admin-api.bringg.com
+      description: US2 region (GCP)
+    - url: https://us3-admin-api.bringg.com
+      description: US3 region (GCP)
+    - url: https://us4-admin-api.bringg.com
+      description: US4 region (GCP)
+    - url: https://eu2-admin-api.bringg.com
+      description: EU2 region (GCP)
+    - url: https://eu3-admin-api.bringg.com
+      description: EU3 region (GCP)
 components:
   securitySchemes:
     OAuth2ClientCredentials:
@@ -148,3 +221,6 @@ components:
             create_service_area: Create service areas
             create_service_plan: Create service plans
             get_quotes: Get delivery quotes
+x-refined-from:
+- bringg-delivery-hub-api-openapi.yml
+- bringg-drivers-shifts-api-openapi.yml

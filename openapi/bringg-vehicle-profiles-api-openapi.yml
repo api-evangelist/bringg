@@ -1,26 +1,19 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Bringg Delivery Hub Administration Vehicle Profiles API
+  title: Bringg Drivers and Shifts Vehicle Profiles API
   version: '1.0'
-  description: 'Bringg''s Delivery Hub REST API provides programmatic access to last-mile delivery
+  description: 'Bringg''s Drivers and Shifts REST API covers driver lifecycle (users, roles, login),
 
-    orchestration: orders (tasks), routes (runs), customers, teams, service areas,
+    shift management (start/end shift, driver home events, availability), driver
 
-    service plans, planned delivery windows (delivery slots), exclusion windows
+    location updates, QR-code generation, delivery blocks (driver shift slots),
 
-    (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
-
-    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
-
-    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
-
-    follow the pattern https://{region}-admin-api.bringg.com.
+    vehicles, and vehicle profiles. Uses OAuth 2.0 Client Credentials.
 
     '
   contact:
     name: Bringg Developer Support
     url: https://developers.bringg.com
-  termsOfService: https://developers.bringg.com/reference/terms-of-service
   license:
     name: Bringg API Terms of Service
     url: https://developers.bringg.com/reference/terms-of-service
@@ -94,27 +87,17 @@ components:
   securitySchemes:
     OAuth2ClientCredentials:
       type: oauth2
-      description: 'OAuth 2.0 Client Credentials Grant. Exchange your client_id and client_secret
-
-        for an access token via POST https://admin-api.bringg.com/oauth/token (or the
-
-        regional equivalent), then send Authorization: Bearer <access_token>.
-
-        '
+      description: OAuth 2.0 Client Credentials Grant.
       flows:
         clientCredentials:
           tokenUrl: https://admin-api.bringg.com/oauth/token
           scopes:
-            create_task: Create orders
-            update_task: Update orders
-            get_task: Read orders
-            cancel_task: Cancel orders
-            assign_task: Assign orders to drivers
-            checkin: Driver check-in
-            checkout: Driver check-out
-            create_customer: Create customers
-            update_customer: Update customers
-            create_team: Create teams
-            create_service_area: Create service areas
-            create_service_plan: Create service plans
-            get_quotes: Get delivery quotes
+            create_user: Create users
+            update_user: Update users
+            get_user: Read users
+            delete_user: Delete users
+            start_shift: Start shifts
+            end_shift: End shifts
+            update_driver_location: Update driver location
+            create_delivery_block: Create delivery blocks
+            create_vehicle: Create vehicles
