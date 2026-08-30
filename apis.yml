@@ -1812,7 +1812,7 @@ apis:
     url: asyncapi/bringg-webhooks-asyncapi.yml
 name: Bringg
 tags:
-- Last Mile Delivery
+- Last-Mile Delivery
 - Delivery Orchestration
 - Fulfillment
 - Logistics
