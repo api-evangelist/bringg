@@ -11,7 +11,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 7
+edge_count: 10
 edges:
 - tag: Delivery Blocks
   spec_file: bringg-delivery-blocks-api-openapi.yml
@@ -44,6 +44,17 @@ edges:
   reason: Full lifecycle of delivery orders (tasks) — create, update, start, end, cancel, open-order queries
     — on a last-mile delivery orchestration platform. This is execution of final-leg delivery jobs, i.e.
     Last-Mile Delivery Operations Management; some ambiguity versus generic order fulfilment orchestration.
+- tag: Delivery Slots
+  spec_file: bringg-delivery-slots-api-openapi.yml
+  capability_id: BC-2330.50
+  capability_id_l1: BC-2330
+  capability_name: Consumer Delivery Slot Management
+  confidence: 0.78
+  evidence: POST /services/create_planned_delivery_window  Create Planned Delivery Window; "planned delivery
+    windows (delivery slots)"
+  reason: Operations create and update planned consumer delivery windows, which is exactly consumer delivery
+    slot management in an omnichannel last-mile context.
+  recovered_from: vertical-retail-consumer-goods-edges.json
 - tag: Shifts
   spec_file: bringg-shifts-api-openapi.yml
   capability_id: BC-2440
@@ -64,6 +75,17 @@ edges:
     POST /services/assign_run_vehicle  Assign Vehicle To Route
   reason: Vehicle master records plus assignment of vehicles to routes is management of mobile assets;
     spans registry and dispatch use, so only L1 asserted.
+- tag: Planned Routes
+  spec_file: bringg-planned-routes-api-openapi.yml
+  capability_id: BC-520.50
+  capability_id_l1: BC-520
+  capability_name: Logistics Operations Management
+  confidence: 0.72
+  evidence: '"Create Planned Route Identifier", "Update Planned Route Identifier"; API covers "routes
+    (runs)"'
+  reason: Route planning objects for delivery runs — transport route planning, a core logistics operations
+    activity.
+  recovered_from: vertical-automotive-mobility-edges.json
 - tag: Customers
   spec_file: bringg-customers-api-openapi.yml
   capability_id: BC-420.10
@@ -86,3 +108,14 @@ edges:
   reason: The dominant operations assign orders and routes to drivers, which is dispatch assignment of
     loads and drivers to transport moves. Confidence tempered because the tag also mixes in driver location
     updates, availability and QR-code utilities that belong to driver/crew and telematics capabilities.
+- tag: Packages
+  spec_file: bringg-packages-api-openapi.yml
+  capability_id: BC-520.50
+  capability_id_l1: BC-520
+  capability_name: Logistics Operations Management
+  confidence: 0.7
+  evidence: '"Create Package", "Get Task Packages" in an API for "last-mile delivery orchestration: ...
+    packages"'
+  reason: Parcel/package records attached to delivery tasks — shipment handling within last-mile logistics
+    operations.
+  recovered_from: vertical-automotive-mobility-edges.json
