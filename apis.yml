@@ -1,5 +1,8 @@
 aid: bringg
 url: https://raw.githubusercontent.com/api-evangelist/bringg/refs/heads/main/apis.yml
+x-docs-platform: readme
+x-docs-platform-confidence: high
+x-docs-platform-checked: 2026-09-20
 apis:
 - aid: bringg:bringg-administration-api
   name: Bringg Administration API
