@@ -1,24 +1,10 @@
 openapi: 3.2.0
 info:
-  title: Bringg Fleet Partners (Self-Integrated Fleets) Authentication API
+  title: Bringg Fleet Partners (Self-Integrated Fleets)…
   version: '1.0'
   description: 'Bringg''s Fleet Partners API is the integration surface for delivery providers
 
-    and self-integrated fleets connecting to the Bringg Delivery Hub. Partners
-
-    implement webhook endpoints Bringg calls (Delivery Created, Get Quote, Order
-
-    Updated, Order Cancelled, Return Delivery Created, Merchant Registered) and
-
-    expose endpoints for accepting orders, updating order status, posting driver
-
-    locations, adding proof of delivery, and managing tokens / merchant credentials.
-
-    Authentication is OAuth 2.0 plus per-partner shared secrets for webhook
-
-    signature verification.
-
-    '
+    and self-integrated fleets connecting to the Bringg Delivery Hub.'
   contact:
     name: Bringg Developer Support
     url: https://developers.bringg.com

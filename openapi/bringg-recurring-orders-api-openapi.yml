@@ -10,13 +10,7 @@ info:
 
     (blackouts), parking spots, packages, inventory, recurring orders, vehicles,
 
-    delivery blocks, and analytics reports. All endpoints use OAuth 2.0 Client
-
-    Credentials Grant. Base URLs are region-specific (US2/US3/US4, EU2/EU3) and
-
-    follow the pattern https://{region}-admin-api.bringg.com.
-
-    '
+    delivery blocks, and analytics reports.'
   contact:
     name: Bringg Developer Support
     url: https://developers.bringg.com

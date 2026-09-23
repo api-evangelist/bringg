@@ -87,7 +87,8 @@
     "tag 'Orders' spans 2 source specs (bringg-delivery-hub-api-openapi.yml, bringg-fleet-partners-api-openapi.yml): per-path servers applied",
     "tag 'Vehicles' spans 2 source specs (bringg-delivery-hub-api-openapi.yml, bringg-drivers-shifts-api-openapi.yml): per-path servers applied",
     "tag 'Waypoints' spans 2 source specs (bringg-delivery-hub-api-openapi.yml, bringg-fleet-partners-api-openapi.yml): per-path servers applied",
-    "tag 'Webhooks' spans 2 source specs (bringg-delivery-hub-api-openapi.yml, bringg-fleet-partners-api-openapi.yml): per-path servers applied"
+    "tag 'Webhooks' spans 2 source specs (bringg-delivery-hub-api-openapi.yml, bringg-fleet-partners-api-openapi.yml): per-path servers applied",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "bringg-administration-api-openapi.yml: previously refined output, superseded by openapi/_original/",

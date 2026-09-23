@@ -8,9 +8,7 @@ info:
 
     location updates, QR-code generation, delivery blocks (driver shift slots),
 
-    vehicles, and vehicle profiles. Uses OAuth 2.0 Client Credentials.
-
-    '
+    vehicles, and vehicle profiles. Uses OAuth 2.0 Client Credentials.'
   contact:
     name: Bringg Developer Support
     url: https://developers.bringg.com
