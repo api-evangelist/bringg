@@ -1770,6 +1770,7 @@ tags:
 - Same-Day Delivery
 - Curbside Pickup
 - Returns
+- Delivery
 tags_raw:
 - Last-Mile Delivery
 - Delivery Orchestration
@@ -1786,6 +1787,7 @@ tags_raw:
 - Same-Day Delivery
 - Curbside Pickup
 - Returns
+- Delivery
 kind: contract
 deliveryModel:
   model: saas
