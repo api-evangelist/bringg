@@ -3,6 +3,7 @@ provider: Bringg
 generated_by: planning/capability-mapping/scripts/classify_capabilities.py
 model: claude-opus-5
 frame:
+- Software & Technology
 - Transportation & Logistics
 min_confidence: 0.7
 capability_model:
@@ -11,7 +12,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 10
+edge_count: 12
 edges:
 - tag: Delivery Blocks
   spec_file: bringg-delivery-blocks-api-openapi.yml
@@ -119,3 +120,23 @@ edges:
   reason: Parcel/package records attached to delivery tasks — shipment handling within last-mile logistics
     operations.
   recovered_from: vertical-automotive-mobility-edges.json
+- tag: Recurring Orders
+  spec_file: bringg-recurring-orders-api-openapi.yml
+  capability_id: BC-520.40
+  capability_id_l1: BC-520
+  capability_name: Order Fulfilment Management
+  confidence: 0.7
+  evidence: '"Create Recurring Order Template"; "Get Recurring Order Templates By Customer" on a "last-mile
+    delivery and fulfillment orchestration platform"'
+  reason: Templates that generate repeating delivery orders per customer drive order capture and fulfilment
+    orchestration in the last-mile delivery platform, mapping to Order Fulfilment Management.
+- tag: Waypoints
+  spec_file: bringg-waypoints-api-openapi.yml
+  capability_id: BC-520.50
+  capability_id_l1: BC-520
+  capability_name: Logistics Operations Management
+  confidence: 0.7
+  evidence: '"Check-in (Arrived to Destination)", "Check Out / Driver Left Location", "Multi-Order Checkout"'
+  reason: Driver arrival/departure events at delivery stops are execution telemetry of last-mile transport
+    operations, which falls under Logistics Operations Management. Not order promising/allocation, so
+    Order Fulfilment was rejected.
