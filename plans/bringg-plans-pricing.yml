@@ -34,3 +34,19 @@ plans:
   - name: Carrier Network access fees
   - name: Integrations and professional services
   - name: SLAs and support level
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - negotiated
+  units:
+  - negotiated
+  plans:
+  - name: Contact Sales
+    access: other
+    model: negotiated
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
