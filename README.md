@@ -1,4 +1,4 @@
-# Bringg (bringg)
+# Bringg
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,169 +66,267 @@
 
 Bringg is a last-mile delivery and fulfillment orchestration platform headquartered in Tel Aviv (founded 2013, CEO Guy Bloch). The Bringg platform combines modular software (Shopping Experience, Plan, Dispatch, Drive, Delivery Experience, Automation Center, Intelligence, Connect) with the Bringg Carrier Network — 250+ pre-integrated third-party, crowdsourced, and autonomous carriers across 70+ countries — to give enterprise retailers and logistics providers a single integration point for orchestrating own-fleet and partner-fleet deliveries. Bringg's developer surface exposes a REST Delivery Hub API for orders/runs/customers/teams/service areas/service plans/delivery slots/blackouts/inventory/packages, a Drivers & Shifts API for users/shifts/delivery-blocks/vehicles, a Fleet Partners API for self-integrated carriers, 50+ outbound webhook event types, and JavaScript/iOS/Android SDKs powering the Dispatcher and Driver apps. All HTTP APIs use OAuth 2.0 Client Credentials Grant against region-specific GCP base URLs (US2/US3/US4, EU2/EU3) — visible on status.bringg.com. Bringg counts 800+ customers including Best Buy, AutoZone, ASDA, Wegmans, FedEx Office, Metro, uBreakiFix, and B&Q, and processes 200 million annual deliveries.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/bringg/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/bringg/refs/heads/main/apis.yml)
+**Areas:** Last Mile Delivery · Delivery Orchestration · Fulfillment · Logistics · Retail · Dispatch · Routing · Driver App · Carrier Network · Fleet Management · Supply Chain · E-Commerce
 
-## Scope
+## Bringg on APIs.io
 
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Bringg is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bringg/](https://apis.io/providers/bringg/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (30)
 
-- Last-Mile Delivery
-- Delivery Orchestration
-- Fulfillment
-- Logistics
-- Retail
-- Dispatch
-- Routing
-- Driver App
-- Carrier Network
-- Fleet Management
-- Supply Chain
-- E-commerce
-- Same-Day Delivery
-- Curbside Pickup
-- Returns
+- [Bringg Administration API](https://apis.io/apis/bringg/bringg-administration-api/) — The Administration API from Bringg — 1 operation(s) for administration.
+- [Bringg Analytics API](https://apis.io/apis/bringg/bringg-analytics-api/) — The Analytics API from Bringg — 2 operation(s) for analytics.
+- [Bringg Authentication API](https://apis.io/apis/bringg/bringg-authentication-api/) — The Authentication API from Bringg — 2 operation(s) for authentication.
+- [Bringg Blackouts API](https://apis.io/apis/bringg/bringg-blackouts-api/) — The Blackouts API from Bringg — 4 operation(s) for blackouts.
+- [Bringg Bulk API](https://apis.io/apis/bringg/bringg-bulk-api/) — The Bulk API from Bringg — 3 operation(s) for bulk.
+- [Bringg Customers API](https://apis.io/apis/bringg/bringg-customers-api/) — The Customers API from Bringg — 5 operation(s) for customers.
+- [Bringg Delivery Blocks API](https://apis.io/apis/bringg/bringg-delivery-blocks-api/) — The Delivery Blocks API from Bringg — 8 operation(s) for delivery blocks.
+- [Bringg Delivery Slots API](https://apis.io/apis/bringg/bringg-delivery-slots-api/) — The Delivery Slots API from Bringg — 2 operation(s) for delivery slots.
+- [Bringg Drivers API](https://apis.io/apis/bringg/bringg-drivers-api/) — The Drivers API from Bringg — 15 operation(s) for drivers.
+- [Bringg Floating Inventory API](https://apis.io/apis/bringg/bringg-floating-inventory-api/) — The Floating Inventory API from Bringg — 4 operation(s) for floating inventory.
+- [Bringg Inventory API](https://apis.io/apis/bringg/bringg-inventory-api/) — The Inventory API from Bringg — 2 operation(s) for inventory.
+- [Bringg Notes API](https://apis.io/apis/bringg/bringg-notes-api/) — The Notes API from Bringg — 3 operation(s) for notes.
+- [Bringg Operations API](https://apis.io/apis/bringg/bringg-operations-api/) — The Operations API from Bringg — 1 operation(s) for operations.
+- [Bringg Order Configurations API](https://apis.io/apis/bringg/bringg-order-configurations-api/) — The Order Configurations API from Bringg — 2 operation(s) for order configurations.
+- [Bringg Orders API](https://apis.io/apis/bringg/bringg-orders-api/) — The Orders API from Bringg — 22 operation(s) for orders.
+- [Bringg Packages API](https://apis.io/apis/bringg/bringg-packages-api/) — The Packages API from Bringg — 6 operation(s) for packages.
+- [Bringg Parking Spots API](https://apis.io/apis/bringg/bringg-parking-spots-api/) — The Parking Spots API from Bringg — 5 operation(s) for parking spots.
+- [Bringg Planned Routes API](https://apis.io/apis/bringg/bringg-planned-routes-api/) — The Planned Routes API from Bringg — 2 operation(s) for planned routes.
+- [Bringg Quotes API](https://apis.io/apis/bringg/bringg-quotes-api/) — The Quotes API from Bringg — 1 operation(s) for quotes.
+- [Bringg Recurring Orders API](https://apis.io/apis/bringg/bringg-recurring-orders-api/) — The Recurring Orders API from Bringg — 3 operation(s) for recurring orders.
+- [Bringg Routes API](https://apis.io/apis/bringg/bringg-routes-api/) — The Routes API from Bringg — 4 operation(s) for routes.
+- [Bringg Service Areas API](https://apis.io/apis/bringg/bringg-service-areas-api/) — The Service Areas API from Bringg — 8 operation(s) for service areas.
+- [Bringg Service Plans API](https://apis.io/apis/bringg/bringg-service-plans-api/) — The Service Plans API from Bringg — 4 operation(s) for service plans.
+- [Bringg Shifts API](https://apis.io/apis/bringg/bringg-shifts-api/) — The Shifts API from Bringg — 2 operation(s) for shifts.
+- [Bringg Teams API](https://apis.io/apis/bringg/bringg-teams-api/) — The Teams API from Bringg — 8 operation(s) for teams.
+- [Bringg Users API](https://apis.io/apis/bringg/bringg-users-api/) — The Users API from Bringg — 6 operation(s) for users.
+- [Bringg Vehicle Profiles API](https://apis.io/apis/bringg/bringg-vehicle-profiles-api/) — The Vehicle Profiles API from Bringg — 5 operation(s) for vehicle profiles.
+- [Bringg Vehicles API](https://apis.io/apis/bringg/bringg-vehicles-api/) — The Vehicles API from Bringg — 8 operation(s) for vehicles.
+- [Bringg Waypoints API](https://apis.io/apis/bringg/bringg-waypoints-api/) — The Waypoints API from Bringg — 6 operation(s) for waypoints.
+- [Bringg Webhooks API](https://apis.io/apis/bringg/bringg-webhooks-api/) — The Webhooks API from Bringg — 7 operation(s) for webhooks.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-25T00:00:00.000Z
-- **Modified:** 2026-05-25
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### AsyncAPI (1)
 
-### Bringg Delivery Hub API
+Event-driven and webhook contracts.
 
-Bringg's REST orchestration API for the Delivery Hub — create and manage orders (tasks), runs (routes), customers, teams, service areas, service plans, planned delivery windows (delivery slots), exclusion windows (blackouts), parking spots, packages, inventory, floating inventory, recurring orders, delivery blocks, vehicles, and analytics reports. All endpoints use OAuth 2.0 Client Credentials Grant against region-specific GCP base URLs (US2/US3/US4, EU2/EU3).
+- [Bringg Webhooks](https://apis.io/asyncapis/bringg/bringg-webhooks-asyncapi/)
 
-- **Human URL:** [https://developers.bringg.com/reference/welcome-to-bringgs-api-reference](https://developers.bringg.com/reference/welcome-to-bringgs-api-reference)
-- **Base URL:** `https://us2-admin-api.bringg.com`
+#### Event channels (45)
 
-#### Tags
+Individual events and webhooks the provider emits.
 
-- Last-Mile Delivery
-- Orders
-- Dispatch
-- Routing
-- Service Areas
-- Service Plans
-- Quotes
-- Inventory
-- Analytics
+- [alert.new](https://apis.io/channels/bringg/alert-new/)
+- [customer.created](https://apis.io/channels/bringg/customer-created/)
+- [customer.opted_in_to_sms](https://apis.io/channels/bringg/customer-opted-in-to-sms/)
+- [customer.opted_out_of_sms](https://apis.io/channels/bringg/customer-opted-out-of-sms/)
+- [customer.tipped_driver](https://apis.io/channels/bringg/customer-tipped-driver/)
+- [delivery.created](https://apis.io/channels/bringg/delivery-created/)
+- [driver.arrived_on_location](https://apis.io/channels/bringg/driver-arrived-on-location/)
+- [driver.changed_type](https://apis.io/channels/bringg/driver-changed-type/)
+- [driver.got_home](https://apis.io/channels/bringg/driver-got-home/)
+- [driver.left_home](https://apis.io/channels/bringg/driver-left-home/)
+- [driver.location_updated](https://apis.io/channels/bringg/driver-location-updated/)
+- [driver.on_way](https://apis.io/channels/bringg/driver-on-way/)
+- [driver.unavailable_status_changed](https://apis.io/channels/bringg/driver-unavailable-status-changed/)
+- [inventory.scanned](https://apis.io/channels/bringg/inventory-scanned/)
+- [masked_call](https://apis.io/channels/bringg/masked-call/)
+- [optimization.applied](https://apis.io/channels/bringg/optimization-applied/)
+- [order.accepted_by_driver](https://apis.io/channels/bringg/order-accepted-by-driver/)
+- [order.accepted_by_fleet](https://apis.io/channels/bringg/order-accepted-by-fleet/)
+- [order.assigned_to_dp](https://apis.io/channels/bringg/order-assigned-to-dp/)
+- [order.assigned_to_driver](https://apis.io/channels/bringg/order-assigned-to-driver/)
+- [order.cancelled](https://apis.io/channels/bringg/order-cancelled/)
+- [order.created](https://apis.io/channels/bringg/order-created/)
+- [order.eta_changed](https://apis.io/channels/bringg/order-eta-changed/)
+- [order.is_done](https://apis.io/channels/bringg/order-is-done/)
+- [order.marked_late](https://apis.io/channels/bringg/order-marked-late/)
+- …and 20 more published on APIs.io
 
-#### Properties
+#### GraphQL (1)
 
-- [Documentation](https://developers.bringg.com/reference/welcome-to-bringgs-api-reference)
-- [Documentation](https://developers.bringg.com/docs/overview)
-- [Documentation](https://developers.bringg.com/docs/rest)
-- [Authentication](https://developers.bringg.com/docs/bringg-api-access-management)
-- [Authentication](https://developers.bringg.com/docs/oauth-20-urls)
-- [OpenAPI](openapi/bringg-delivery-hub-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/bringg-delivery-hub-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/bringg-delivery-hub-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/bringg-order-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/bringg-customer-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/bringg-waypoint-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/bringg-run-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](json-structure/bringg-order-structure.json)
-- [JSON-LD](json-ld/bringg-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Example](examples/bringg-create-task-example.json)
+GraphQL schemas.
 
-### Bringg Drivers And Shifts API
+- [Moved to /providers/bringg/](https://apis.io/graphqls/bringg/bringg-graphql/)
 
-Manage Bringg drivers, user roles, shifts, real-time availability, driver location updates, delivery blocks (shift slots), QR-code-based login, and vehicles with vehicle profiles. Backs the Bringg Driver App and dispatcher workflows; uses OAuth 2.0 Client Credentials Grant.
+#### Agentic access (1)
 
-- **Human URL:** [https://developers.bringg.com/reference/driver-shifts](https://developers.bringg.com/reference/driver-shifts)
-- **Base URL:** `https://us2-admin-api.bringg.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Bringg Agentic Access](https://apis.io/agentic-access/bringg/bringg-agentic-access/)
 
-- Drivers
-- Shifts
-- Users
-- Delivery Blocks
-- Vehicles
-- Fleet
+#### JSON Schema (5)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://developers.bringg.com/reference/driver-shifts)
-- [Documentation](https://developers.bringg.com/reference/users-3)
-- [Documentation](https://developers.bringg.com/reference/vehicles)
-- [Documentation](https://developers.bringg.com/reference/delivery-blocks)
-- [OpenAPI](openapi/bringg-drivers-shifts-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/bringg-drivers-shifts-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/bringg-drivers-shifts-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/bringg-driver-schema.json) — [JSON Schema](https://json-schema.org/specification)
+- [Bringg Customer](https://apis.io/schemas/bringg/bringg-customer/)
+- [Bringg Driver (User)](https://apis.io/schemas/bringg/bringg-driver/)
+- [Bringg Order (Task)](https://apis.io/schemas/bringg/bringg-order/)
+- [Bringg Run (Route)](https://apis.io/schemas/bringg/bringg-run/)
+- [Bringg Waypoint](https://apis.io/schemas/bringg/bringg-waypoint/)
 
-### Bringg Fleet Partners API
+#### JSON Structure (1)
 
-Integration surface for delivery providers and self-integrated fleets connecting to the Bringg Delivery Hub. Partners host webhook endpoints Bringg calls (Delivery Created, Get Quote, Delivery Updated, Delivery Cancelled, Merchant Registered, Return Delivery Created) and expose endpoints for order acceptance, status updates, driver location, and proof of delivery. Used by 250+ third-party carriers and crowdsourced fleets in the Bringg Carrier Network.
+Data models expressed in JSON Structure.
 
-- **Human URL:** [https://developers.bringg.com/reference/overview-1](https://developers.bringg.com/reference/overview-1)
-- **Base URL:** `https://app.bringg.com`
+- [Bringg Order Structure](https://apis.io/json-structure/bringg/bringg-order-structure/)
 
-#### Tags
+#### JSON-LD (1)
 
-- Fleet Partners
-- Self-Integrated Fleets
-- Carrier Integration
-- Quotes
-- Webhooks
+Linked-data contexts for the provider's vocabulary.
 
-#### Properties
+- [Bringg Context](https://apis.io/jsonld/bringg/bringg-context/)
 
-- [Documentation](https://developers.bringg.com/reference/overview-1)
-- [Getting Started](https://developers.bringg.com/reference/how-to-get-started)
-- [Documentation](https://developers.bringg.com/reference/getting-certified)
-- [Documentation](https://developers.bringg.com/reference/how-to-conduct-and-end-to-end-test)
-- [Documentation](https://developers.bringg.com/reference/webhooks)
-- [Documentation](https://developers.bringg.com/reference/webhooks-index)
-- [OpenAPI](openapi/bringg-fleet-partners-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/bringg-fleet-partners-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/bringg-fleet-partners-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [AsyncAPI](asyncapi/bringg-webhooks-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
+#### Vocabulary (1)
 
-## Common Properties
+The provider's domain terms, defined.
 
-- [Portal](https://www.bringg.com)
+- [Bringg Vocabulary](https://apis.io/vocabularies/bringg/bringg-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Bringg Create Task Example](https://apis.io/examples/bringg/bringg-create-task-example/)
+
+#### Collections (63)
+
+Postman and Open Collection request collections.
+
+- [Bringg Delivery Hub Administration API](https://apis.io/collections/bringg/open-bringg-administration-api/)
+- [Bringg Delivery Hub Administration Analytics API](https://apis.io/collections/bringg/open-bringg-analytics-api/)
+- [Bringg Delivery Hub Administration Authentication API](https://apis.io/collections/bringg/open-bringg-authentication-api/)
+- [Bringg Delivery Hub Administration Blackouts API](https://apis.io/collections/bringg/open-bringg-blackouts-api/)
+- [Bringg Delivery Hub Administration Bulk API](https://apis.io/collections/bringg/open-bringg-bulk-api/)
+- [Bringg Delivery Hub Administration Customers API](https://apis.io/collections/bringg/open-bringg-customers-api/)
+- [Bringg Delivery Hub Administration Delivery Blocks API](https://apis.io/collections/bringg/open-bringg-delivery-blocks-api/)
+- [Bringg Delivery Hub API](https://apis.io/collections/bringg/open-bringg-delivery-hub-api/)
+- [Bringg Delivery Hub Administration Delivery Slots API](https://apis.io/collections/bringg/open-bringg-delivery-slots-api/)
+- [Bringg Delivery Hub Administration Drivers API](https://apis.io/collections/bringg/open-bringg-drivers-api/)
+- [Bringg Drivers and Shifts API](https://apis.io/collections/bringg/open-bringg-drivers-shifts-api/)
+- [Bringg Fleet Partners (Self-Integrated Fleets) API](https://apis.io/collections/bringg/open-bringg-fleet-partners-api/)
+- [Bringg Delivery Hub Administration Floating Inventory API](https://apis.io/collections/bringg/open-bringg-floating-inventory-api/)
+- [Bringg Delivery Hub Administration Inventory API](https://apis.io/collections/bringg/open-bringg-inventory-api/)
+- [Bringg Delivery Hub Administration Notes API](https://apis.io/collections/bringg/open-bringg-notes-api/)
+- [Bringg Delivery Hub Administration Operations API](https://apis.io/collections/bringg/open-bringg-operations-api/)
+- [Bringg Delivery Hub Administration Order Configurations API](https://apis.io/collections/bringg/open-bringg-order-configurations-api/)
+- [Bringg Delivery Hub Administration Orders API](https://apis.io/collections/bringg/open-bringg-orders-api/)
+- [Bringg Delivery Hub Administration Packages API](https://apis.io/collections/bringg/open-bringg-packages-api/)
+- [Bringg Delivery Hub Administration Parking Spots API](https://apis.io/collections/bringg/open-bringg-parking-spots-api/)
+- [Bringg Delivery Hub Administration Planned Routes API](https://apis.io/collections/bringg/open-bringg-planned-routes-api/)
+- [Bringg Delivery Hub Administration Quotes API](https://apis.io/collections/bringg/open-bringg-quotes-api/)
+- [Bringg Delivery Hub Administration Recurring Orders API](https://apis.io/collections/bringg/open-bringg-recurring-orders-api/)
+- [Bringg Delivery Hub Administration Routes API](https://apis.io/collections/bringg/open-bringg-routes-api/)
+- [Bringg Delivery Hub Administration Service Areas API](https://apis.io/collections/bringg/open-bringg-service-areas-api/)
+- …and 38 more published on APIs.io
+
+#### Governance rules (3)
+
+Spectral rulesets for the provider's contracts.
+
+- [Bringg — asyncapi rules](https://apis.io/rules/bringg/bringg-asyncapi-spectral-rules/)
+- [Bringg — jsonschema rules](https://apis.io/rules/bringg/bringg-jsonschema-spectral-rules/)
+- [Bringg API Rules](https://apis.io/rules/bringg/bringg-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Bringg Authentication](https://apis.io/security/bringg/bringg-authentication/)
+- [Bringg Domain Security](https://apis.io/security/bringg/bringg-domain-security/)
+- [Bringg Trust Center](https://apis.io/security/bringg/bringg-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Bringg Scopes](https://apis.io/scopes/bringg/bringg-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Bringg Plans Pricing](https://apis.io/plans/bringg/bringg-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Bringg Rate Limits](https://apis.io/rate-limits/bringg/bringg-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Bringg Finops](https://apis.io/finops/bringg/bringg-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.bringg.com/)
 - [Documentation](https://developers.bringg.com)
-- [Documentation](https://developers.bringg.com/reference/welcome-to-bringgs-api-reference)
-- [Documentation](https://developers.bringg.com/v2.0/docs/overview)
-- [Getting Started](https://developers.bringg.com/docs/overview)
-- [Authentication](https://developers.bringg.com/docs/bringg-api-access-management)
-- [Authentication](https://developers.bringg.com/docs/oauth-20-urls)
-- [Errors](https://developers.bringg.com/docs/errors)
-- [Webhooks](https://developers.bringg.com/docs/bringg-webhooks)
-- [Webhooks](https://developers.bringg.com/reference/webhooks-index)
-- [Documentation](https://developers.bringg.com/docs/webhook-authentication-methods)
-- [Documentation](https://developers.bringg.com/docs/data-formatting)
-- [Documentation](https://developers.bringg.com/docs/bringg-system-requirements)
+- [Getting started](https://developers.bringg.com/docs/overview)
 - [Changelog](https://developers.bringg.com/reference/changelog)
-- [Status Page](https://status.bringg.com)
-- [Terms of Service](https://developers.bringg.com/reference/terms-of-service)
-- [Knowledge Base](https://help.bringg.com)
 - [Blog](https://www.bringg.com/resources/blog)
-- [Portal](https://www.bringg.com/platform/)
-- [Portal](https://www.bringg.com/carrier-network/)
-- [Portal](https://www.bringg.com/about/)
-- [SDK](https://developers.bringg.com/docs/dashboard-sdk-resources)
-- [SDK](https://github.com/bringg/Bringg-iOS-DriverSDK)
-- [GitHub Organization](https://github.com/bringg)
-- [LinkedIn](https://www.linkedin.com/company/bringg)
-- [Twitter](https://twitter.com/bringg)
-- [Sign Up](https://www.bringg.com/contact-us/)
-- [Plans](plans/bringg-plans-pricing.yml)
-- [Rate Limits](rate-limits/bringg-rate-limits.yml)
-- [Fin Ops](finops/bringg-finops.yml)
-- [Features](undefined)
-- [Modules](undefined)
-- [Solutions](undefined)
-- [Integrations](undefined)
+- [Terms of service](https://developers.bringg.com/reference/terms-of-service)
+- [GitHub](https://github.com/bringg)
+- [Status](https://status.bringg.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 48.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 69.8 |
+| Contract governance | 13.6 |
+| Operational transparency | 38.2 |
+| Developer ergonomics | 36.9 |
+| Access clarity | 31.6 |
+
+**Agent readiness 28.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | mostly |
+
+**Regulatory alignment 34.2** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bringg/](https://apis.io/providers/bringg/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bringg: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bringg/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
